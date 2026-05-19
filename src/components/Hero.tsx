@@ -1,0 +1,171 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { heroStats, siteConfig } from "@/lib/site";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" as const },
+  }),
+};
+
+export function Hero() {
+  return (
+    <section className="relative min-h-[92vh] overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20">
+      <div
+        aria-hidden
+        className="bg-grid pointer-events-none absolute inset-0 opacity-60"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_-10%,rgba(45,212,191,0.14),transparent_55%),radial-gradient(ellipse_50%_40%_at_90%_20%,rgba(129,140,248,0.12),transparent_50%)]"
+      />
+      <div
+        aria-hidden
+        className="animate-pulse-glow pointer-events-none absolute -left-20 top-1/3 h-72 w-72 rounded-full bg-teal-500/10 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="animate-pulse-glow pointer-events-none absolute -right-10 top-10 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl"
+      />
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <div>
+          <motion.p
+            custom={0}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-teal-300 uppercase"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-400" />
+            </span>
+            Results backed by $20M+ ad spend
+          </motion.p>
+
+          <motion.h1
+            custom={1}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.08]"
+          >
+            Media buyer for{" "}
+            <span className="text-gradient">med spas, clinics</span> & home
+            services — built to book appointments
+          </motion.h1>
+
+          <motion.p
+            custom={2}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300"
+          >
+            I&apos;m Asmat — 7+ years running Meta & Google ads that generate
+            qualified leads and booked consultations. Top Rated Plus on
+            Upwork. Focused on aesthetic, wellness, and local service brands.
+          </motion.p>
+
+          <motion.div
+            custom={3}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+          >
+            <Link
+              href={siteConfig.links.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/25 transition-all hover:shadow-teal-500/40 hover:brightness-110"
+            >
+              Book a free strategy call
+            </Link>
+            <Link
+              href="#portfolio"
+              className="inline-flex h-13 items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-indigo-400/40 hover:bg-indigo-500/10 hover:text-indigo-100"
+            >
+              View case studies
+            </Link>
+          </motion.div>
+
+          <motion.dl
+            custom={4}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4"
+          >
+            {heroStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="card-hover rounded-xl border border-white/10 bg-[var(--card)]/80 p-4 backdrop-blur-sm"
+              >
+                <dt className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  {stat.value}
+                </dt>
+                <dd className="mt-1 text-xs text-zinc-400 sm:text-sm">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mx-auto w-full max-w-md lg:max-w-none"
+        >
+          <div className="animate-float relative flex min-h-[400px] items-end justify-center sm:min-h-[460px] lg:min-h-[520px]">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute bottom-0 left-1/2 h-[90%] w-[75%] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(45,212,191,0.22)_0%,rgba(129,140,248,0.08)_45%,transparent_70%)] blur-2xl"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute bottom-4 left-1/2 h-6 w-[50%] -translate-x-1/2 rounded-[100%] bg-black/50 blur-2xl"
+            />
+            <Image
+              src="/asmat-hero.png"
+              alt="Asmat — Meta and Google media buyer for med spas and home services"
+              width={520}
+              height={871}
+              priority
+              className="relative z-10 h-auto w-full max-w-[300px] object-contain object-bottom drop-shadow-[0_28px_56px_rgba(0,0,0,0.55)] sm:max-w-[360px] lg:max-w-[400px]"
+              sizes="(max-width: 1024px) 90vw, 400px"
+            />
+          </div>
+
+          <div className="animate-float-delayed absolute -left-2 top-6 z-20 rounded-xl border border-teal-500/30 bg-[var(--card)]/95 px-4 py-3 shadow-xl shadow-teal-500/10 backdrop-blur-md sm:-left-8">
+            <p className="text-2xl font-bold text-teal-400">50X+</p>
+            <p className="text-xs text-zinc-400">Peak purchase ROAS</p>
+          </div>
+
+          <div className="animate-float absolute -right-1 top-1/3 z-20 rounded-xl border border-indigo-500/30 bg-[var(--card)]/95 px-4 py-3 shadow-xl shadow-indigo-500/10 backdrop-blur-md sm:-right-6">
+            <p className="text-2xl font-bold text-indigo-300">4,269</p>
+            <p className="text-xs text-zinc-400">Google conversions / yr</p>
+          </div>
+
+          <div className="absolute bottom-0 left-4 right-4 z-20 rounded-xl border border-white/10 bg-[var(--surface)]/95 p-4 backdrop-blur-md">
+            <p className="text-xs font-semibold tracking-wide text-teal-400 uppercase">
+              Specializing in
+            </p>
+            <p className="mt-1 text-sm leading-snug text-zinc-200">
+              Med spas · Aesthetic clinics · Home services · Lead gen
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
