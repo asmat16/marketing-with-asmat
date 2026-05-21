@@ -11,16 +11,22 @@ const slideVariants = {
   exit: { opacity: 0, x: -48 },
 };
 
-const customPhotoIds = new Set(["amanda-l", "priya-n"]);
+const customPhotoIds = new Set([
+  "amanda-l",
+  "priya-n",
+  "holly-burns",
+  "mike-r",
+  "tom-v",
+]);
 
 function testimonialPhotoClass(id: string) {
-  if (id === "amanda-l") {
-    return "h-full w-full scale-[1.35] object-cover object-[center_22%]";
-  }
-  if (id === "priya-n") {
-    return "h-full w-full scale-105 object-cover object-[center_12%]";
-  }
-  return "h-full w-full object-cover object-center";
+  const base = "h-full w-full object-cover";
+  if (id === "amanda-l") return `${base} scale-[1.35] object-[center_22%]`;
+  if (id === "priya-n") return `${base} scale-105 object-[center_12%]`;
+  if (id === "mike-r") return `${base} scale-[1.25] object-[center_20%]`;
+  if (id === "tom-v") return `${base} scale-105 object-[center_15%]`;
+  if (id === "holly-burns") return `${base} scale-105 object-[center_18%]`;
+  return `${base} object-center`;
 }
 
 export function Testimonials() {

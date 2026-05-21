@@ -2,10 +2,11 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 const links = [
+  { label: "Portfolio", href: siteConfig.links.portfolio },
   { label: "Upwork", href: siteConfig.links.upwork },
   { label: "LinkedIn", href: siteConfig.links.linkedin },
   { label: "Fiverr", href: siteConfig.links.fiverr },
-  { label: "Book a call", href: siteConfig.links.calendly },
+  { label: "Book a call", href: siteConfig.links.book },
 ] as const;
 
 export function Footer() {

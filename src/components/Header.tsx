@@ -7,7 +7,8 @@ import { siteConfig } from "@/lib/site";
 
 const nav = [
   { href: "#testimonials", label: "Reviews" },
-  { href: "#portfolio", label: "Portfolio" },
+  { href: siteConfig.links.portfolio, label: "Portfolio", external: true },
+  { href: "#portfolio", label: "Work" },
   { href: "#services", label: "Services" },
   { href: "#book", label: "Book" },
   { href: "#faq", label: "FAQ" },
@@ -29,6 +30,12 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              target={"external" in item && item.external ? "_blank" : undefined}
+              rel={
+                "external" in item && item.external
+                  ? "noopener noreferrer"
+                  : undefined
+              }
               className="text-sm text-zinc-400 transition-colors hover:text-white"
             >
               {item.label}
@@ -70,6 +77,12 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  target={"external" in item && item.external ? "_blank" : undefined}
+                  rel={
+                    "external" in item && item.external
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="block text-sm text-zinc-300"
                   onClick={() => setOpen(false)}
                 >

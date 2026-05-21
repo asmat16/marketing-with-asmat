@@ -18,6 +18,7 @@ import { Services } from "@/components/Services";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
 import { Testimonials } from "@/components/Testimonials";
+import { UpworkReviews } from "@/components/UpworkReviews";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <main className="min-h-screen bg-[var(--background)] pb-20 md:pb-0">
         <Hero />
         <Testimonials />
+        <UpworkReviews />
         <HireChannels />
         <NicheBar />
         <FeaturedPortfolio />

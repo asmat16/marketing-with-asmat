@@ -2,29 +2,40 @@ export const siteConfig = {
   name: "Marketing with Asmat",
   url: "https://www.marketingwithasmat.pro",
   description:
-    "Meta & Google media buyer specializing in lead generation and booked appointments for med spas, aesthetic clinics, and home service businesses. 7+ years experience. $20M+ ad spend managed.",
+    "USA-based Meta & Google media buyer for home service businesses, med spas, and aesthetic clinics. Qualified leads, booked calls, and appointments — 7+ years, $20M+ ad spend managed.",
   email: "asmat.llh@gmail.com",
   phone: "+923136109373",
   phoneDisplay: "+92 313 6109373",
+  calendly: {
+    /** Bookings appear in your Calendly dashboard + email (calendly.com) */
+    eventUrl: "https://calendly.com/asmat-llh/15",
+    eventName: "Free 15-Min Strategy Call",
+    embedParams:
+      "hide_gdpr_banner=1&hide_event_type_details=1&background_color=14141f&text_color=fafafa&primary_color=2dd4bf",
+  },
   links: {
     calendly: "https://calendly.com/asmat-llh/15",
+    book: "/book",
     upwork: "https://www.upwork.com/freelancers/proasmat",
     fiverr: "https://www.fiverr.com/users/muhammad_asmat/",
     linkedin: "https://www.linkedin.com/in/asmat16/",
     instagram: "https://www.instagram.com/marketingwithasmat/",
     facebook: "https://www.facebook.com/profile.php?id=61561281302647",
+    portfolio: "https://portfolio.marketingwithasmat.pro",
   },
   keywords: [
+    "best media buyer for home service business",
+    "media buyer for my business USA",
+    "home service media buyer",
+    "facebook ads home services USA",
+    "google ads contractor leads",
+    "HVAC media buyer",
     "media buyer med spa",
     "meta ads med spa",
     "google ads aesthetic clinic",
-    "lead generation med spa",
-    "facebook ads home services",
-    "appointment booking ads",
-    "paid media buyer",
+    "lead generation home services",
+    "paid media buyer United States",
     "meta google ads specialist",
-    "aesthetic clinic marketing",
-    "home service lead generation",
   ],
 } as const;
 
@@ -242,6 +253,14 @@ export const faqs = [
     q: "Do you create ad creative?",
     a: "I direct creative strategy, hooks, and angles based on what converts in your niche. I can work with your in-house team, UGC creators, or recommend formats (before/after, testimonial, offer-led) that perform for med spa and local service ads.",
   },
+  {
+    q: "Are you a media buyer for home service businesses in the USA?",
+    a: "Yes. I work with US-based HVAC, cleaning, landscaping, remodeling, and other home service companies that need qualified leads and phone calls from Meta and Google — not vanity clicks. Campaigns use service-area targeting, offer-led creative, and conversion tracking aligned to booked jobs.",
+  },
+  {
+    q: "How do I find the best media buyer for my business?",
+    a: "Look for proven lead-gen results in your niche, clear reporting on cost per lead and booked appointments, and experience with both Meta and Google. Book a free 15-minute strategy call to review your market, offers, and whether paid ads are the right fit before you commit budget.",
+  },
 ] as const;
 
 export const processSteps = [
@@ -268,5 +287,41 @@ export const processSteps = [
     title: "Scale what works",
     description:
       "Winning campaigns get more budget; underperformers get cut. You get clear reporting on real business outcomes.",
+  },
+] as const;
+
+/** Keyword-rich sections for SEO & readability (visible on homepage) */
+export const seoContentSections = [
+  {
+    id: "med-spa-media-buyer",
+    title: "Media buyer for med spas & aesthetic clinics",
+    paragraphs: [
+      "Med spas and aesthetic clinics need more than likes — they need booked consultations. I run Meta (Facebook & Instagram) and Google campaigns structured around lead forms, instant forms, and call-focused ads that attract patients searching for injectables, laser treatments, body contouring, and skincare.",
+      "With 7+ years managing paid media and $20M+ in ad spend, I optimize for cost per lead and cost per booked appointment — not vanity metrics. Every campaign includes audience research, offer alignment, creative direction, and weekly optimization.",
+    ],
+  },
+  {
+    id: "home-service-media-buyer-usa",
+    title: "Best media buyer for home service businesses in the USA",
+    paragraphs: [
+      "If you run an HVAC, plumbing, roofing, cleaning, landscaping, or remodeling company in the United States, you need a media buyer who understands local lead gen — not generic e-commerce playbooks. I manage Meta and Google campaigns built for service-area targeting, click-to-call, lead forms, and retargeting so you get qualified leads and booked jobs.",
+      "Business owners searching for a media buyer for their business often waste budget on broad audiences and weak offers. I focus on cost per lead, cost per booked call, and revenue — with weekly optimization, creative testing, and transparent reporting for US home service brands.",
+    ],
+  },
+  {
+    id: "home-service-lead-gen",
+    title: "Lead generation for home service businesses",
+    paragraphs: [
+      "Home service brands rely on qualified leads and phone calls. I build Meta and Google campaigns with seasonal offers, geo-targeted audiences, and remarketing that turns website visitors into booked jobs across the USA.",
+      "Whether you need Google Search ads for high-intent keywords like “HVAC repair near me” or Meta lead ads for local awareness, I focus on measurable outcomes: leads, calls, and revenue.",
+    ],
+  },
+  {
+    id: "meta-google-specialist",
+    title: "Meta & Google ads specialist — e-commerce & local",
+    paragraphs: [
+      "As a Top Rated Plus media buyer on Upwork, I've managed campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts), training companies, and local service providers. I'm Meta and Google certified with experience across B2B, B2C, and D2C.",
+      "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management — all aimed at scaling what works and cutting wasted spend fast.",
+    ],
   },
 ] as const;

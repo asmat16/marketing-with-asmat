@@ -30,13 +30,16 @@ export function TestimonialTicker() {
                 alt=""
                 width={20}
                 height={20}
-                className={
-                  item.id === "amanda-l"
-                    ? "h-full w-full scale-[1.4] object-cover object-[center_20%]"
-                    : item.id === "priya-n"
-                      ? "h-full w-full scale-110 object-cover object-[center_10%]"
-                      : "h-full w-full object-cover object-center"
-                }
+                className={[
+                  "h-full w-full object-cover",
+                  item.id === "amanda-l" && "scale-[1.4] object-[center_20%]",
+                  item.id === "priya-n" && "scale-110 object-[center_10%]",
+                  item.id === "mike-r" && "scale-[1.3] object-[center_18%]",
+                  item.id === "tom-v" && "scale-110 object-[center_12%]",
+                  item.id === "holly-burns" && "scale-110 object-[center_15%]",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
               />
             </span>
             <span className="font-medium text-zinc-300">{item.name}</span>
