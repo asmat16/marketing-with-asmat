@@ -53,7 +53,7 @@ export const testimonials: Testimonial[] = [
     location: "Edison, NJ",
     niche: "Dermatology clinic",
     image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=faces",
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=faces",
     quote:
       "Injectable campaigns are picky — offers, disclaimers, before/after rules. Asmat actually reads that stuff. We filled Tuesday and Thursday consult blocks three weeks straight after he refreshed creative.",
   },
@@ -77,7 +77,7 @@ export const testimonials: Testimonial[] = [
     location: "Scottsdale, AZ",
     niche: "IV wellness",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=faces",
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=faces",
     quote:
       "Hired on Upwork after a rough experience elsewhere. Clear scope, escrow, no fluff deck. Our drip-offer ROAS finally looked like real numbers — we're on month four and still going.",
   },
