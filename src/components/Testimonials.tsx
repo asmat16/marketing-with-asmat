@@ -11,6 +11,18 @@ const slideVariants = {
   exit: { opacity: 0, x: -48 },
 };
 
+const customPhotoIds = new Set(["amanda-l", "priya-n"]);
+
+function testimonialPhotoClass(id: string) {
+  if (id === "amanda-l") {
+    return "h-full w-full scale-[1.35] object-cover object-[center_22%]";
+  }
+  if (id === "priya-n") {
+    return "h-full w-full scale-105 object-cover object-[center_12%]";
+  }
+  return "h-full w-full object-cover object-center";
+}
+
 export function Testimonials() {
   const [index, setIndex] = useState(0);
   const count = testimonials.length;
@@ -89,13 +101,25 @@ export function Testimonials() {
               >
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
                   <div className="relative mx-auto shrink-0 sm:mx-0">
-                    <div className="relative h-24 w-24 overflow-hidden rounded-2xl ring-2 ring-white/10 sm:h-28 sm:w-28">
+                    <div
+                      className={`relative h-24 w-24 overflow-hidden rounded-2xl ring-2 ring-white/10 sm:h-28 sm:w-28 ${
+                        customPhotoIds.has(active.id)
+                          ? "bg-[var(--surface)]"
+                          : ""
+                      }`}
+                    >
+                      {customPhotoIds.has(active.id) ? (
+                        <span
+                          aria-hidden
+                          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[var(--background)]/25 via-transparent to-[var(--background)]/50"
+                        />
+                      ) : null}
                       <Image
                         src={active.image}
                         alt=""
                         width={112}
                         height={112}
-                        className="h-full w-full object-cover"
+                        className={testimonialPhotoClass(active.id)}
                         priority={index === 0}
                       />
                     </div>

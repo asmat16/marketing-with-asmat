@@ -52,8 +52,7 @@ export const testimonials: Testimonial[] = [
     role: "Medical director",
     location: "Edison, NJ",
     niche: "Dermatology clinic",
-    image:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=faces",
+    image: "/testimonials/priya.png",
     quote:
       "Injectable ads are picky with offers, disclaimers, before/after rules, all of it. Asmat actually reads that stuff instead of guessing. We filled Tuesday and Thursday consult blocks three weeks in a row after he refreshed creative.",
   },
@@ -76,8 +75,7 @@ export const testimonials: Testimonial[] = [
     role: "Co-founder",
     location: "Scottsdale, AZ",
     niche: "IV wellness",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=faces",
+    image: "/testimonials/amanda.png",
     quote:
       "Hired him on Upwork after a rough agency experience. Escrow, clear scope, no fluff proposal deck. Our drip offer ROAS finally looked like real numbers. Still working together on month four.",
   },

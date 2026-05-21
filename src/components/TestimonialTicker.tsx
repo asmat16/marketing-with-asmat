@@ -24,17 +24,23 @@ export function TestimonialTicker() {
             key={`${item.id}-${i}`}
             className="inline-flex shrink-0 items-center gap-2.5 text-[11px] text-zinc-400"
           >
-            <span className="relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-white/15">
+            <span className="relative h-5 w-5 overflow-hidden rounded-full bg-[var(--surface)] ring-1 ring-white/15">
               <Image
                 src={item.image}
                 alt=""
                 width={20}
                 height={20}
-                className="h-full w-full object-cover"
+                className={
+                  item.id === "amanda-l"
+                    ? "h-full w-full scale-[1.4] object-cover object-[center_20%]"
+                    : item.id === "priya-n"
+                      ? "h-full w-full scale-110 object-cover object-[center_10%]"
+                      : "h-full w-full object-cover object-center"
+                }
               />
             </span>
             <span className="font-medium text-zinc-300">{item.name}</span>
-            <span className="text-zinc-500">—</span>
+            <span className="text-zinc-500">,</span>
             <span className="max-w-[280px] truncate italic text-zinc-500">
               &ldquo;{item.snippet}&rdquo;
             </span>
