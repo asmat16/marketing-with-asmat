@@ -16,7 +16,7 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20">
+    <section className="relative min-h-[92vh] overflow-hidden pt-[7.25rem] pb-16 sm:pt-[7.75rem] sm:pb-20">
       <div
         aria-hidden
         className="bg-grid pointer-events-none absolute inset-0 opacity-60"

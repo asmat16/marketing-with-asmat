@@ -16,14 +16,18 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { SeoContent } from "@/components/SeoContent";
 import { Services } from "@/components/Services";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
+import { TestimonialTicker } from "@/components/TestimonialTicker";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
     <>
       <JsonLd />
+      <TestimonialTicker />
       <Header />
       <main className="min-h-screen bg-[var(--background)] pb-20 md:pb-0">
         <Hero />
+        <Testimonials />
         <HireChannels />
         <NicheBar />
         <FeaturedPortfolio />
