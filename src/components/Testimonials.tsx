@@ -42,13 +42,12 @@ export function Testimonials() {
               Client feedback
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
-              Our clients have real insights — and they&apos;re not shy about
-              sharing them
+              Our clients actually tell us how it went
             </h2>
             <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
               Home service owners, clinic teams, and local brands across the US.
-              No scripted fluff — just what happened after we ran their Meta and
-              Google campaigns.
+              Real feedback from people running Meta and Google with us, not
+              polished marketing copy.
             </p>
             <div className="mt-6 flex items-center gap-2">
               {testimonials.map((t, i) => (
@@ -116,7 +115,7 @@ export function Testimonials() {
                       <p className="text-sm text-zinc-400">{active.role}</p>
                     </div>
                     <p className="mt-0.5 text-xs text-zinc-500">
-                      {active.niche} · {active.location}
+                      {active.niche}, {active.location}
                     </p>
                     <blockquote className="mt-4 text-[15px] leading-relaxed text-zinc-200 sm:text-base">
                       &ldquo;{active.quote}&rdquo;
