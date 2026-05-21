@@ -95,80 +95,38 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          <motion.div
+          <motion.dl
             custom={4}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mt-12 sm:mt-14"
+            className="mt-10 grid grid-cols-2 gap-2 sm:mt-11 sm:grid-cols-4 sm:gap-2.5"
           >
-            <p className="mb-4 text-xs font-semibold tracking-[0.2em] text-teal-400/90 uppercase">
-              Proven track record
-            </p>
-            <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-              {heroStats.map((stat, index) => {
-                const accents = [
-                  {
-                    bar: "bg-teal-400",
-                    border: "border-teal-500/25",
-                    glow: "shadow-teal-500/15",
-                    hoverBorder: "hover:border-teal-400/50",
-                    hoverGlow: "hover:shadow-teal-500/25",
-                    value: "text-teal-300",
-                  },
-                  {
-                    bar: "bg-indigo-400",
-                    border: "border-indigo-500/25",
-                    glow: "shadow-indigo-500/15",
-                    hoverBorder: "hover:border-indigo-400/50",
-                    hoverGlow: "hover:shadow-indigo-500/25",
-                    value: "text-indigo-200",
-                  },
-                  {
-                    bar: "bg-teal-400",
-                    border: "border-teal-500/20",
-                    glow: "shadow-teal-500/10",
-                    hoverBorder: "hover:border-teal-400/45",
-                    hoverGlow: "hover:shadow-teal-500/20",
-                    value: "text-gradient",
-                  },
-                  {
-                    bar: "bg-[#14A800]",
-                    border: "border-[#14A800]/30",
-                    glow: "shadow-[#14A800]/20",
-                    hoverBorder: "hover:border-[#14A800]/55",
-                    hoverGlow: "hover:shadow-[#14A800]/30",
-                    value: "text-[#6fdc6f]",
-                  },
-                ] as const;
-                const accent = accents[index] ?? accents[0];
+            {heroStats.map((stat, index) => {
+              const valueStyles = [
+                "text-teal-300",
+                "text-indigo-200/95",
+                "text-white",
+                "text-[#6fdc6f]",
+              ] as const;
 
-                return (
-                  <div
-                    key={stat.label}
-                    className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-br from-[var(--card)] via-[var(--card)] to-[var(--surface)]/90 p-4 shadow-lg backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 sm:p-5 ${accent.border} ${accent.glow} ${accent.hoverBorder} ${accent.hoverGlow}`}
+              return (
+                <div
+                  key={stat.label}
+                  className="flex min-h-[4.25rem] flex-col justify-center rounded-lg border border-white/[0.08] bg-[var(--card)]/50 px-3 py-2.5 backdrop-blur-sm transition-colors duration-300 hover:border-white/15 hover:bg-[var(--card)]/75 sm:min-h-[4.5rem] sm:px-3.5"
+                >
+                  <dt
+                    className={`text-lg font-bold leading-none tracking-tight sm:text-xl ${valueStyles[index] ?? valueStyles[0]}`}
                   >
-                    <span
-                      aria-hidden
-                      className={`absolute left-0 top-0 h-full w-1 ${accent.bar} transition-all duration-300 group-hover:w-1.5`}
-                    />
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/[0.03] blur-2xl transition-opacity duration-300 group-hover:opacity-100"
-                    />
-                    <dt
-                      className={`relative text-2xl font-bold tracking-tight sm:text-[1.75rem] lg:text-4xl ${accent.value}`}
-                    >
-                      {stat.value}
-                    </dt>
-                    <dd className="relative mt-2 text-xs font-medium leading-snug text-zinc-300 transition-colors duration-300 group-hover:text-zinc-100 sm:text-sm">
-                      {stat.label}
-                    </dd>
-                  </div>
-                );
-              })}
-            </dl>
-          </motion.div>
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-1.5 text-[10px] leading-tight text-zinc-500 sm:text-[11px]">
+                    {stat.label}
+                  </dd>
+                </div>
+              );
+            })}
+          </motion.dl>
         </div>
 
         <motion.div
