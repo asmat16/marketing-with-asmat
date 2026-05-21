@@ -82,9 +82,7 @@ export function Hero() {
             className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <Link
-              href={siteConfig.links.calendly}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={siteConfig.links.book}
               className="group inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/25 transition-all hover:shadow-teal-500/40 hover:brightness-110"
             >
               Book a free strategy call
@@ -97,27 +95,80 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          <motion.dl
+          <motion.div
             custom={4}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4"
+            className="mt-12 sm:mt-14"
           >
-            {heroStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="card-hover rounded-xl border border-white/10 bg-[var(--card)]/80 p-4 backdrop-blur-sm"
-              >
-                <dt className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                  {stat.value}
-                </dt>
-                <dd className="mt-1 text-xs text-zinc-400 sm:text-sm">
-                  {stat.label}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
+            <p className="mb-4 text-xs font-semibold tracking-[0.2em] text-teal-400/90 uppercase">
+              Proven track record
+            </p>
+            <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+              {heroStats.map((stat, index) => {
+                const accents = [
+                  {
+                    bar: "bg-teal-400",
+                    border: "border-teal-500/25",
+                    glow: "shadow-teal-500/15",
+                    hoverBorder: "hover:border-teal-400/50",
+                    hoverGlow: "hover:shadow-teal-500/25",
+                    value: "text-teal-300",
+                  },
+                  {
+                    bar: "bg-indigo-400",
+                    border: "border-indigo-500/25",
+                    glow: "shadow-indigo-500/15",
+                    hoverBorder: "hover:border-indigo-400/50",
+                    hoverGlow: "hover:shadow-indigo-500/25",
+                    value: "text-indigo-200",
+                  },
+                  {
+                    bar: "bg-teal-400",
+                    border: "border-teal-500/20",
+                    glow: "shadow-teal-500/10",
+                    hoverBorder: "hover:border-teal-400/45",
+                    hoverGlow: "hover:shadow-teal-500/20",
+                    value: "text-gradient",
+                  },
+                  {
+                    bar: "bg-[#14A800]",
+                    border: "border-[#14A800]/30",
+                    glow: "shadow-[#14A800]/20",
+                    hoverBorder: "hover:border-[#14A800]/55",
+                    hoverGlow: "hover:shadow-[#14A800]/30",
+                    value: "text-[#6fdc6f]",
+                  },
+                ] as const;
+                const accent = accents[index] ?? accents[0];
+
+                return (
+                  <div
+                    key={stat.label}
+                    className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-br from-[var(--card)] via-[var(--card)] to-[var(--surface)]/90 p-4 shadow-lg backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 sm:p-5 ${accent.border} ${accent.glow} ${accent.hoverBorder} ${accent.hoverGlow}`}
+                  >
+                    <span
+                      aria-hidden
+                      className={`absolute left-0 top-0 h-full w-1 ${accent.bar} transition-all duration-300 group-hover:w-1.5`}
+                    />
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/[0.03] blur-2xl transition-opacity duration-300 group-hover:opacity-100"
+                    />
+                    <dt
+                      className={`relative text-2xl font-bold tracking-tight sm:text-[1.75rem] lg:text-4xl ${accent.value}`}
+                    >
+                      {stat.value}
+                    </dt>
+                    <dd className="relative mt-2 text-xs font-medium leading-snug text-zinc-300 transition-colors duration-300 group-hover:text-zinc-100 sm:text-sm">
+                      {stat.label}
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
+          </motion.div>
         </div>
 
         <motion.div
