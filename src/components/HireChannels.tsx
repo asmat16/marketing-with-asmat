@@ -98,7 +98,7 @@ export function HireChannels() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-teal-500/[0.03] to-transparent"
       />
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell relative">
         <p className="mb-3 text-center text-[10px] font-semibold tracking-[0.18em] text-zinc-500 uppercase sm:mb-3.5 sm:text-left">
           Hire me your way
         </p>

@@ -7,7 +7,10 @@ export function BlogCard({ post }: { post: BlogPost }) {
   const isSvg = post.cover.split("?")[0].endsWith(".svg");
 
   return (
-    <article className="card-hover group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[var(--card)]">
+    <article
+      data-reveal
+      className="card-hover group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[var(--card)]"
+    >
       <Link
         href={`/blogs/${post.slug}`}
         className="relative block aspect-[1200/630] overflow-hidden bg-[var(--surface)]"

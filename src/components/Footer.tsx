@@ -14,7 +14,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/[0.08] bg-[var(--surface)] py-12">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-semibold text-white">{siteConfig.name}</p>

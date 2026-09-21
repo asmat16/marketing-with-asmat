@@ -19,8 +19,8 @@ export default async function PortfolioFolderPage({
   }
 
   return (
-    <div className="px-5 py-10 sm:px-8 sm:py-14">
-      <div className="mx-auto max-w-5xl">
+    <div className="py-10 sm:py-14">
+      <div className="page-shell">
         <PortfolioSlideshow folder={folder} />
       </div>
     </div>

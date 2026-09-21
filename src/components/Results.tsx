@@ -5,7 +5,7 @@ import { SectionHeading } from "./SectionHeading";
 export function Results() {
   return (
     <section id="results" className="border-t border-white/[0.08] bg-[var(--background)] py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell">
         <SectionHeading
           label="Results"
           title="Experience backed by measurable outcomes"
@@ -16,6 +16,7 @@ export function Results() {
           {resultsHighlights.map((item) => (
             <div
               key={item.label}
+              data-reveal
               className="card-hover rounded-2xl border border-white/10 bg-[var(--card)] p-6"
             >
               <p className="text-3xl font-semibold tracking-tight text-teal-400">
@@ -27,7 +28,7 @@ export function Results() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-2xl border border-white/10 bg-[var(--card)] p-8 sm:p-10">
+        <div data-reveal className="mt-16 rounded-2xl border border-white/10 bg-[var(--card)] p-8 sm:p-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-xs font-medium tracking-widest text-teal-400/90 uppercase">

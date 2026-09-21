@@ -8,7 +8,7 @@ export function SeoContent() {
       className="border-t border-white/[0.08] bg-[var(--background)] py-24 sm:py-28"
       aria-label="About services"
     >
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+      <div className="page-shell">
         <SectionHeading
           label="Expertise"
           title="Paid media for e-commerce, real estate & home services"
@@ -16,10 +16,18 @@ export function SeoContent() {
           align="center"
         />
 
-        <div className="mt-14 space-y-14">
+        <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:gap-10">
           {seoContentSections.map((section) => (
-            <article key={section.id} id={section.id}>
-              <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
+            <article
+              key={section.id}
+              id={section.id}
+              data-reveal
+              className="card-hover rounded-2xl border border-white/10 bg-[var(--card)] p-6 sm:p-8"
+            >
+              <h2
+                data-split
+                className="text-xl font-bold tracking-tight text-white sm:text-2xl"
+              >
                 {section.title}
               </h2>
               <div className="mt-4 space-y-4">

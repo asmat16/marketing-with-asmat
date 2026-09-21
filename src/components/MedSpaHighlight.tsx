@@ -8,13 +8,16 @@ export function MedSpaHighlight() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(45,212,191,0.08),transparent_60%)]"
       />
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="card-hover flex flex-col gap-8 rounded-3xl border border-teal-500/20 bg-gradient-to-br from-teal-500/10 via-[var(--card)] to-indigo-500/10 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
-          <div className="max-w-xl">
+      <div className="page-shell relative">
+        <div
+          data-reveal
+          className="card-hover flex flex-col gap-8 rounded-3xl border border-teal-500/20 bg-gradient-to-br from-teal-500/10 via-[var(--card)] to-indigo-500/10 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10"
+        >
+          <div className="max-w-2xl">
             <p className="text-xs font-semibold tracking-widest text-teal-400 uppercase">
               Sales engine
             </p>
-            <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            <h2 data-split className="mt-2 text-2xl font-bold text-white sm:text-3xl">
               E-commerce and DTC ads built to sell, not collect leads
             </h2>
             <p className="mt-3 text-zinc-300 leading-relaxed">

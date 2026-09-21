@@ -25,14 +25,17 @@ export default function BookPage() {
     <>
       <Header />
       <main className="min-h-screen bg-[var(--background)] pt-24 pb-16">
-        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-5xl">
           <Link
             href="/"
             className="text-sm text-zinc-500 transition-colors hover:text-white"
           >
             ← Back to home
           </Link>
-          <h1 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h1
+            data-split
+            className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
             Book your free strategy call
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-zinc-400">

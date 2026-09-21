@@ -18,8 +18,8 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-9 z-50 border-b border-white/[0.08] bg-[var(--background)]/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+    <header className="site-chrome fixed top-9 z-50 border-b border-white/[0.08] bg-[var(--background)]/85 backdrop-blur-xl">
+      <div className="page-shell flex h-16 items-center justify-between">
         <Link href="/" className="text-white" onClick={() => setOpen(false)}>
           <Logo accent />
         </Link>

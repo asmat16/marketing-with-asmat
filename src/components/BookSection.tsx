@@ -9,7 +9,7 @@ export function BookSection() {
       id="book"
       className="border-t border-white/[0.08] bg-[var(--surface)] py-24 sm:py-28"
     >
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
+      <div className="mx-auto w-full max-w-5xl">
         <SectionHeading
           label="Book a call"
           title="Schedule your free strategy call"

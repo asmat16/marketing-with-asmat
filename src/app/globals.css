@@ -10,6 +10,7 @@
   --accent: #2dd4bf;
   --accent-secondary: #818cf8;
   --border: rgba(255, 255, 255, 0.1);
+  --page-gutter: clamp(1.25rem, 4vw, 2.75rem);
 }
 
 @theme inline {
@@ -26,6 +27,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  padding-inline: var(--page-gutter);
 }
 
 ::selection {
@@ -48,21 +50,53 @@ body {
   background-clip: text;
 }
 
+.page-shell {
+  width: 100%;
+  max-width: 96rem;
+  margin-inline: auto;
+}
+
+.site-chrome {
+  left: var(--page-gutter);
+  right: var(--page-gutter);
+}
+
 .card-hover {
   transition:
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.35s ease,
     box-shadow 0.35s ease,
     background-color 0.35s ease;
+  will-change: transform;
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(45, 212, 191, 0.35);
+  transform: translateY(-6px) scale(1.012);
+  border-color: rgba(45, 212, 191, 0.4);
   box-shadow:
-    0 20px 40px -12px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(45, 212, 191, 0.1),
-    0 0 32px -8px rgba(45, 212, 191, 0.15);
+    0 24px 48px -14px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(45, 212, 191, 0.12),
+    0 0 40px -10px rgba(45, 212, 191, 0.2);
+}
+
+.split-line,
+[data-split] .split-line {
+  overflow: hidden;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover,
+  .card-hover:hover {
+    transform: none;
+    will-change: auto;
+  }
+
+  .animate-float,
+  .animate-float-delayed,
+  .animate-pulse-glow {
+    animation: none;
+  }
 }
 
 @keyframes float {

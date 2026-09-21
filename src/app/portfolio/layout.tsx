@@ -16,7 +16,7 @@ export default function PortfolioLayout({
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <header className="border-b border-white/[0.08] bg-[var(--background)]/90 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:px-8">
+        <div className="page-shell flex h-14 items-center justify-between">
           <Link href="/portfolio" className="text-sm font-semibold text-white">
             Marketing with Asmat
           </Link>

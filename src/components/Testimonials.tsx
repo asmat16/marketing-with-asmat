@@ -1,190 +1,70 @@
-"use client";
-
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import { testimonials } from "@/lib/testimonials";
 
-const slideVariants = {
-  enter: { opacity: 0, x: 48 },
-  center: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -48 },
-};
-
-const customPhotoIds = new Set([
-  "amanda-l",
-  "priya-n",
-  "holly-burns",
-  "mike-r",
-  "tom-v",
-]);
-
-function testimonialPhotoClass(id: string) {
-  const base = "h-full w-full object-cover";
-  if (id === "amanda-l") return `${base} scale-[1.35] object-[center_22%]`;
-  if (id === "priya-n") return `${base} scale-105 object-[center_12%]`;
-  if (id === "mike-r") return `${base} scale-[1.25] object-[center_20%]`;
-  if (id === "tom-v") return `${base} scale-105 object-[center_15%]`;
-  if (id === "holly-burns") return `${base} scale-105 object-[center_18%]`;
-  return `${base} object-center`;
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
 }
 
 export function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const count = testimonials.length;
-
-  const next = useCallback(() => {
-    setIndex((i) => (i + 1) % count);
-  }, [count]);
-
-  const prev = useCallback(() => {
-    setIndex((i) => (i - 1 + count) % count);
-  }, [count]);
-
-  useEffect(() => {
-    const timer = setInterval(next, 6000);
-    return () => clearInterval(timer);
-  }, [next]);
-
-  const active = testimonials[index];
-
   return (
     <section
       id="testimonials"
       className="scroll-mt-28 border-t border-white/[0.08] bg-[var(--background)] py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
-          <div className="max-w-xl">
-            <p className="text-xs font-medium tracking-widest text-teal-400/90 uppercase">
-              Client feedback
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
-              Our clients actually tell us how it went
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
-              Store owners, real estate teams, home service brands, and local
-              operators across the US. Real feedback from people running Meta
-              and Google with us, not polished marketing copy.
-            </p>
-            <div className="mt-6 flex items-center gap-2">
-              {testimonials.map((t, i) => (
-                <button
-                  key={t.id}
-                  type="button"
-                  aria-label={`Show review from ${t.name}`}
-                  aria-current={i === index ? "true" : undefined}
-                  onClick={() => setIndex(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === index
-                      ? "w-8 bg-teal-400"
-                      : "w-1.5 bg-zinc-600 hover:bg-zinc-500"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="relative min-h-[320px] sm:min-h-[300px]">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-8 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-teal-500/10 blur-3xl"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[var(--background)] to-transparent"
-            />
-
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.article
-                key={active.id}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[var(--card)] via-[var(--card)] to-[var(--surface)]/80 p-5 shadow-xl shadow-black/20 backdrop-blur-md sm:p-6"
-              >
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
-                  <div className="relative mx-auto shrink-0 sm:mx-0">
-                    <div
-                      className={`relative h-24 w-24 overflow-hidden rounded-2xl ring-2 ring-white/10 sm:h-28 sm:w-28 ${
-                        customPhotoIds.has(active.id)
-                          ? "bg-[var(--surface)]"
-                          : ""
-                      }`}
-                    >
-                      {customPhotoIds.has(active.id) ? (
-                        <span
-                          aria-hidden
-                          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[var(--background)]/25 via-transparent to-[var(--background)]/50"
-                        />
-                      ) : null}
-                      <Image
-                        src={active.image}
-                        alt=""
-                        width={112}
-                        height={112}
-                        className={testimonialPhotoClass(active.id)}
-                        priority={index === 0}
-                      />
-                    </div>
-                    <span className="absolute -bottom-1 -right-1 rounded-md bg-teal-500/90 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-zinc-950 uppercase">
-                      USA
-                    </span>
-                  </div>
-
-                  <div className="min-w-0 flex-1 text-center sm:text-left">
-                    <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 sm:justify-start">
-                      <p className="text-base font-semibold text-white">
-                        {active.name}
-                      </p>
-                      <span className="text-zinc-600" aria-hidden>
-                        ·
-                      </span>
-                      <p className="text-sm text-zinc-400">{active.role}</p>
-                    </div>
-                    <p className="mt-0.5 text-xs text-zinc-500">
-                      {active.niche}, {active.location}
-                    </p>
-                    <blockquote className="mt-4 text-[15px] leading-relaxed text-zinc-200 sm:text-base">
-                      &ldquo;{active.quote}&rdquo;
-                    </blockquote>
-                    {active.caseStudy ? (
-                      <div className="mt-4 rounded-xl border border-teal-500/20 bg-teal-500/5 px-4 py-3 text-left">
-                        <p className="text-[10px] font-semibold tracking-widest text-teal-400/90 uppercase">
-                          Quick snapshot
-                        </p>
-                        <p className="mt-1.5 text-xs leading-relaxed text-zinc-300 sm:text-sm">
-                          {active.caseStudy}
-                        </p>
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-              </motion.article>
-            </AnimatePresence>
-
-            <div className="mt-4 flex justify-end gap-2">
-              <button
-                type="button"
-                onClick={prev}
-                aria-label="Previous review"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[var(--card)] text-zinc-400 transition-colors hover:border-teal-500/30 hover:text-white"
-              >
-                ←
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                aria-label="Next review"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[var(--card)] text-zinc-400 transition-colors hover:border-teal-500/30 hover:text-white"
-              >
-                →
-              </button>
-            </div>
-          </div>
+      <div className="page-shell">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-medium tracking-widest text-teal-400/90 uppercase">
+            Client feedback
+          </p>
+          <h2
+            data-split
+            className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]"
+          >
+            Real clients. Their words. Their LinkedIn.
+          </h2>
+          <p data-reveal className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
+            Four reviews from people who ran paid acquisition with us. Open any
+            LinkedIn profile to see who they are.
+          </p>
         </div>
+
+        <ul className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
+          {testimonials.map((t) => (
+            <li key={t.id} data-reveal>
+              <article className="card-hover flex h-full flex-col items-center rounded-3xl border border-white/10 bg-[var(--card)] px-6 py-8 text-center">
+                <div className="relative h-36 w-36 overflow-hidden rounded-full bg-[var(--surface)] ring-4 ring-[#0A66C2]/35 sm:h-40 sm:w-40">
+                  <Image
+                    src={t.image}
+                    alt={`${t.name} LinkedIn profile photo`}
+                    fill
+                    sizes="160px"
+                    className={`object-cover ${t.imageClass ?? "object-center"}`}
+                  />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-white">{t.name}</h3>
+                <p className="mt-1 text-sm text-zinc-400">{t.role}</p>
+                <p className="mt-0.5 text-xs text-zinc-500">{t.location}</p>
+                <blockquote className="mt-5 flex-1 text-[15px] leading-relaxed text-zinc-300">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <Link
+                  href={t.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#0A66C2] px-5 text-sm font-semibold text-white shadow-lg shadow-[#0A66C2]/20 transition-all hover:bg-[#0c7bd3] hover:shadow-[#0A66C2]/35"
+                >
+                  <LinkedInIcon className="h-4 w-4" />
+                  LinkedIn profile
+                </Link>
+              </article>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

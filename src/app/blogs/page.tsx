@@ -75,11 +75,14 @@ export default function BlogsPage() {
       <TestimonialTicker />
       <Header />
       <main className="min-h-screen bg-[var(--background)] pt-28 pb-24">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="page-shell">
           <p className="text-xs font-medium tracking-widest text-teal-400/90 uppercase">
             Blog
           </p>
-          <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1
+            data-split
+            className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-5xl"
+          >
             {title}
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-400">

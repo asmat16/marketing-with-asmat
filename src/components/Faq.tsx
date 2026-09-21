@@ -9,7 +9,7 @@ export function Faq() {
 
   return (
     <section id="faq" className="border-t border-white/[0.08] bg-[var(--surface)] py-24 sm:py-28">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+      <div className="mx-auto w-full max-w-5xl">
         <SectionHeading
           label="FAQ"
           title="Common questions before you book"
@@ -23,6 +23,7 @@ export function Faq() {
             return (
               <li
                 key={item.q}
+                data-reveal
                 className="overflow-hidden rounded-xl border border-white/10 bg-[var(--card)] transition-colors hover:border-teal-500/20"
               >
                 <button

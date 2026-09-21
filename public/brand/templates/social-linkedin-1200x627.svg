@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" fill="none">
+  <defs>
+    <pattern id="grid-li" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="627" fill="#14141f"/>
+  <rect width="1200" height="627" fill="url(#grid-li)"/>
+  <text font-family="Inter, system-ui, sans-serif">
+    <tspan x="80" y="120" font-size="16" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">Marketing </tspan>
+    <tspan font-size="16" font-weight="400" fill="#71717a">with </tspan>
+    <tspan font-size="30" font-weight="700" fill="#fafafa" letter-spacing="0.14em">ASMAT</tspan>
+  </text>
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="#f4f4f5">Meta &amp; Google media buyer</text>
+  <text x="80" y="340" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="#9ca3af">Med spas � aesthetic clinics � home services (USA)</text>
+  <rect x="80" y="380" width="80" height="3" rx="1.5" fill="#2dd4bf"/>
+  <text x="80" y="560" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#71717a">marketingwithasmat.pro</text>
+</svg>

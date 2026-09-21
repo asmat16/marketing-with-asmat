@@ -41,7 +41,7 @@ export function FeaturedPortfolio() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(129,140,248,0.06),transparent_70%)]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell relative">
         <SectionHeading
           label="Case studies"
           title="Campaign results from real ad accounts"

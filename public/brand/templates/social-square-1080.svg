@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" fill="none">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1080" fill="#14141f"/>
+  <rect width="1080" height="1080" fill="url(#grid)"/>
+  <rect x="80" y="80" width="920" height="920" rx="32" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Logo zone (import logo-square-on-dark or paste text) -->
+  <text text-anchor="middle" font-family="Inter, system-ui, sans-serif">
+    <tspan x="540" y="420" font-size="22" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">Marketing </tspan>
+    <tspan font-size="22" font-weight="400" fill="#71717a">with</tspan>
+    <tspan x="540" y="500" font-size="64" font-weight="700" fill="#fafafa" letter-spacing="0.16em">ASMAT</tspan>
+  </text>
+  <!-- Headline placeholder -->
+  <text x="540" y="620" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="700" fill="#f4f4f5">Your headline here</text>
+  <text x="540" y="680" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="#9ca3af">Supporting line � med spa &amp; home service leads</text>
+  <!-- Accent rule -->
+  <rect x="440" y="720" width="200" height="3" rx="1.5" fill="#2dd4bf"/>
+  <!-- Footer URL -->
+  <text x="540" y="960" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#71717a" letter-spacing="0.08em">marketingwithasmat.pro</text>
+</svg>

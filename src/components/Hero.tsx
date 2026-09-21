@@ -34,7 +34,7 @@ export function Hero() {
         className="animate-pulse-glow pointer-events-none absolute -right-10 top-10 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+      <div className="page-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
         <div>
           <motion.p
             custom={0}
@@ -113,7 +113,7 @@ export function Hero() {
               return (
                 <div
                   key={stat.label}
-                  className="flex min-h-[4.25rem] flex-col justify-center rounded-lg border border-white/[0.08] bg-[var(--card)]/50 px-3 py-2.5 backdrop-blur-sm transition-colors duration-300 hover:border-white/15 hover:bg-[var(--card)]/75 sm:min-h-[4.5rem] sm:px-3.5"
+                  className="card-hover flex min-h-[4.25rem] flex-col justify-center rounded-lg border border-white/[0.08] bg-[var(--card)]/50 px-3 py-2.5 backdrop-blur-sm sm:min-h-[4.5rem] sm:px-3.5"
                 >
                   <dt
                     className={`text-lg font-bold leading-none tracking-tight sm:text-xl ${valueStyles[index] ?? valueStyles[0]}`}
@@ -144,15 +144,17 @@ export function Hero() {
               aria-hidden
               className="pointer-events-none absolute bottom-4 left-1/2 h-6 w-[50%] -translate-x-1/2 rounded-[100%] bg-black/50 blur-2xl"
             />
-            <Image
-              src="/asmat-hero.png"
-              alt="Asmat, Meta and Google media buyer for e-commerce, real estate, and home services"
-              width={520}
-              height={871}
-              priority
-              className="relative z-10 h-auto w-full max-w-[300px] object-contain object-bottom drop-shadow-[0_28px_56px_rgba(0,0,0,0.55)] sm:max-w-[360px] lg:max-w-[400px]"
-              sizes="(max-width: 1024px) 90vw, 400px"
-            />
+            <div data-parallax="6" className="relative z-10 w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[400px]">
+              <Image
+                src="/asmat-hero.png"
+                alt="Asmat, Meta and Google media buyer for e-commerce, real estate, and home services"
+                width={520}
+                height={871}
+                priority
+                className="h-auto w-full object-contain object-bottom drop-shadow-[0_28px_56px_rgba(0,0,0,0.55)]"
+                sizes="(max-width: 1024px) 90vw, 400px"
+              />
+            </div>
           </div>
 
           <div className="animate-float-delayed absolute -left-2 top-6 z-20 rounded-xl border border-teal-500/30 bg-[var(--card)]/95 px-4 py-3 shadow-xl shadow-teal-500/10 backdrop-blur-md sm:-left-8">

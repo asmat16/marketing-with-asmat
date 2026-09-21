@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 export function Services() {
   return (
     <section id="services" className="border-t border-white/[0.08] py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell">
         <SectionHeading
           label="Services"
           title="Sales ads and lead generation built for your niche"
@@ -15,6 +15,7 @@ export function Services() {
           {services.map((service) => (
             <article
               key={service.title}
+              data-reveal
               className="card-hover group flex flex-col rounded-2xl border border-white/10 bg-[var(--card)] p-6 hover:bg-[var(--card-hover)]"
             >
               <h3 className="text-lg font-semibold text-white">

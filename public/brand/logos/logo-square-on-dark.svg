@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" role="img" aria-label="Marketing with ASMAT">
+  <title>Marketing with ASMAT</title>
+  <rect width="400" height="400" rx="24" fill="#14141f"/>
+  <rect x="0.5" y="0.5" width="399" height="399" rx="23.5" stroke="rgba(255,255,255,0.1)"/>
+  <text text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <tspan x="200" y="168" font-size="18" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">Marketing </tspan>
+    <tspan font-size="18" font-weight="400" fill="#71717a">with</tspan>
+    <tspan x="200" y="248" font-size="52" font-weight="700" fill="#fafafa" letter-spacing="0.16em">ASMAT</tspan>
+  </text>
+</svg>

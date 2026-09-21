@@ -6,7 +6,7 @@ import { SectionHeading } from "./SectionHeading";
 export function Contact() {
   return (
     <section id="contact" className="border-t border-white/[0.08] py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell">
         <SectionHeading
           label="Contact"
           title="Message me or book a call"
@@ -15,7 +15,10 @@ export function Contact() {
         />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-[var(--card)] p-6 sm:p-8">
+          <div
+            data-reveal
+            className="card-hover rounded-2xl border border-white/10 bg-[var(--card)] p-6 sm:p-8"
+          >
             <h3 className="text-lg font-semibold text-white">Send a message</h3>
             <p className="mt-2 text-sm text-zinc-400">
               Leads from this form are emailed to{" "}
@@ -32,7 +35,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between gap-6">
+          <div data-reveal className="flex flex-col justify-between gap-6">
             <Link
               href={siteConfig.links.book}
               className="card-hover flex items-center justify-between rounded-2xl border border-teal-500/30 bg-teal-500/10 p-6 hover:bg-teal-500/15"
@@ -53,7 +56,7 @@ export function Contact() {
             <div className="grid gap-3 sm:grid-cols-2">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm transition-colors hover:border-white/20"
+                className="card-hover rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm"
               >
                 <p className="text-zinc-500">Phone</p>
                 <p className="mt-1 font-medium text-white">
@@ -62,7 +65,7 @@ export function Contact() {
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm transition-colors hover:border-white/20"
+                className="card-hover rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm"
               >
                 <p className="text-zinc-500">Email</p>
                 <p className="mt-1 font-medium text-white">

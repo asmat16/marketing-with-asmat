@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 
 export function StickyMobileCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[var(--background)]/95 p-3 backdrop-blur-lg md:hidden">
+    <div className="site-chrome fixed bottom-0 z-40 border-t border-white/10 bg-[var(--background)]/95 p-3 backdrop-blur-lg md:hidden">
       <div className="flex gap-2">
         <Link
           href={siteConfig.links.book}

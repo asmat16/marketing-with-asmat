@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <TestimonialTicker />
       <Header />
       <main className="min-h-screen bg-[var(--background)] pt-28 pb-24">
-        <article className="mx-auto max-w-3xl px-5 sm:px-8">
+        <article className="mx-auto w-full max-w-3xl">
           <nav aria-label="Breadcrumb" className="text-sm text-zinc-500">
             <ol className="flex flex-wrap gap-2">
               <li>
@@ -237,7 +237,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </section>
         </article>
 
-        <aside className="mx-auto mt-16 max-w-6xl px-5 sm:px-8">
+        <aside className="page-shell mt-16">
           <h2 className="text-2xl font-bold text-white">Keep reading</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((item) => (

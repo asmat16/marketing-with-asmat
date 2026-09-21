@@ -20,7 +20,7 @@ export function BlogInsights() {
       className="border-t border-white/[0.08] py-24 sm:py-28"
       aria-labelledby="insights-heading"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="page-shell">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             label="Insights"

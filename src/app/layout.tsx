@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { PageMotion } from "@/components/PageMotion";
 import { siteConfig } from "@/lib/site";
 
 const inter = Inter({
@@ -64,7 +65,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://calendly.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        <PageMotion />
+        {children}
+      </body>
     </html>
   );
 }
