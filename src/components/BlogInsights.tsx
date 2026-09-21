@@ -7,7 +7,7 @@ import { SectionHeading } from "./SectionHeading";
 export function BlogInsights() {
   const featuredSlugs = [
     "google-ads-hvac-home-service-leads-usa",
-    "funnel-optimization-before-meta-ads",
+    "funnel-optimization-expert-before-meta-ads",
     "ai-ads-strategist-creative-beats-ad-spend",
   ];
   const featured = featuredSlugs
