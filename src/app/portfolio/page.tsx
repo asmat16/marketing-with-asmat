@@ -16,7 +16,7 @@ export default function PortfolioHomePage() {
         </h1>
         <p className="mt-4 max-w-xl text-base text-zinc-400 sm:text-lg">
           Six folders. Real ad account screenshots and custom case study boards
-          for med spas, home services, trades, e-commerce, Google, and Meta.
+          for e-commerce, home services, trades, Google, and Meta.
         </p>
         <div className="mt-12">
           <PortfolioFolderGrid />

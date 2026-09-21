@@ -7,7 +7,7 @@ export function Process() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           label="How it works"
-          title="From first call to consistent booked appointments"
+          title="From first call to consistent sales or booked leads"
           description="A clear, repeatable process — whether you're launching ads for the first time or scaling what already works."
           align="center"
         />

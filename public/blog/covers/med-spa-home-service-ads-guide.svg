@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Med Spa and Home Service Ads Guide">
+  <defs>
+    <linearGradient id="bgMed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14141f"/>
+      <stop offset="0.5" stop-color="#181f26"/>
+      <stop offset="1" stop-color="#1c2630"/>
+    </linearGradient>
+    <radialGradient id="glowMed" cx="0.85" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pinMed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgMed)"/>
+  <rect width="1200" height="630" fill="url(#glowMed)"/>
+  <g transform="translate(80,80)">
+    <circle cx="6" cy="8" r="6" fill="#2dd4bf"/>
+    <text x="24" y="14" font-family="system-ui, Arial, sans-serif" font-size="24" font-weight="600" fill="#2dd4bf">Marketing with Asmat</text>
+  </g>
+  <g transform="translate(960,220)" opacity="0.95">
+    <path d="M90 0 C140 0 180 40 180 90 C180 150 90 230 90 230 C90 230 0 150 0 90 C0 40 40 0 90 0 Z" fill="url(#pinMed)" opacity="0.9"/>
+    <circle cx="90" cy="88" r="34" fill="#14141f"/>
+  </g>
+  <text x="80" y="290" font-family="system-ui, Arial, sans-serif" font-size="40" font-weight="600" fill="#5eead4" letter-spacing="-0.5">US Local Lead Generation</text>
+  <text x="80" y="362" font-family="system-ui, Arial, sans-serif" font-size="56" font-weight="700" fill="#fafafa" letter-spacing="-1">Med Spa and Home Service Ads</text>
+  <text x="80" y="470" font-family="system-ui, Arial, sans-serif" font-size="28" font-weight="500" fill="#a1a1aa">Meta Lead Ads / Google Search / LSAs</text>
+</svg>

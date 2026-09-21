@@ -12,17 +12,15 @@ export function CtaBanner() {
           />
           <div className="relative">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to fill your calendar with qualified leads?
+              Ready to grow sales — or fill the pipeline with real leads?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-zinc-300">
               Book a free strategy call. We&apos;ll review your offers, ad
-              accounts, and the fastest path to more appointments.
+              accounts, and the fastest path to purchases or qualified leads.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href={siteConfig.links.calendly}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={siteConfig.links.book}
                 className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/20 transition-all hover:shadow-teal-500/35"
               >
                 Book free call

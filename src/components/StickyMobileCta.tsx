@@ -8,9 +8,7 @@ export function StickyMobileCta() {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[var(--background)]/95 p-3 backdrop-blur-lg md:hidden">
       <div className="flex gap-2">
         <Link
-          href={siteConfig.links.calendly}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={siteConfig.links.book}
           className="flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 py-3 text-sm font-bold text-zinc-950"
         >
           Book free call

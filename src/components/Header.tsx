@@ -6,13 +6,12 @@ import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/site";
 
 const nav = [
-  { href: "#testimonials", label: "Reviews" },
-  { href: siteConfig.links.portfolio, label: "Portfolio", external: true },
-  { href: "#portfolio", label: "Work" },
-  { href: "#services", label: "Services" },
-  { href: "#book", label: "Book" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#testimonials", label: "Reviews" },
+  { href: siteConfig.links.portfolio, label: "Portfolio" },
+  { href: siteConfig.links.blog, label: "Blog" },
+  { href: "/#services", label: "Services" },
+  { href: "/#book", label: "Book" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export function Header() {

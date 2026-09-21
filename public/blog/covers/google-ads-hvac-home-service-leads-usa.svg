@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Google Ads for HVAC and home service leads in the USA">
+  <defs>
+    <linearGradient id="bgHvac" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14141f"/>
+      <stop offset="0.5" stop-color="#172026"/>
+      <stop offset="1" stop-color="#1a2a28"/>
+    </linearGradient>
+    <radialGradient id="glowHvac" cx="0.88" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgHvac)"/>
+  <rect width="1200" height="630" fill="url(#glowHvac)"/>
+  <g transform="translate(80,80)">
+    <circle cx="6" cy="8" r="6" fill="#2dd4bf"/>
+    <text x="24" y="14" font-family="system-ui, Arial, sans-serif" font-size="24" font-weight="600" fill="#2dd4bf">Marketing with Asmat</text>
+  </g>
+  <g transform="translate(980,240)" opacity="0.9">
+    <rect x="0" y="40" width="140" height="90" rx="10" fill="#2dd4bf" opacity="0.2"/>
+    <path d="M20 90 L70 40 L120 90 Z" fill="#2dd4bf"/>
+    <rect x="48" y="92" width="44" height="38" fill="#14141f"/>
+    <rect x="56" y="100" width="12" height="12" fill="#5eead4"/>
+  </g>
+  <text x="80" y="286" font-family="system-ui, Arial, sans-serif" font-size="36" font-weight="600" fill="#5eead4">USA Home Service Lead Gen</text>
+  <text x="80" y="362" font-family="system-ui, Arial, sans-serif" font-size="54" font-weight="700" fill="#fafafa">Google Ads That Book Jobs</text>
+  <text x="80" y="470" font-family="system-ui, Arial, sans-serif" font-size="26" font-weight="500" fill="#a1a1aa">HVAC / Plumbing / Roofing / Local Search</text>
+</svg>

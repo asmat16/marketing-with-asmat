@@ -68,8 +68,10 @@ export function FeaturedPortfolio() {
                   src={study.image}
                   alt={study.title}
                   fill
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 50vw"
+                quality={72}
+                loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
                 <span className="absolute left-4 top-4 rounded-full bg-teal-500/90 px-3 py-1 text-xs font-bold text-zinc-950">

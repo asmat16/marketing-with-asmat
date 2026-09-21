@@ -9,7 +9,7 @@ export function Results() {
         <SectionHeading
           label="Results"
           title="Experience backed by measurable outcomes"
-          description="7+ years managing Meta and Google ads across e-commerce, local services, and high-ticket niches — with a focus on ROAS and lead quality."
+          description="7+ years managing Meta and Google ads across e-commerce sales, real estate and home service lead gen, and local niches — with a focus on ROAS and lead quality."
         />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -38,8 +38,8 @@ export function Results() {
               </h3>
               <p className="mt-2 max-w-xl text-zinc-400">
                 Trusted by brands from startups to enterprise. Meta & Google
-                certified with a proven track record in lead generation and
-                revenue growth.
+                certified with a proven track record in e-commerce sales and
+                lead generation.
               </p>
             </div>
             <Link

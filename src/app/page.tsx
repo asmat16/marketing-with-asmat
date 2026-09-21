@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { BlogInsights } from "@/components/BlogInsights";
 import { BookSection } from "@/components/BookSection";
 import { Contact } from "@/components/Contact";
 import { CtaBanner } from "@/components/CtaBanner";
@@ -19,6 +21,13 @@ import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
 import { Testimonials } from "@/components/Testimonials";
 import { UpworkReviews } from "@/components/UpworkReviews";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export default function Home() {
   return (
@@ -38,6 +47,7 @@ export default function Home() {
         <Services />
         <Process />
         <SeoContent />
+        <BlogInsights />
         <BookSection />
         <CtaBanner />
         <Faq />

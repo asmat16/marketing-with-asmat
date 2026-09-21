@@ -63,9 +63,9 @@ export function Testimonials() {
               Our clients actually tell us how it went
             </h2>
             <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
-              Home service owners, clinic teams, and local brands across the US.
-              Real feedback from people running Meta and Google with us, not
-              polished marketing copy.
+              Store owners, real estate teams, home service brands, and local
+              operators across the US. Real feedback from people running Meta
+              and Google with us, not polished marketing copy.
             </p>
             <div className="mt-6 flex items-center gap-2">
               {testimonials.map((t, i) => (

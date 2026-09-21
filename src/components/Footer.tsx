@@ -2,10 +2,10 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 const links = [
+  { label: "Blog", href: siteConfig.links.blog },
   { label: "Portfolio", href: siteConfig.links.portfolio },
   { label: "Upwork", href: siteConfig.links.upwork },
   { label: "LinkedIn", href: siteConfig.links.linkedin },
-  { label: "Fiverr", href: siteConfig.links.fiverr },
   { label: "Book a call", href: siteConfig.links.book },
 ] as const;
 
@@ -19,8 +19,8 @@ export function Footer() {
           <div>
             <p className="font-semibold text-white">{siteConfig.name}</p>
             <p className="mt-1 max-w-sm text-sm text-zinc-400">
-              Media buyer for med spas, aesthetic clinics & home service lead
-              generation on Meta & Google.
+              Media buyer for e-commerce sales, real estate and home service
+              lead gen on Meta & Google.
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-6 gap-y-2">

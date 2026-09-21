@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Meta ads for med spas that book consults">
+  <defs>
+    <linearGradient id="bgSpa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14141f"/>
+      <stop offset="0.55" stop-color="#1c1830"/>
+      <stop offset="1" stop-color="#2a1f3a"/>
+    </linearGradient>
+    <radialGradient id="glowSpa" cx="0.86" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgSpa)"/>
+  <rect width="1200" height="630" fill="url(#glowSpa)"/>
+  <g transform="translate(80,80)">
+    <circle cx="6" cy="8" r="6" fill="#2dd4bf"/>
+    <text x="24" y="14" font-family="system-ui, Arial, sans-serif" font-size="24" font-weight="600" fill="#2dd4bf">Marketing with Asmat</text>
+  </g>
+  <g transform="translate(980,250)" opacity="0.95">
+    <circle cx="70" cy="70" r="70" fill="none" stroke="#2dd4bf" stroke-width="8"/>
+    <circle cx="70" cy="70" r="42" fill="none" stroke="#818cf8" stroke-width="6"/>
+    <circle cx="70" cy="70" r="14" fill="#2dd4bf"/>
+  </g>
+  <text x="80" y="286" font-family="system-ui, Arial, sans-serif" font-size="36" font-weight="600" fill="#c4b5fd">Med Spa Meta Ads</text>
+  <text x="80" y="362" font-family="system-ui, Arial, sans-serif" font-size="52" font-weight="700" fill="#fafafa">Booked Consults, Not Likes</text>
+  <text x="80" y="470" font-family="system-ui, Arial, sans-serif" font-size="26" font-weight="500" fill="#a1a1aa">Lead forms / Offers / Compliance / Follow-up</text>
+</svg>

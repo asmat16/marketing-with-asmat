@@ -58,8 +58,8 @@ export function Hero() {
             className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.08]"
           >
             Media buyer for{" "}
-            <span className="text-gradient">med spas, clinics</span> & home
-            services — built to book appointments
+            <span className="text-gradient">e-commerce, real estate</span>{" "}
+            & home services — sales and lead gen
           </motion.h1>
 
           <motion.p
@@ -69,9 +69,9 @@ export function Hero() {
             variants={fadeUp}
             className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300"
           >
-            I&apos;m Asmat — 7+ years running Meta & Google ads that generate
-            qualified leads and booked consultations. Top Rated Plus on
-            Upwork. Focused on aesthetic, wellness, and local service brands.
+            I&apos;m Asmat — 7+ years running Meta & Google ads that drive
+            DTC sales and qualified leads. Top Rated Plus on Upwork. E-commerce,
+            real estate, and home service brands first.
           </motion.p>
 
           <motion.div
@@ -146,7 +146,7 @@ export function Hero() {
             />
             <Image
               src="/asmat-hero.png"
-              alt="Asmat — Meta and Google media buyer for med spas and home services"
+              alt="Asmat — Meta and Google media buyer for e-commerce, real estate, and home services"
               width={520}
               height={871}
               priority
@@ -170,7 +170,7 @@ export function Hero() {
               Specializing in
             </p>
             <p className="mt-1 text-sm leading-snug text-zinc-200">
-              Med spas · Aesthetic clinics · Home services · Lead gen
+              E-commerce · Real estate · Home services · DTC sales
             </p>
           </div>
         </motion.div>

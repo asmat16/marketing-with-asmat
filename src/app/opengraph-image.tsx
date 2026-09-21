@@ -62,7 +62,7 @@ export default function OgImage() {
             lineHeight: 1.3,
           }}
         >
-          Med spas · Aesthetic clinics · Home services — leads & appointments
+          E-commerce · Real estate · Home services — sales & lead gen
         </div>
         <div
           style={{

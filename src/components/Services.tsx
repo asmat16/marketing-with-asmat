@@ -7,8 +7,8 @@ export function Services() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           label="Services"
-          title="Lead generation & booked appointments — built for your niche"
-          description="Every campaign is structured around one outcome: qualified leads and consultations for med spas, aesthetic clinics, and home service businesses."
+          title="Sales ads and lead generation — built for your niche"
+          description="E-commerce is optimized for purchases and ROAS. Real estate and home services are optimized for qualified leads, calls, and booked jobs."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -254,7 +254,7 @@ export function PortfolioDashboardSlide({
 
       <div className="flex items-center justify-between border-t border-slate-200 bg-white px-4 py-2 text-[10px] text-slate-400">
         <span>Marketing with Asmat</span>
-        <span>portfolio.marketingwithasmat.pro</span>
+        <span>marketingwithasmat.pro/portfolio</span>
       </div>
     </div>
   );

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AI Ads Strategist 2026 Creative beats ad spend">
+  <defs>
+    <linearGradient id="bgAi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14141f"/>
+      <stop offset="0.5" stop-color="#1c1a2c"/>
+      <stop offset="1" stop-color="#241f3a"/>
+    </linearGradient>
+    <radialGradient id="glowAi" cx="0.85" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sparkAi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgAi)"/>
+  <rect width="1200" height="630" fill="url(#glowAi)"/>
+  <g transform="translate(80,80)">
+    <circle cx="6" cy="8" r="6" fill="#2dd4bf"/>
+    <text x="24" y="14" font-family="system-ui, Arial, sans-serif" font-size="24" font-weight="600" fill="#2dd4bf">Marketing with Asmat</text>
+  </g>
+  <g transform="translate(950,230)" opacity="0.95">
+    <path d="M70 0 L86 54 L140 70 L86 86 L70 140 L54 86 L0 70 L54 54 Z" fill="url(#sparkAi)"/>
+    <path d="M150 120 L158 144 L182 152 L158 160 L150 184 L142 160 L118 152 L142 144 Z" fill="url(#sparkAi)" opacity="0.7"/>
+  </g>
+  <text x="80" y="290" font-family="system-ui, Arial, sans-serif" font-size="40" font-weight="600" fill="#c4b5fd" letter-spacing="-0.5">The AI Ads Strategist 2026</text>
+  <text x="80" y="370" font-family="system-ui, Arial, sans-serif" font-size="60" font-weight="700" fill="#fafafa" letter-spacing="-1">Creative Beats Ad Spend</text>
+  <text x="80" y="470" font-family="system-ui, Arial, sans-serif" font-size="28" font-weight="500" fill="#a1a1aa">AI Marketing / Creative Strategy / UGC</text>
+</svg>

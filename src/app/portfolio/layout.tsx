@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Portfolio | Marketing with Asmat",
   description:
-    "Case studies and campaign results for med spas, home services, HVAC, e-commerce, Google Ads, and Meta Ads.",
+    "Case studies and campaign results for e-commerce, real estate, home services, Google Ads, and Meta Ads.",
   robots: { index: true, follow: true },
 };
 

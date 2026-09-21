@@ -12,24 +12,23 @@ export function MedSpaHighlight() {
         <div className="card-hover flex flex-col gap-8 rounded-3xl border border-teal-500/20 bg-gradient-to-br from-teal-500/10 via-[var(--card)] to-indigo-500/10 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
           <div className="max-w-xl">
             <p className="text-xs font-semibold tracking-widest text-teal-400 uppercase">
-              Primary focus
+              Sales engine
             </p>
             <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-              Med spas & aesthetic clinics — ads built to book consultations
+              E-commerce & DTC — ads built to sell, not collect leads
             </h2>
             <p className="mt-3 text-zinc-300 leading-relaxed">
-              Instant forms, local targeting, and offer creative tuned for
-              injectables, laser, body contouring, and skincare — so your front
-              desk gets qualified appointment requests, not tire-kickers.
+              Purchase campaigns, catalog ads, and product creative for Shopify
+              and DTC brands — so you get orders and ROAS, not a spreadsheet of
+              form fills. Lead gen is reserved for real estate and home
+              services.
             </p>
           </div>
           <Link
-            href={siteConfig.links.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteConfig.links.book}
             className="inline-flex h-12 shrink-0 items-center justify-center rounded-full bg-white px-8 text-sm font-bold text-zinc-950 transition-opacity hover:opacity-90"
           >
-            Get a med spa ad audit
+            Get an e-commerce ad audit
           </Link>
         </div>
       </div>

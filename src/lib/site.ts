@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Marketing with Asmat",
   url: "https://www.marketingwithasmat.pro",
   description:
-    "USA-based Meta & Google media buyer for home service businesses, med spas, and aesthetic clinics. Qualified leads, booked calls, and appointments — 7+ years, $20M+ ad spend managed.",
+    "USA-based Meta & Google media buyer for e-commerce (DTC) sales, real estate lead generation, and home service businesses. Also work with med spas & aesthetics. 7+ years, $20M+ ad spend managed.",
   email: "asmat.llh@gmail.com",
   phone: "+923136109373",
   phoneDisplay: "+92 313 6109373",
@@ -21,21 +21,26 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/asmat16/",
     instagram: "https://www.instagram.com/marketingwithasmat/",
     facebook: "https://www.facebook.com/profile.php?id=61561281302647",
-    portfolio: "https://portfolio.marketingwithasmat.pro",
+    portfolio: "/portfolio",
+    blog: "/blogs",
   },
   keywords: [
+    "e-commerce media buyer",
+    "DTC Facebook ads",
+    "Meta ads for Shopify",
+    "Google Shopping ads specialist",
+    "real estate lead generation ads",
+    "Facebook ads real estate leads",
     "best media buyer for home service business",
-    "media buyer for my business USA",
     "home service media buyer",
-    "facebook ads home services USA",
     "google ads contractor leads",
     "HVAC media buyer",
-    "media buyer med spa",
-    "meta ads med spa",
-    "google ads aesthetic clinic",
     "lead generation home services",
     "paid media buyer United States",
     "meta google ads specialist",
+    "hire media buyer USA",
+    "ecommerce ROAS specialist",
+    "media buyer med spa",
   ],
 } as const;
 
@@ -48,23 +53,23 @@ export const heroStats = [
 
 export const services = [
   {
-    title: "Med Spa & Aesthetic Lead Gen",
+    title: "E-commerce & DTC Sales Ads",
     description:
-      "Meta campaigns built to fill your consultation calendar — targeting high-intent audiences for injectables, laser, body contouring, and skincare treatments.",
+      "Meta and Google campaigns built to sell — purchases, ROAS, and repeat buyers for Shopify and DTC brands. We do not run e-commerce for lead forms. We run it for revenue.",
     bullets: [
-      "Lead forms & instant forms optimized for bookings",
-      "Creative testing for before/after & treatment offers",
-      "Local radius + interest stacking for qualified patients",
+      "Purchase & catalog campaigns (Advantage+, Shopping, PMax)",
+      "Creative testing for product, UGC, and offer angles",
+      "Pixel, CAPI, and ROAS reporting tied to actual sales",
     ],
   },
   {
-    title: "Google Ads for Clinics",
+    title: "Real Estate Lead Generation",
     description:
-      "Capture patients actively searching for treatments in your area. Search, Performance Max, and local campaigns aligned to your services and locations.",
+      "Facebook, Instagram, and Google ads that bring in buyer, seller, and listing inquiries — not random clicks. Built for agents, teams, and local markets.",
     bullets: [
-      "High-intent keyword structure by treatment",
-      "Call & booking conversion tracking",
-      "Landing page alignment for lower cost per lead",
+      "Lead forms & landing pages for listings and markets",
+      "Geo targeting by city, zip, and commute patterns",
+      "Follow-up friendly lead quality over cheap volume",
     ],
   },
   {
@@ -78,9 +83,19 @@ export const services = [
     ],
   },
   {
+    title: "Med Spa & Aesthetic Lead Gen",
+    description:
+      "Meta and Google campaigns that fill consult calendars for injectables, laser, body contouring, and skincare — when you need booked appointments, not likes.",
+    bullets: [
+      "Lead forms & instant forms optimized for bookings",
+      "Offer creative that stays within ad-platform rules",
+      "Local radius targeting for qualified patients",
+    ],
+  },
+  {
     title: "Campaign Setup & Account Audit",
     description:
-      "Starting from scratch or inheriting a broken account? I audit structure, tracking, audiences, and creative — then rebuild for measurable lead volume.",
+      "Starting from scratch or inheriting a broken account? I audit structure, tracking, audiences, and creative — then rebuild for sales (e-commerce) or qualified lead volume (services).",
     bullets: [
       "Pixel, CAPI & conversion event review",
       "Account structure & budget recommendations",
@@ -88,19 +103,9 @@ export const services = [
     ],
   },
   {
-    title: "Retargeting & Full-Funnel Strategy",
-    description:
-      "Most leads need multiple touchpoints. I build retargeting flows that move prospects from awareness to consultation — across Meta and Google.",
-    bullets: [
-      "Warm audience segmentation",
-      "Offer sequencing & urgency creative",
-      "Cross-platform remarketing sync",
-    ],
-  },
-  {
     title: "Monthly Media Buying & Optimization",
     description:
-      "Ongoing management with weekly optimizations, creative refreshes, and transparent reporting focused on cost per lead and booked appointments.",
+      "Ongoing management with weekly optimizations, creative refreshes, and reporting on the metric that matters: ROAS and purchases for stores, cost per lead and booked jobs for services.",
     bullets: [
       "Weekly performance reviews",
       "A/B testing on copy, creative & audiences",
@@ -220,18 +225,18 @@ export const copyrightNotice =
   "© Asmat — All portfolio screenshots are confidential client work.";
 
 export const niches = [
-  { label: "Med Spas", icon: "✦" },
-  { label: "Aesthetic Clinics", icon: "◈" },
-  { label: "Dermatology", icon: "◎" },
-  { label: "Home Services", icon: "⌂" },
-  { label: "HVAC & Contractors", icon: "⚙" },
-  { label: "Wellness & IV", icon: "♡" },
+  { label: "E-commerce & DTC", icon: "◈" },
+  { label: "Real Estate", icon: "⌂" },
+  { label: "Home Services", icon: "⚙" },
+  { label: "Med Spas & Aesthetics", icon: "✦" },
+  { label: "Lead Generation", icon: "◎" },
+  { label: "Paid Sales Ads", icon: "♡" },
 ] as const;
 
 export const faqs = [
   {
-    q: "Do you only work with med spas and clinics?",
-    a: "That's my primary focus — lead gen and booked consultations for aesthetic and wellness brands. I also manage campaigns for home service businesses (HVAC, cleaning, remodeling) that need qualified leads and calls.",
+    q: "Do you do sales ads or lead generation?",
+    a: "Both — and they are separate playbooks. E-commerce and DTC brands get purchase campaigns optimized for sales and ROAS. Real estate, home services, and med spas / aesthetics get lead generation: qualified inquiries, calls, and booked appointments.",
   },
   {
     q: "What's included in the free strategy call?",
@@ -243,7 +248,7 @@ export const faqs = [
   },
   {
     q: "What results should I expect?",
-    a: "Results vary by offer, market, and budget. My focus is qualified leads and booked appointments at a sustainable cost per lead — not vanity metrics. Past accounts have seen 5X–50X+ ROAS (e-commerce) and thousands of conversions on Google Search.",
+    a: "Results vary by offer, market, and budget. For stores, I optimize purchases and ROAS. For real estate and home services, I optimize qualified leads and booked jobs. Past accounts have seen 5X–50X+ ROAS on e-commerce and thousands of conversions on Google Search.",
   },
   {
     q: "Can I hire you through Upwork?",
@@ -251,7 +256,7 @@ export const faqs = [
   },
   {
     q: "Do you create ad creative?",
-    a: "I direct creative strategy, hooks, and angles based on what converts in your niche. I can work with your in-house team, UGC creators, or recommend formats (before/after, testimonial, offer-led) that perform for med spa and local service ads.",
+    a: "I direct creative strategy, hooks, and angles based on what converts in your niche. I can work with your in-house team, UGC creators, or recommend formats (product/UGC for DTC, listing and offer ads for real estate and home services).",
   },
   {
     q: "Are you a media buyer for home service businesses in the USA?",
@@ -259,7 +264,7 @@ export const faqs = [
   },
   {
     q: "How do I find the best media buyer for my business?",
-    a: "Look for proven lead-gen results in your niche, clear reporting on cost per lead and booked appointments, and experience with both Meta and Google. Book a free 15-minute strategy call to review your market, offers, and whether paid ads are the right fit before you commit budget.",
+    a: "Look for results that match your model: ROAS and purchases for e-commerce, cost per lead and booked appointments for real estate and home services. Book a free 15-minute strategy call to review your market, offers, and whether paid ads are the right fit before you commit budget.",
   },
 ] as const;
 
@@ -268,7 +273,7 @@ export const processSteps = [
     step: "01",
     title: "Discovery call",
     description:
-      "We review your business, offers, current ads, and goals — appointments, leads, or revenue targets.",
+      "We review your business, offers, current ads, and goals — sales for e-commerce, or leads and booked jobs for services.",
   },
   {
     step: "02",
@@ -280,7 +285,7 @@ export const processSteps = [
     step: "03",
     title: "Launch & optimize",
     description:
-      "Campaigns go live with tested creative and audiences. I optimize weekly toward lower CPL and more bookings.",
+      "Campaigns go live with tested creative and audiences. I optimize weekly toward more sales (DTC) or lower CPL and more bookings (lead gen).",
   },
   {
     step: "04",
@@ -293,18 +298,26 @@ export const processSteps = [
 /** Keyword-rich sections for SEO & readability (visible on homepage) */
 export const seoContentSections = [
   {
-    id: "med-spa-media-buyer",
-    title: "Media buyer for med spas & aesthetic clinics",
+    id: "ecommerce-dtc-media-buyer",
+    title: "E-commerce & DTC media buyer — ads that sell",
     paragraphs: [
-      "Med spas and aesthetic clinics need more than likes — they need booked consultations. I run Meta (Facebook & Instagram) and Google campaigns structured around lead forms, instant forms, and call-focused ads that attract patients searching for injectables, laser treatments, body contouring, and skincare.",
-      "With 7+ years managing paid media and $20M+ in ad spend, I optimize for cost per lead and cost per booked appointment — not vanity metrics. Every campaign includes audience research, offer alignment, creative direction, and weekly optimization.",
+      "Online stores do not need more leads. They need sales. I run Meta (Facebook & Instagram) and Google campaigns for Shopify and DTC brands structured around purchases, catalog ads, Shopping, and Performance Max — with creative and tracking built for ROAS, not form fills.",
+      "With 7+ years managing paid media and $20M+ in ad spend, I optimize for cost per purchase and return on ad spend. Every account includes pixel and CAPI setup, offer testing, and weekly scaling of what actually sells.",
+    ],
+  },
+  {
+    id: "real-estate-lead-gen",
+    title: "Real estate lead generation on Meta & Google",
+    paragraphs: [
+      "Agents and teams need listing inquiries, buyer consults, and seller conversations — not random traffic. I build Facebook, Instagram, and Google campaigns around markets, listings, and lead forms so your CRM fills with people you can actually work.",
+      "Lead generation for real estate is a different mechanism from e-commerce sales. I target by city and zip, match creative to the offer, and report on cost per qualified lead instead of vanity reach.",
     ],
   },
   {
     id: "home-service-media-buyer-usa",
     title: "Best media buyer for home service businesses in the USA",
     paragraphs: [
-      "If you run an HVAC, plumbing, roofing, cleaning, landscaping, or remodeling company in the United States, you need a media buyer who understands local lead gen — not generic e-commerce playbooks. I manage Meta and Google campaigns built for service-area targeting, click-to-call, lead forms, and retargeting so you get qualified leads and booked jobs.",
+      "If you run an HVAC, plumbing, roofing, cleaning, landscaping, or remodeling company in the United States, you need a media buyer who understands local lead gen — not a store playbook. I manage Meta and Google campaigns built for service-area targeting, click-to-call, lead forms, and retargeting so you get qualified leads and booked jobs.",
       "Business owners searching for a media buyer for their business often waste budget on broad audiences and weak offers. I focus on cost per lead, cost per booked call, and revenue — with weekly optimization, creative testing, and transparent reporting for US home service brands.",
     ],
   },
@@ -313,14 +326,22 @@ export const seoContentSections = [
     title: "Lead generation for home service businesses",
     paragraphs: [
       "Home service brands rely on qualified leads and phone calls. I build Meta and Google campaigns with seasonal offers, geo-targeted audiences, and remarketing that turns website visitors into booked jobs across the USA.",
-      "Whether you need Google Search ads for high-intent keywords like “HVAC repair near me” or Meta lead ads for local awareness, I focus on measurable outcomes: leads, calls, and revenue.",
+      "Whether you need Google Search ads for high-intent keywords like “HVAC repair near me” or Meta lead ads for local awareness, I focus on measurable outcomes: leads, calls, and booked work.",
+    ],
+  },
+  {
+    id: "med-spa-media-buyer",
+    title: "Media buyer for med spas & aesthetic clinics",
+    paragraphs: [
+      "Med spas and aesthetic clinics still need booked consultations. I run Meta and Google campaigns with lead forms, local targeting, and offer creative for injectables, laser, body contouring, and skincare — as one of the niches I support alongside e-commerce, real estate, and home services.",
+      "The goal is cost per lead and cost per booked appointment, with creative that follows platform rules so the account stays healthy.",
     ],
   },
   {
     id: "meta-google-specialist",
-    title: "Meta & Google ads specialist — e-commerce & local",
+    title: "Meta & Google ads specialist — sales and lead gen",
     paragraphs: [
-      "As a Top Rated Plus media buyer on Upwork, I've managed campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts), training companies, and local service providers. I'm Meta and Google certified with experience across B2B, B2C, and D2C.",
+      "As a Top Rated Plus media buyer on Upwork, I've managed campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts), real estate and home service lead gen, and local providers. I'm Meta and Google certified with experience across B2C, DTC, and local services.",
       "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management — all aimed at scaling what works and cutting wasted spend fast.",
     ],
   },

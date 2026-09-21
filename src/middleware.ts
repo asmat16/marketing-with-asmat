@@ -11,15 +11,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const { pathname } = request.nextUrl;
+  const { pathname, search } = request.nextUrl;
+  const targetPath = pathname.startsWith("/portfolio")
+    ? pathname
+    : pathname === "/"
+      ? "/portfolio"
+      : `/portfolio${pathname}`;
 
-  if (pathname.startsWith("/portfolio")) {
-    return NextResponse.next();
-  }
-
-  const url = request.nextUrl.clone();
-  url.pathname = pathname === "/" ? "/portfolio" : `/portfolio${pathname}`;
-  return NextResponse.rewrite(url);
+  // Subdomain has no separate deployment — send visitors to the main site route.
+  const redirectUrl = new URL(targetPath + search, "https://www.marketingwithasmat.pro");
+  return NextResponse.redirect(redirectUrl, 308);
 }
 
 export const config = {
