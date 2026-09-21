@@ -228,7 +228,7 @@ export const niches = [
   { label: "E-commerce & DTC", icon: "◈" },
   { label: "Real Estate", icon: "⌂" },
   { label: "Home Services", icon: "⚙" },
-  { label: "Med Spas & Aesthetics", icon: "✦" },
+  { label: "HVAC & Contractors", icon: "✦" },
   { label: "Lead Generation", icon: "◎" },
   { label: "Paid Sales Ads", icon: "♡" },
 ] as const;
@@ -236,7 +236,7 @@ export const niches = [
 export const faqs = [
   {
     q: "Do you do sales ads or lead generation?",
-    a: "Both — and they are separate playbooks. E-commerce and DTC brands get purchase campaigns optimized for sales and ROAS. Real estate, home services, and med spas / aesthetics get lead generation: qualified inquiries, calls, and booked appointments.",
+    a: "Both — and they are separate playbooks. E-commerce and DTC brands get purchase campaigns optimized for sales and ROAS. Real estate and home services get lead generation: qualified inquiries, calls, and booked jobs.",
   },
   {
     q: "What's included in the free strategy call?",
@@ -331,10 +331,10 @@ export const seoContentSections = [
   },
   {
     id: "med-spa-media-buyer",
-    title: "Media buyer for med spas & aesthetic clinics",
+    title: "Also available: med spas & aesthetic clinics",
     paragraphs: [
-      "Med spas and aesthetic clinics still need booked consultations. I run Meta and Google campaigns with lead forms, local targeting, and offer creative for injectables, laser, body contouring, and skincare — as one of the niches I support alongside e-commerce, real estate, and home services.",
-      "The goal is cost per lead and cost per booked appointment, with creative that follows platform rules so the account stays healthy.",
+      "This is a supporting niche, not the primary offer. When a med spa or aesthetic clinic needs booked consultations, I can run Meta and Google lead campaigns with local targeting and offer creative that follows platform rules.",
+      "The main work is still e-commerce sales plus real estate and home service lead generation.",
     ],
   },
   {

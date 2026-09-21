@@ -5,7 +5,14 @@ import { BlogCard } from "./blog/BlogCard";
 import { SectionHeading } from "./SectionHeading";
 
 export function BlogInsights() {
-  const featured = blogPosts.slice(0, 3);
+  const featuredSlugs = [
+    "google-ads-hvac-home-service-leads-usa",
+    "funnel-optimization-before-meta-ads",
+    "ai-ads-strategist-creative-beats-ad-spend",
+  ];
+  const featured = featuredSlugs
+    .map((slug) => blogPosts.find((post) => post.slug === slug))
+    .filter((post): post is (typeof blogPosts)[number] => Boolean(post));
 
   return (
     <section
