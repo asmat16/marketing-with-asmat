@@ -10,7 +10,7 @@ export function Contact() {
         <SectionHeading
           label="Contact"
           title="Message me or book a call"
-          description="Form submissions go to my email. Strategy calls are booked through Calendly — I see every appointment in my Calendly dashboard and inbox."
+          description="Form submissions go to my email. Strategy calls are booked through Calendly. I see every appointment in my Calendly dashboard and inbox."
           align="center"
         />
 
@@ -42,7 +42,7 @@ export function Contact() {
                   Book on the calendar
                 </p>
                 <p className="mt-1 text-sm text-zinc-400">
-                  Full scheduling page — pick a time for your free strategy call
+                  Full scheduling page. Pick a time for your free strategy call
                 </p>
               </div>
               <span className="text-2xl text-teal-400" aria-hidden>

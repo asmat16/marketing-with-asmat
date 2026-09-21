@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
       ? "/portfolio"
       : `/portfolio${pathname}`;
 
-  // Subdomain has no separate deployment — send visitors to the main site route.
+  // Subdomain has no separate deployment. Send visitors to the main site route.
   const redirectUrl = new URL(targetPath + search, "https://www.marketingwithasmat.pro");
   return NextResponse.redirect(redirectUrl, 308);
 }

@@ -30,7 +30,7 @@ export default function PortfolioLayout({
       </header>
       <main>{children}</main>
       <footer className="border-t border-white/[0.08] py-8 text-center text-xs text-zinc-500">
-        © Asmat — Confidential client work shown for portfolio purposes.
+        © Asmat. Confidential client work shown for portfolio purposes.
       </footer>
     </div>
   );

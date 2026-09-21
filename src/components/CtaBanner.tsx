@@ -12,7 +12,7 @@ export function CtaBanner() {
           />
           <div className="relative">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to grow sales — or fill the pipeline with real leads?
+              Ready to grow sales, or fill the pipeline with real leads?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-zinc-300">
               Book a free strategy call. We&apos;ll review your offers, ad

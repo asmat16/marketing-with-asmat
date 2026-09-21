@@ -8,7 +8,7 @@ export function Process() {
         <SectionHeading
           label="How it works"
           title="From first call to consistent sales or booked leads"
-          description="A clear, repeatable process — whether you're launching ads for the first time or scaling what already works."
+          description="A clear, repeatable process, whether you are launching ads for the first time or scaling what already works."
           align="center"
         />
 

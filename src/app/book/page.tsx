@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book a Free Strategy Call",
   description:
-    "Schedule a free 15-minute Zoom call with Asmat — Meta & Google media buyer for e-commerce sales, real estate, and home service lead generation.",
+    "Schedule a free 15-minute Zoom call with Asmat. Meta and Google media buyer for e-commerce sales, real estate, and home service lead generation.",
   alternates: {
     canonical: `${siteConfig.url}/book`,
   },
@@ -36,7 +36,7 @@ export default function BookPage() {
             Book your free strategy call
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-zinc-400">
-            15 minutes on Zoom — we&apos;ll review your offers, ad accounts,
+            15 minutes on Zoom. We&apos;ll review your offers, ad accounts,
             and the fastest path to more sales or qualified leads.
           </p>
 

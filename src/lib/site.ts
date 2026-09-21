@@ -55,7 +55,7 @@ export const services = [
   {
     title: "E-commerce & DTC Sales Ads",
     description:
-      "Meta and Google campaigns built to sell — purchases, ROAS, and repeat buyers for Shopify and DTC brands. We do not run e-commerce for lead forms. We run it for revenue.",
+      "Meta and Google campaigns built to sell. Purchases, ROAS, and repeat buyers for Shopify and DTC brands. We do not run e-commerce for lead forms. We run it for revenue.",
     bullets: [
       "Purchase & catalog campaigns (Advantage+, Shopping, PMax)",
       "Creative testing for product, UGC, and offer angles",
@@ -65,7 +65,7 @@ export const services = [
   {
     title: "Real Estate Lead Generation",
     description:
-      "Facebook, Instagram, and Google ads that bring in buyer, seller, and listing inquiries — not random clicks. Built for agents, teams, and local markets.",
+      "Facebook, Instagram, and Google ads that bring in buyer, seller, and listing inquiries, not random clicks. Built for agents, teams, and local markets.",
     bullets: [
       "Lead forms & landing pages for listings and markets",
       "Geo targeting by city, zip, and commute patterns",
@@ -75,7 +75,7 @@ export const services = [
   {
     title: "Home Service Appointment Ads",
     description:
-      "Facebook, Instagram, and Google campaigns for HVAC, cleaning, landscaping, remodeling, and other local service businesses that need booked jobs — not vanity metrics.",
+      "Facebook, Instagram, and Google campaigns for HVAC, cleaning, landscaping, remodeling, and other local service businesses that need booked jobs, not vanity metrics.",
     bullets: [
       "Service-area targeting & seasonal offers",
       "Lead gen + click-to-call optimization",
@@ -85,7 +85,7 @@ export const services = [
   {
     title: "Med Spa & Aesthetic Lead Gen",
     description:
-      "Meta and Google campaigns that fill consult calendars for injectables, laser, body contouring, and skincare — when you need booked appointments, not likes.",
+      "Meta and Google campaigns that fill consult calendars for injectables, laser, body contouring, and skincare, when you need booked appointments, not likes.",
     bullets: [
       "Lead forms & instant forms optimized for bookings",
       "Offer creative that stays within ad-platform rules",
@@ -95,7 +95,7 @@ export const services = [
   {
     title: "Campaign Setup & Account Audit",
     description:
-      "Starting from scratch or inheriting a broken account? I audit structure, tracking, audiences, and creative — then rebuild for sales (e-commerce) or qualified lead volume (services).",
+      "Starting from scratch or inheriting a broken account? I audit structure, tracking, audiences, and creative, then rebuild for sales (e-commerce) or qualified lead volume (services).",
     bullets: [
       "Pixel, CAPI & conversion event review",
       "Account structure & budget recommendations",
@@ -153,7 +153,7 @@ export const featuredCaseStudies = [
     title: "E-commerce · 50X+ purchase ROAS",
     headline: "50X+",
     description:
-      "2+ years on one store — $196K spend, 114K+ clicks, sustained 20X–50X+ ROAS on winning campaigns.",
+      "2+ years on one store, $196K spend, 114K+ clicks, sustained 20X–50X+ ROAS on winning campaigns.",
     tags: ["E-commerce", "Facebook", "Instagram"],
   },
   {
@@ -162,7 +162,7 @@ export const featuredCaseStudies = [
     title: "895% revenue growth in 30 days",
     headline: "895%",
     description:
-      "15K users, 21K sessions, 2.5K conversions — purchase revenue scaled from baseline in one month.",
+      "15K users, 21K sessions, 2.5K conversions, purchase revenue scaled from baseline in one month.",
     tags: ["E-commerce", "Growth"],
   },
   {
@@ -180,7 +180,7 @@ export const featuredCaseStudies = [
     title: "4,269 conversions in 12 months",
     headline: "4,269",
     description:
-      "Search campaigns for training & services — 12.59% avg. conversion rate, $25 cost per conversion.",
+      "Search campaigns for training & services, 12.59% avg. conversion rate, $25 cost per conversion.",
     tags: ["Lead Gen", "Search"],
   },
   {
@@ -189,7 +189,7 @@ export const featuredCaseStudies = [
     title: "29.87X conversion value / cost",
     headline: "29.87X",
     description:
-      "37K+ clicks, 5,781 conversions, $0.56 avg. CPC — high-intent keyword structure at scale.",
+      "37K+ clicks, 5,781 conversions, $0.56 avg. CPC, high-intent keyword structure at scale.",
     tags: ["PPC", "E-commerce"],
   },
   {
@@ -198,7 +198,7 @@ export const featuredCaseStudies = [
     title: "Latest e-commerce brand scaling",
     headline: "Scale",
     description:
-      "Full-funnel Google strategy for a growing online brand — optimized for purchases and ROAS.",
+      "Full-funnel Google strategy for a growing online brand, optimized for purchases and ROAS.",
     tags: ["E-commerce", "Google"],
   },
   {
@@ -216,13 +216,13 @@ export const featuredCaseStudies = [
     title: "Multi-campaign conversion wins",
     headline: "Multi",
     description:
-      "Cross-campaign Google Ads performance — consistent conversion volume across niches.",
+      "Cross-campaign Google Ads performance, consistent conversion volume across niches.",
     tags: ["Lead Gen", "Local"],
   },
 ] as const;
 
 export const copyrightNotice =
-  "© Asmat — All portfolio screenshots are confidential client work.";
+  "© Asmat. All portfolio screenshots are confidential client work.";
 
 export const niches = [
   { label: "E-commerce & DTC", icon: "◈" },
@@ -236,7 +236,7 @@ export const niches = [
 export const faqs = [
   {
     q: "Do you do sales ads or lead generation?",
-    a: "Both — and they are separate playbooks. E-commerce and DTC brands get purchase campaigns optimized for sales and ROAS. Real estate and home services get lead generation: qualified inquiries, calls, and booked jobs.",
+    a: "I do both, and they are separate playbooks. E-commerce and DTC brands get purchase campaigns optimized for sales and ROAS. Real estate and home services get lead generation: qualified inquiries, calls, and booked jobs.",
   },
   {
     q: "What's included in the free strategy call?",
@@ -244,7 +244,7 @@ export const faqs = [
   },
   {
     q: "How quickly can we launch?",
-    a: "Most accounts go live within 1–2 weeks after onboarding — including pixel/CAPI audit, offer alignment, creative direction, and campaign structure. Rush launches are possible if tracking is already in place.",
+    a: "Most accounts go live within 1–2 weeks after onboarding, including pixel/CAPI audit, offer alignment, creative direction, and campaign structure. Rush launches are possible if tracking is already in place.",
   },
   {
     q: "What results should I expect?",
@@ -252,7 +252,7 @@ export const faqs = [
   },
   {
     q: "Can I hire you through Upwork?",
-    a: "Yes — I'm Top Rated Plus on Upwork with 7+ years of paid media experience. You can hire there for escrow protection, or work directly after our strategy call.",
+    a: "Yes, I'm Top Rated Plus on Upwork with 7+ years of paid media experience. You can hire there for escrow protection, or work directly after our strategy call.",
   },
   {
     q: "Do you create ad creative?",
@@ -260,7 +260,7 @@ export const faqs = [
   },
   {
     q: "Are you a media buyer for home service businesses in the USA?",
-    a: "Yes. I work with US-based HVAC, cleaning, landscaping, remodeling, and other home service companies that need qualified leads and phone calls from Meta and Google — not vanity clicks. Campaigns use service-area targeting, offer-led creative, and conversion tracking aligned to booked jobs.",
+    a: "Yes. I work with US-based HVAC, cleaning, landscaping, remodeling, and other home service companies that need qualified leads and phone calls from Meta and Google, not vanity clicks. Campaigns use service-area targeting, offer-led creative, and conversion tracking aligned to booked jobs.",
   },
   {
     q: "How do I find the best media buyer for my business?",
@@ -273,7 +273,7 @@ export const processSteps = [
     step: "01",
     title: "Discovery call",
     description:
-      "We review your business, offers, current ads, and goals — sales for e-commerce, or leads and booked jobs for services.",
+      "We review your business, offers, current ads, and goals. Sales for e-commerce, or leads and booked jobs for services.",
   },
   {
     step: "02",
@@ -299,9 +299,9 @@ export const processSteps = [
 export const seoContentSections = [
   {
     id: "ecommerce-dtc-media-buyer",
-    title: "E-commerce & DTC media buyer — ads that sell",
+    title: "E-commerce and DTC media buyer for ads that sell",
     paragraphs: [
-      "Online stores do not need more leads. They need sales. I run Meta (Facebook & Instagram) and Google campaigns for Shopify and DTC brands structured around purchases, catalog ads, Shopping, and Performance Max — with creative and tracking built for ROAS, not form fills.",
+      "Online stores do not need more leads. They need sales. I run Meta (Facebook & Instagram) and Google campaigns for Shopify and DTC brands structured around purchases, catalog ads, Shopping, and Performance Max, with creative and tracking built for ROAS, not form fills.",
       "With 7+ years managing paid media and $20M+ in ad spend, I optimize for cost per purchase and return on ad spend. Every account includes pixel and CAPI setup, offer testing, and weekly scaling of what actually sells.",
     ],
   },
@@ -309,7 +309,7 @@ export const seoContentSections = [
     id: "real-estate-lead-gen",
     title: "Real estate lead generation on Meta & Google",
     paragraphs: [
-      "Agents and teams need listing inquiries, buyer consults, and seller conversations — not random traffic. I build Facebook, Instagram, and Google campaigns around markets, listings, and lead forms so your CRM fills with people you can actually work.",
+      "Agents and teams need listing inquiries, buyer consults, and seller conversations, not random traffic. I build Facebook, Instagram, and Google campaigns around markets, listings, and lead forms so your CRM fills with people you can actually work.",
       "Lead generation for real estate is a different mechanism from e-commerce sales. I target by city and zip, match creative to the offer, and report on cost per qualified lead instead of vanity reach.",
     ],
   },
@@ -317,8 +317,8 @@ export const seoContentSections = [
     id: "home-service-media-buyer-usa",
     title: "Best media buyer for home service businesses in the USA",
     paragraphs: [
-      "If you run an HVAC, plumbing, roofing, cleaning, landscaping, or remodeling company in the United States, you need a media buyer who understands local lead gen — not a store playbook. I manage Meta and Google campaigns built for service-area targeting, click-to-call, lead forms, and retargeting so you get qualified leads and booked jobs.",
-      "Business owners searching for a media buyer for their business often waste budget on broad audiences and weak offers. I focus on cost per lead, cost per booked call, and revenue — with weekly optimization, creative testing, and transparent reporting for US home service brands.",
+      "If you run an HVAC, plumbing, roofing, cleaning, landscaping, or remodeling company in the United States, you need a media buyer who understands local lead gen, not a store playbook. I manage Meta and Google campaigns built for service-area targeting, click-to-call, lead forms, and retargeting so you get qualified leads and booked jobs.",
+      "Business owners searching for a media buyer for their business often waste budget on broad audiences and weak offers. I focus on cost per lead, cost per booked call, and revenue, with weekly optimization, creative testing, and transparent reporting for US home service brands.",
     ],
   },
   {
@@ -339,10 +339,10 @@ export const seoContentSections = [
   },
   {
     id: "meta-google-specialist",
-    title: "Meta & Google ads specialist — sales and lead gen",
+    title: "Meta and Google ads specialist for sales and lead gen",
     paragraphs: [
       "As a Top Rated Plus media buyer on Upwork, I've managed campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts), real estate and home service lead gen, and local providers. I'm Meta and Google certified with experience across B2C, DTC, and local services.",
-      "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management — all aimed at scaling what works and cutting wasted spend fast.",
+      "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management, all aimed at scaling what works and cutting wasted spend fast.",
     ],
   },
 ] as const;

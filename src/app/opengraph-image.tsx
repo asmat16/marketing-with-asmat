@@ -62,7 +62,7 @@ export default function OgImage() {
             lineHeight: 1.3,
           }}
         >
-          E-commerce · Real estate · Home services — sales & lead gen
+          E-commerce · Real estate · Home services. Sales and lead gen
         </div>
         <div
           style={{

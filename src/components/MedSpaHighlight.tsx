@@ -15,11 +15,11 @@ export function MedSpaHighlight() {
               Sales engine
             </p>
             <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-              E-commerce & DTC — ads built to sell, not collect leads
+              E-commerce and DTC ads built to sell, not collect leads
             </h2>
             <p className="mt-3 text-zinc-300 leading-relaxed">
               Purchase campaigns, catalog ads, and product creative for Shopify
-              and DTC brands — so you get orders and ROAS, not a spreadsheet of
+              and DTC brands, so you get orders and ROAS, not a spreadsheet of
               form fills. Lead gen is reserved for real estate and home
               services.
             </p>

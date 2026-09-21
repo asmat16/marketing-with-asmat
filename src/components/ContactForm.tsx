@@ -25,7 +25,7 @@ export function ContactForm() {
           name: data.get("name"),
           email: data.get("email"),
           message: data.get("message"),
-          _subject: "New lead — Marketing with Asmat website",
+          _subject: "New lead: Marketing with Asmat website",
         }),
       });
 
@@ -42,7 +42,7 @@ export function ContactForm() {
       <div className="rounded-2xl border border-teal-500/30 bg-teal-500/10 p-8 text-center">
         <p className="text-lg font-medium text-white">Message sent</p>
         <p className="mt-2 text-sm text-zinc-400">
-          Thanks — I&apos;ll get back to you within 24 hours.
+          Thanks. I&apos;ll get back to you within 24 hours.
         </p>
         <button
           type="button"

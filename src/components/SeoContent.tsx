@@ -12,7 +12,7 @@ export function SeoContent() {
         <SectionHeading
           label="Expertise"
           title="Paid media for e-commerce, real estate & home services"
-          description="Meta and Google ads for DTC sales, plus lead generation for real estate, home services, and aesthetics — not vanity metrics."
+          description="Meta and Google ads for DTC sales, plus lead generation for real estate, home services, and aesthetics, not vanity metrics."
           align="center"
         />
 

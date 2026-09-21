@@ -46,7 +46,7 @@ export function Footer() {
           <p>
             © {year} {siteConfig.name}. All rights reserved.
           </p>
-          <p>Portfolio screenshots © Asmat — confidential client work.</p>
+          <p>Portfolio screenshots © Asmat. Confidential client work.</p>
         </div>
       </div>
     </footer>

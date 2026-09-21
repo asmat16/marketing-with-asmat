@@ -9,7 +9,7 @@ export function Results() {
         <SectionHeading
           label="Results"
           title="Experience backed by measurable outcomes"
-          description="7+ years managing Meta and Google ads across e-commerce sales, real estate and home service lead gen, and local niches — with a focus on ROAS and lead quality."
+          description="7+ years managing Meta and Google ads across e-commerce sales, real estate and home service lead gen, and local niches, with a focus on ROAS and lead quality."
         />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

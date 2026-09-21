@@ -25,7 +25,7 @@ export function BlogInsights() {
           <SectionHeading
             label="Insights"
             title="Ads, growth and performance marketing"
-            description="Guides on Meta Ads, Google Ads, tracking, and funnels written from real ad-account work with US brands — e-commerce, local services, and more."
+            description="Guides on Meta Ads, Google Ads, tracking, and funnels written from real ad-account work with US brands in e-commerce, local services, and more."
           />
           <Link
             href="/blogs"

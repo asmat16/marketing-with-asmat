@@ -13,7 +13,7 @@ export function BookSection() {
         <SectionHeading
           label="Book a call"
           title="Schedule your free strategy call"
-          description="Pick a time below. You'll get a calendar invite and reminder — and I'll see your booking instantly in Calendly."
+          description="Pick a time below. You'll get a calendar invite and reminder, and I'll see your booking instantly in Calendly."
           align="center"
         />
 

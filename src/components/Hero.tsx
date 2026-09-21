@@ -55,11 +55,11 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.08]"
+            className="text-[1.85rem] font-bold tracking-tight text-white sm:text-[2.45rem] sm:leading-[1.14] lg:text-[2.85rem] lg:leading-[1.12]"
           >
-            Media buyer for{" "}
-            <span className="text-gradient">e-commerce, real estate</span>{" "}
-            & home services — sales and lead gen
+            I don&apos;t just buy Media. I build{" "}
+            <span className="text-gradient">Paid Growth Engines</span> that
+            drive Revenue.
           </motion.h1>
 
           <motion.p
@@ -67,11 +67,11 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300"
+            className="mt-5 max-w-xl text-[0.95rem] leading-[1.65] text-zinc-300 sm:mt-6 sm:text-base sm:leading-[1.7] lg:text-[1.05rem] lg:leading-[1.72]"
           >
-            I&apos;m Asmat — 7+ years running Meta & Google ads that drive
-            DTC sales and qualified leads. Top Rated Plus on Upwork. E-commerce,
-            real estate, and home service brands first.
+            I&apos;ve managed $20M+ in ad spend across eCommerce, DTC, real
+            estate, and home services with a focus on turning advertising spend
+            into predictable customer acquisition.
           </motion.p>
 
           <motion.div
@@ -146,7 +146,7 @@ export function Hero() {
             />
             <Image
               src="/asmat-hero.png"
-              alt="Asmat — Meta and Google media buyer for e-commerce, real estate, and home services"
+              alt="Asmat, Meta and Google media buyer for e-commerce, real estate, and home services"
               width={520}
               height={871}
               priority

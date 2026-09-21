@@ -45,7 +45,7 @@ export function FeaturedPortfolio() {
         <SectionHeading
           label="Case studies"
           title="Campaign results from real ad accounts"
-          description="Screenshots from Meta Ads Manager, Google Ads, and Analytics — confidential client work. Click any card to enlarge."
+          description="Screenshots from Meta Ads Manager, Google Ads, and Analytics. Confidential client work. Click any card to enlarge."
           align="center"
         />
 
