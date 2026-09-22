@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { PortfolioFolderGrid } from "@/components/portfolio/PortfolioFolderGrid";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Paid Ads Portfolio: E-commerce, Real Estate & Home Services",
+  description:
+    "Campaign results and case studies from Meta and Google ads for US e-commerce, home services, HVAC, and real estate lead generation.",
+  alternates: {
+    canonical: `${siteConfig.url}/portfolio`,
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function PortfolioHomePage() {
   return (

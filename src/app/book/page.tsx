@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/book`,
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Book a Free Strategy Call | Marketing with Asmat",
     description:
