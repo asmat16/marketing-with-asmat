@@ -10,7 +10,7 @@ export function Contact() {
         <SectionHeading
           label="Contact"
           title="Message me or book a call"
-          description="Form submissions go to my email. Strategy calls are booked through Calendly. I see every appointment in my Calendly dashboard and inbox."
+          description="Form submissions go to my email. You can also WhatsApp, email directly, hire on LinkedIn, or book a strategy call."
           align="center"
         />
 
@@ -55,6 +55,17 @@ export function Contact() {
 
             <div className="grid gap-3 sm:grid-cols-2">
               <a
+                href={siteConfig.links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-hover rounded-xl border border-teal-500/25 bg-teal-500/10 p-4 text-sm"
+              >
+                <p className="text-teal-300">WhatsApp</p>
+                <p className="mt-1 font-medium text-white">
+                  Message Asmat now
+                </p>
+              </a>
+              <a
                 href={`tel:${siteConfig.phone}`}
                 className="card-hover rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm"
               >
@@ -64,13 +75,22 @@ export function Contact() {
                 </p>
               </a>
               <a
-                href={`mailto:${siteConfig.email}`}
+                href={siteConfig.links.email}
                 className="card-hover rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm"
               >
                 <p className="text-zinc-500">Email</p>
                 <p className="mt-1 font-medium text-white">
                   {siteConfig.email}
                 </p>
+              </a>
+              <a
+                href={siteConfig.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-hover rounded-xl border border-white/10 bg-[var(--card)] p-4 text-sm"
+              >
+                <p className="text-zinc-500">LinkedIn</p>
+                <p className="mt-1 font-medium text-white">Hire or connect</p>
               </a>
             </div>
 

@@ -47,19 +47,28 @@
 2. **Bing Webmaster Tools** — [bing.com/webmasters](https://www.bing.com/webmasters) (imports from GSC)
 3. **Google Business Profile** — only if you have a US service address; optional for solo/freelance media buying
 
-### Target keywords (home services, USA)
+### Target keywords (hire intent, USA)
 
-Primary phrases on-site: “best media buyer for home service business”, “media buyer for my business”, “home service media buyer USA”. Ranking takes weeks–months; depends on backlinks, content depth, and competition.
+Primary: hire media buyer USA, best media buyer, Meta ads expert, Google ads specialist USA, TikTok ads expert, e-commerce media buyer, real estate Facebook ads, home service Google Ads.
+
+Ranking takes weeks to months. It depends on dedicated URLs, recrawl, and backlinks. PageSpeed 90+ is already in place.
+
+### Search Console (do this after every content deploy)
+
+1. Sitemaps → submit `https://www.marketingwithasmat.pro/sitemap.xml` again (last GSC read was 14 Jun 2026, only 3 pages discovered).
+2. URL Inspection → Request indexing on `/`, `/book`, `/blogs`, and each new post.
+3. Performance → filter queries for “media buyer”, “meta ads”, “google ads”, “tiktok”, not only med spa.
+4. Page indexing → open the 10 not-indexed URLs and fix or request recrawl.
 
 ### What actually moves rankings
 
 | Action | Why |
 |--------|-----|
-| Case studies / blog posts for HVAC, roofing, etc. | Dedicated URLs rank better than one homepage |
-| Backlinks (Upwork, LinkedIn, guest posts, directories) | Authority signals |
-| Reviews on Upwork + LinkedIn recommendations | Trust + branded searches |
-| Fast mobile site (PageSpeed 90+) | Core Web Vitals |
-| Internal links from social bios to `/book` | Crawl paths + conversions |
+| Money-keyword posts (hire, e-commerce, TikTok, real estate) | Dedicated URLs match hire intent better than one homepage |
+| Resubmit sitemap after deploys | Google was reading a 3-page snapshot from June |
+| WhatsApp, email, LinkedIn, Calendly on every page | Organic visitors can hire without hunting |
+| Backlinks (Upwork, LinkedIn, directories, guest posts) | Authority for competitive “best media buyer” terms |
+| Reviews on Upwork + LinkedIn | Trust + branded searches |
 
 ### Avoid
 

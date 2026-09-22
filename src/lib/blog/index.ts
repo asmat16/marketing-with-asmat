@@ -5,11 +5,19 @@ import { medSpaHomeService } from "./posts/med-spa-home-service";
 import { aiAdsStrategist } from "./posts/ai-ads-strategist";
 import { funnelOptimization } from "./posts/funnel-optimization";
 import { hirePakistan } from "./posts/hire-pakistan";
+import { hireMediaBuyerUsa } from "./posts/hire-media-buyer-usa";
+import { ecommerceMetaGoogle } from "./posts/ecommerce-meta-google";
+import { tiktokVsMetaGoogle } from "./posts/tiktok-vs-meta-google";
+import { facebookAdsRealEstate } from "./posts/facebook-ads-real-estate";
 import type { BlogPost } from "./types";
 
 export type { BlogPost, BlogFaq } from "./types";
 
 export const blogPosts: BlogPost[] = [
+  hireMediaBuyerUsa,
+  ecommerceMetaGoogle,
+  tiktokVsMetaGoogle,
+  facebookAdsRealEstate,
   googleAdsHvac,
   metaAdsMedSpa,
   costPerLead,

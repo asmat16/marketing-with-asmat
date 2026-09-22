@@ -14,11 +14,18 @@ export function StickyMobileCta() {
           Book free call
         </Link>
         <Link
-          href={`tel:${siteConfig.phone}`}
-          className="flex items-center justify-center rounded-full border border-white/15 px-4 py-3 text-sm font-medium text-white"
-          aria-label="Call"
+          href={siteConfig.links.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center rounded-full border border-teal-400/40 px-4 py-3 text-sm font-medium text-teal-200"
         >
-          Call
+          WhatsApp
+        </Link>
+        <Link
+          href={siteConfig.links.email}
+          className="flex items-center justify-center rounded-full border border-white/15 px-4 py-3 text-sm font-medium text-white"
+        >
+          Email
         </Link>
       </div>
     </div>

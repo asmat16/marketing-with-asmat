@@ -6,9 +6,9 @@ import { SectionHeading } from "./SectionHeading";
 
 export function BlogInsights() {
   const featuredSlugs = [
-    "google-ads-hvac-home-service-leads-usa",
-    "funnel-optimization-expert-before-meta-ads",
-    "ai-ads-strategist-creative-beats-ad-spend",
+    "hire-media-buyer-usa-meta-google-tiktok",
+    "ecommerce-meta-google-ads-that-sell",
+    "tiktok-vs-meta-vs-google-ads",
   ];
   const featured = featuredSlugs
     .map((slug) => blogPosts.find((post) => post.slug === slug))
@@ -43,8 +43,17 @@ export function BlogInsights() {
           Ready to hire?{" "}
           <Link href={siteConfig.links.book} className="text-teal-400 hover:underline">
             Book a free strategy call
-          </Link>{" "}
-          or{" "}
+          </Link>
+          {", "}
+          <Link
+            href={siteConfig.links.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-400 hover:underline"
+          >
+            WhatsApp
+          </Link>
+          {", or "}
           <Link
             href={siteConfig.links.upwork}
             target="_blank"

@@ -4,8 +4,10 @@ import { siteConfig } from "@/lib/site";
 const links = [
   { label: "Blog", href: siteConfig.links.blog },
   { label: "Portfolio", href: siteConfig.links.portfolio },
-  { label: "Upwork", href: siteConfig.links.upwork },
+  { label: "Email", href: siteConfig.links.email },
+  { label: "WhatsApp", href: siteConfig.links.whatsapp },
   { label: "LinkedIn", href: siteConfig.links.linkedin },
+  { label: "Upwork", href: siteConfig.links.upwork },
   { label: "Book a call", href: siteConfig.links.book },
 ] as const;
 

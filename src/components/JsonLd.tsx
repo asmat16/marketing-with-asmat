@@ -10,6 +10,28 @@ export function JsonLd() {
     description: siteConfig.description,
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    image: `${siteConfig.url}/opengraph-image`,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: siteConfig.email,
+        telephone: siteConfig.phone,
+        availableLanguage: ["English"],
+        url: siteConfig.links.book,
+      },
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Asmat",
+      jobTitle: "Media Buyer",
+      url: siteConfig.url,
+      sameAs: [
+        siteConfig.links.linkedin,
+        siteConfig.links.upwork,
+        siteConfig.links.instagram,
+      ],
+    },
     areaServed: {
       "@type": "Country",
       name: "United States",
@@ -30,6 +52,8 @@ export function JsonLd() {
       "E-commerce Sales",
       "Lead Generation",
       "DTC Marketing",
+      "TikTok Ads",
+      "Media Buying",
     ],
     sameAs: [
       siteConfig.links.linkedin,
@@ -49,6 +73,13 @@ export function JsonLd() {
           itemOffered: {
             "@type": "Service",
             name: "Google Ads for home services & real estate",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "TikTok ads for e-commerce",
           },
         },
         {

@@ -2,10 +2,12 @@ export const siteConfig = {
   name: "Marketing with Asmat",
   url: "https://www.marketingwithasmat.pro",
   description:
-    "USA-based Meta & Google media buyer for e-commerce (DTC) sales, real estate lead generation, and home service businesses. Also work with med spas & aesthetics. 7+ years, $20M+ ad spend managed.",
+    "Hire a US-focused media buyer for Meta, Google, and TikTok ads. E-commerce and DTC sales, real estate and home service lead gen, 7+ years, $20M+ ad spend managed.",
   email: "asmat.llh@gmail.com",
   phone: "+923136109373",
   phoneDisplay: "+92 313 6109373",
+  whatsapp:
+    "https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
   calendly: {
     /** Bookings appear in your Calendly dashboard + email (calendly.com) */
     eventUrl: "https://calendly.com/asmat-llh/15",
@@ -23,8 +25,16 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/profile.php?id=61561281302647",
     portfolio: "/portfolio",
     blog: "/blogs",
+    whatsapp:
+      "https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
+    email: "mailto:asmat.llh@gmail.com",
   },
   keywords: [
+    "best media buyer",
+    "hire media buyer USA",
+    "Meta ads expert",
+    "Google ads specialist USA",
+    "TikTok ads expert",
     "e-commerce media buyer",
     "DTC Facebook ads",
     "Meta ads for Shopify",
@@ -34,13 +44,11 @@ export const siteConfig = {
     "best media buyer for home service business",
     "home service media buyer",
     "google ads contractor leads",
-    "HVAC media buyer",
     "lead generation home services",
     "paid media buyer United States",
     "meta google ads specialist",
-    "hire media buyer USA",
     "ecommerce ROAS specialist",
-    "media buyer med spa",
+    "sales ads expert",
   ],
 } as const;
 
@@ -264,7 +272,15 @@ export const faqs = [
   },
   {
     q: "How do I find the best media buyer for my business?",
-    a: "Look for results that match your model: ROAS and purchases for e-commerce, cost per lead and booked appointments for real estate and home services. Book a free 15-minute strategy call to review your market, offers, and whether paid ads are the right fit before you commit budget.",
+    a: "Look for results that match your model: ROAS and purchases for e-commerce, cost per lead and booked appointments for real estate and home services. Book a free 15-minute strategy call, message on WhatsApp, or hire on LinkedIn.",
+  },
+  {
+    q: "Do you run TikTok ads as well as Meta and Google?",
+    a: "Yes. TikTok is useful for DTC creative testing and prospecting. Meta and Google usually carry the conversion load. I recommend the mix based on your product, offer, and creative capacity, not a one-platform default.",
+  },
+  {
+    q: "Can I hire you for Meta or Google ads in the United States?",
+    a: "Yes. Most of my paid media work is for US e-commerce, real estate, and home service brands. You can book a strategy call, email, WhatsApp, or hire through LinkedIn or Upwork.",
   },
 ] as const;
 
@@ -339,10 +355,18 @@ export const seoContentSections = [
   },
   {
     id: "meta-google-specialist",
-    title: "Meta and Google ads specialist for sales and lead gen",
+    title: "Meta, Google, and TikTok ads specialist for US brands",
     paragraphs: [
-      "As a Top Rated Plus media buyer on Upwork, I've managed campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts), real estate and home service lead gen, and local providers. I'm Meta and Google certified with experience across B2C, DTC, and local services.",
-      "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management, all aimed at scaling what works and cutting wasted spend fast.",
+      "As a Top Rated Plus media buyer, I manage Meta, Google, and TikTok campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts) and lead gen for real estate and home services. Certification covers Meta and Google. TikTok is used when creative volume supports it.",
+      "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management, aimed at sales or booked jobs, not vanity reach.",
+    ],
+  },
+  {
+    id: "hire-media-buyer",
+    title: "Hire a media buyer who can actually be reached",
+    paragraphs: [
+      "If you searched for the best media buyer, a Meta ads expert, or a Google ads specialist in the US, the next step should be a conversation, not a form maze. Book a free strategy call, email, WhatsApp, or hire on LinkedIn.",
+      "I work with founders and operators who already have a product or service and need paid acquisition that reports to revenue or qualified leads.",
     ],
   },
 ] as const;

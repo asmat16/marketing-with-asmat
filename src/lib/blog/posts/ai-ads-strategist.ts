@@ -52,7 +52,7 @@ So if AI is doing the targeting, what is the role of a media buyer today?
 
 In 2026, the answer is clear: creative is the new targeting. To win in paid media, you do not need a button pusher. You need an [AI ads strategist](/blogs/ai-ads-strategist-creative-beats-ad-spend) and a creative director rolled into one.
 
-This is how I work with US med spas, clinics, and home service brands. The same person who writes the hook also reads the booked-appointment numbers.
+This is how I work with US e-commerce, real estate, and home service brands. The same person who writes the hook also reads the purchase or booked-appointment numbers. If you need to [hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok), start there.
 
 ## Why creative strategy is the real lever
 
