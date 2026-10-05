@@ -39,7 +39,6 @@ export async function generateMetadata({
   return {
     title: post.seoTitle,
     description: post.description,
-    keywords: post.keywords,
     authors: [{ name: "Asmat", url: siteConfig.url }],
     category: post.category,
     alternates: {
@@ -72,16 +71,18 @@ export async function generateMetadata({
       description: post.description,
       images: [post.cover],
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots: post.noindex
+      ? { index: false, follow: false, googleBot: { index: false, follow: false } }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+          },
+        },
     other: {
       "geo.region": "US",
       "geo.placename": "United States",
@@ -95,7 +96,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   const url = `${siteConfig.url}/blogs/${post.slug}`;
-  const related = getRelatedPosts(post.slug, 3);
+  const related = getRelatedPosts(post.slug, 2);
   const isSvg = post.cover.split("?")[0].endsWith(".svg");
 
   return (
@@ -151,6 +152,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <img
                 src={post.cover}
                 alt={post.coverAlt}
+                data-motion="media"
                 className="h-full w-full object-cover"
                 width={1200}
                 height={630}
@@ -164,6 +166,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 width={1200}
                 height={630}
                 priority
+                data-motion="media"
                 className="h-auto w-full object-cover"
               />
             )}
@@ -173,13 +176,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           <div className="mt-12 rounded-2xl border border-teal-500/20 bg-teal-500/5 p-6 sm:p-8">
             <h2 className="text-xl font-bold text-white">
-              Hire a media buyer for your US business
+              Hire a media buyer for your US home service company
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-              I help e-commerce brands sell more, and I help real estate, home
-              service, and aesthetic businesses in the United States get
-              qualified leads with Meta and Google. 7+ years. $20M+ ad spend
-              managed. Top Rated Plus on Upwork.
+              I help US HVAC, roofing, plumbing, landscaping, and home repair
+              companies turn leads into booked jobs. Ads, creative, funnel, and
+              CRM in one seat. 7+ years. $20M+ ad spend managed. Top Rated Plus
+              on Upwork.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -204,7 +207,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <section className="mt-16 rounded-2xl border border-white/10 bg-[var(--card)] p-6 sm:flex sm:gap-5">
             <Image
               src="/asmat-hero.png"
-              alt="Asmat, senior media buyer and growth strategist for US brands"
+                alt="Asmat, media buyer for US home service companies"
               width={160}
               height={160}
               className="h-20 w-20 shrink-0 rounded-full border border-teal-400/30 object-cover object-top"
@@ -215,9 +218,10 @@ export default async function BlogPostPage({ params }: PageProps) {
               </p>
               <h2 className="mt-1 text-lg font-semibold text-white">Asmat</h2>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Senior media buyer and growth strategist. I run Meta and Google
-                ads for US e-commerce, real estate, and home service
-                companies, with a focus on sales, booked calls, and revenue.
+                Senior media buyer. I run Google Ads, Meta Ads, creative,
+                funnel, and CRM follow-up for US HVAC, roofing, plumbing,
+                landscaping, and home repair companies. The goal is booked
+                jobs, not cheap form fills.
               </p>
               <p className="mt-3 text-sm">
                 <Link href="/#contact" className="text-teal-400 hover:underline">
@@ -239,7 +243,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         <aside className="page-shell mt-16">
           <h2 className="text-2xl font-bold text-white">Keep reading</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {related.map((item) => (
               <BlogCard key={item.slug} post={item} />
             ))}

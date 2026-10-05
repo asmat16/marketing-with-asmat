@@ -10,7 +10,15 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
-export function Testimonials() {
+export function Testimonials({
+  label = "Client feedback",
+  title = "Real clients. Their words. Their LinkedIn.",
+  description = "Four reviews from people who ran paid acquisition with us. Open any LinkedIn profile to see who they are.",
+}: {
+  label?: string;
+  title?: string;
+  description?: string;
+}) {
   return (
     <section
       id="testimonials"
@@ -19,17 +27,16 @@ export function Testimonials() {
       <div className="page-shell">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-medium tracking-widest text-teal-400/90 uppercase">
-            Client feedback
+            {label}
           </p>
           <h2
             data-split
             className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]"
           >
-            Real clients. Their words. Their LinkedIn.
+            {title}
           </h2>
           <p data-reveal className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
-            Four reviews from people who ran paid acquisition with us. Open any
-            LinkedIn profile to see who they are.
+            {description}
           </p>
         </div>
 
@@ -37,18 +44,26 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <li key={t.id} data-reveal>
               <article className="card-hover flex h-full flex-col items-center rounded-3xl border border-white/10 bg-[var(--card)] px-6 py-8 text-center">
-                <div className="relative h-36 w-36 overflow-hidden rounded-full bg-[var(--surface)] ring-4 ring-[#0A66C2]/35 sm:h-40 sm:w-40">
+                <div
+                  className="relative h-36 w-36 overflow-hidden rounded-full bg-[var(--surface)] ring-4 ring-[#0A66C2]/35 sm:h-40 sm:w-40"
+                >
                   <Image
                     src={t.image}
-                    alt={`${t.name} LinkedIn profile photo`}
+                    alt={`${t.name} profile photo`}
                     fill
                     sizes="160px"
-                    className={`object-cover ${t.imageClass ?? "object-center"}`}
+                    className={`object-cover ${
+                      t.id === "jason-wojo"
+                        ? "object-[center_18%]"
+                        : (t.imageClass ?? "object-center")
+                    }`}
                   />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-white">{t.name}</h3>
                 <p className="mt-1 text-sm text-zinc-400">{t.role}</p>
-                <p className="mt-0.5 text-xs text-zinc-500">{t.location}</p>
+                {t.location ? (
+                  <p className="mt-0.5 text-xs text-zinc-500">{t.location}</p>
+                ) : null}
                 <blockquote className="mt-5 flex-1 text-[15px] leading-relaxed text-zinc-300">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>

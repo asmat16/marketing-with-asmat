@@ -3,9 +3,9 @@ import type { BlogPost } from "../types";
 export const facebookAdsRealEstate: BlogPost = {
   slug: "facebook-ads-real-estate-lead-generation",
   title: "Facebook Ads for Real Estate Lead Generation in the United States",
-  seoTitle: "Facebook Ads Real Estate Leads | US Agents",
+  seoTitle: "Facebook Real Estate Lead Generation",
   description:
-    "How US agents and teams use Facebook, Instagram, and Google ads for buyer, seller, and listing leads without buying junk form fills.",
+    "Facebook ads for real estate lead generation in the US. Buyer, seller, and listing leads with a tight map and same-day follow-up.",
   keywords: [
     "real estate lead generation ads",
     "Facebook ads real estate leads",
@@ -20,9 +20,14 @@ export const facebookAdsRealEstate: BlogPost = {
   coverAlt:
     "Facebook and Google ads for US real estate buyer and seller lead generation",
   publishedAt: "2026-09-22",
-  updatedAt: "2026-09-22",
+  updatedAt: "2026-10-02",
   readingMinutes: 6,
+  noindex: true,
   faqs: [
+    {
+      q: "How does Facebook real estate lead generation work?",
+      a: "You run ads to a listing, a neighborhood, or a seller consult inside a tight area. The form or page starts a conversation. Someone on the team follows up the same day. A cheap lead with no follow-up does not become a client.",
+    },
     {
       q: "Do Facebook ads still work for real estate?",
       a: "Yes when the offer is a listing, market, or consult, the geo is tight, and someone follows up the same day. Cheap leads with no speed-to-lead fail.",
@@ -56,6 +61,6 @@ A 20-minute follow-up beats a cheaper CPL. If your CRM is slow, ads will look li
 
 ## Talk through your market
 
-[Book a strategy call](/book), [email](mailto:asmat.llh@gmail.com), or [WhatsApp](https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.). If you want a public hire path, use [LinkedIn](https://www.linkedin.com/in/asmat16/).
+[Book a strategy call](/book), [email](mailto:asmat.llh@gmail.com), or [WhatsApp](https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.). If you want a public hire path, use [LinkedIn](https://www.linkedin.com/in/asmat16/).
 `,
 };

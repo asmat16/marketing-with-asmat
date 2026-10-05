@@ -24,7 +24,7 @@ export function BlogJsonLd({ post }: { post: BlogPost }) {
       "@type": "Person",
       name: "Asmat",
       url: siteConfig.url,
-      jobTitle: "Media Buyer and Growth Strategist",
+      jobTitle: "Media buyer for US home service companies",
       sameAs: [
         siteConfig.links.linkedin,
         siteConfig.links.upwork,

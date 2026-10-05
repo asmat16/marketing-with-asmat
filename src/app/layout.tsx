@@ -15,11 +15,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "Hire a Media Buyer for Meta, Google & TikTok Ads | US Brands",
+      "Google Ads, Meta Ads, Funnel and CRM for US Home Services | Marketing with Asmat",
     template: "%s | Marketing with Asmat",
   },
   description: siteConfig.description,
-  keywords: [...siteConfig.keywords],
   authors: [{ name: "Asmat", url: siteConfig.url }],
   creator: "Asmat",
   publisher: siteConfig.name,
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Hire a Media Buyer for Meta, Google & TikTok Ads",
+    title: "Home service leads that become booked jobs",
     description: siteConfig.description,
     images: [
       { url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name },
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire a Media Buyer for Meta, Google & TikTok Ads",
+    title: "Home service leads that become booked jobs",
     description: siteConfig.description,
   },
   robots: {

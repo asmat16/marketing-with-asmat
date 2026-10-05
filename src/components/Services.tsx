@@ -1,18 +1,37 @@
 import { services } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 
-export function Services() {
+type ServiceItem = {
+  title: string;
+  description: string;
+  bullets: readonly string[];
+};
+
+const liveHeading = {
+  label: "Services",
+    title: "Paid ads for US home service companies",
+  description:
+    "Google Ads, Meta Ads, and TikTok Ads for US HVAC, roofing, plumbing, landscaping, and home repair. The goal is more bookings and estimates.",
+};
+
+export function Services({
+  heading = liveHeading,
+  items = services,
+}: {
+  heading?: { label: string; title: string; description: string };
+  items?: readonly ServiceItem[];
+}) {
   return (
     <section id="services" className="border-t border-white/[0.08] py-24 sm:py-28">
       <div className="page-shell">
         <SectionHeading
-          label="Services"
-          title="Sales ads and lead generation built for your niche"
-          description="E-commerce is optimized for purchases and ROAS. Real estate and home services are optimized for qualified leads, calls, and booked jobs."
+          label={heading.label}
+          title={heading.title}
+          description={heading.description}
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {items.map((service) => (
             <article
               key={service.title}
               data-reveal

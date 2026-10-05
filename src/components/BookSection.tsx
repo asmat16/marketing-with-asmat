@@ -3,7 +3,18 @@ import { siteConfig } from "@/lib/site";
 import { CalendlyEmbed } from "./CalendlyEmbed";
 import { SectionHeading } from "./SectionHeading";
 
-export function BookSection() {
+const liveBook = {
+  label: "Book a call",
+  title: "Schedule your free strategy call",
+  description:
+    "Pick a time below. You'll get a calendar invite and reminder, and I'll see your booking instantly in Calendly.",
+};
+
+export function BookSection({
+  copy = liveBook,
+}: {
+  copy?: { label: string; title: string; description: string };
+}) {
   return (
     <section
       id="book"
@@ -11,9 +22,9 @@ export function BookSection() {
     >
       <div className="mx-auto w-full max-w-5xl">
         <SectionHeading
-          label="Book a call"
-          title="Schedule your free strategy call"
-          description="Pick a time below. You'll get a calendar invite and reminder, and I'll see your booking instantly in Calendly."
+          label={copy.label}
+          title={copy.title}
+          description={copy.description}
           align="center"
         />
 

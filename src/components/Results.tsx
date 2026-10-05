@@ -2,14 +2,30 @@ import Link from "next/link";
 import { credentials, resultsHighlights, siteConfig } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 
-export function Results() {
+const liveHeading = {
+  label: "Results",
+  title: "Experience backed by measurable outcomes",
+  description:
+    "7+ years managing Meta and Google ads for US home service companies, with a focus on booked jobs and lead quality.",
+};
+
+const liveCredentialsBlurb =
+  "Meta and Google certified. Paid media for US HVAC, roofing, plumbing, landscaping, and home repair.";
+
+export function Results({
+  heading = liveHeading,
+  credentialsBlurb = liveCredentialsBlurb,
+}: {
+  heading?: { label: string; title: string; description: string };
+  credentialsBlurb?: string;
+}) {
   return (
     <section id="results" className="border-t border-white/[0.08] bg-[var(--background)] py-24 sm:py-28">
       <div className="page-shell">
         <SectionHeading
-          label="Results"
-          title="Experience backed by measurable outcomes"
-          description="7+ years managing Meta and Google ads across e-commerce sales, real estate and home service lead gen, and local niches, with a focus on ROAS and lead quality."
+          label={heading.label}
+          title={heading.title}
+          description={heading.description}
         />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -38,9 +54,7 @@ export function Results() {
                 Top Rated Plus on Upwork
               </h3>
               <p className="mt-2 max-w-xl text-zinc-400">
-                Trusted by brands from startups to enterprise. Meta & Google
-                certified with a proven track record in e-commerce sales and
-                lead generation.
+                {credentialsBlurb}
               </p>
             </div>
             <Link

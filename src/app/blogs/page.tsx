@@ -7,20 +7,14 @@ import { TestimonialTicker } from "@/components/TestimonialTicker";
 import { blogPosts } from "@/lib/blog";
 import { siteConfig } from "@/lib/site";
 
-const title = "Insights on Ads, Growth and Performance Marketing";
+const title = "Guides on HVAC and home service ads";
 const description =
-  "Learn how US e-commerce, real estate, and home service brands grow with Meta Ads, Google Ads, tracking, and funnels. Hire Asmat, Top Rated Plus media buyer.";
+  "HVAC Google Ads, tracking, and booked jobs for US home service companies.";
+const listedPosts = blogPosts.filter((post) => !post.noindex);
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: [
-    "e-commerce ads",
-    "google ads HVAC",
-    "real estate lead generation",
-    "hire media buyer USA",
-    "home service lead generation",
-  ],
   authors: [{ name: "Asmat", url: siteConfig.url }],
   alternates: {
     canonical: `${siteConfig.url}/blogs`,
@@ -57,7 +51,7 @@ export default function BlogsPage() {
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    blogPost: blogPosts.map((post) => ({
+    blogPost: listedPosts.map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
       url: `${siteConfig.url}/blogs/${post.slug}`,
@@ -88,8 +82,8 @@ export default function BlogsPage() {
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-400">
             {description}
           </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post) => (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {listedPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
           </div>

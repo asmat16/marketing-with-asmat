@@ -1,7 +1,26 @@
 import { seoContentSections } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 
-export function SeoContent() {
+type SeoSection = {
+  id: string;
+  title: string;
+  paragraphs: readonly string[];
+};
+
+const liveHeading = {
+  label: "Expertise",
+  title: "Paid ads for US HVAC, roofing and plumbing",
+  description:
+    "Google Ads, Meta Ads, and TikTok Ads for US home service companies. Booked jobs and estimates, not cheap form fills.",
+};
+
+export function SeoContent({
+  heading = liveHeading,
+  sections = seoContentSections,
+}: {
+  heading?: { label: string; title: string; description: string };
+  sections?: readonly SeoSection[];
+}) {
   return (
     <section
       id="about"
@@ -10,14 +29,14 @@ export function SeoContent() {
     >
       <div className="page-shell">
         <SectionHeading
-          label="Expertise"
-          title="Paid media for e-commerce, real estate & home services"
-          description="Meta and Google ads for DTC sales, plus lead generation for real estate, home services, and aesthetics, not vanity metrics."
+          label={heading.label}
+          title={heading.title}
+          description={heading.description}
           align="center"
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          {seoContentSections.map((section) => (
+          {sections.map((section) => (
             <article
               key={section.id}
               id={section.id}

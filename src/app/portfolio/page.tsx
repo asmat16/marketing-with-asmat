@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { PortfolioFolderGrid } from "@/components/portfolio/PortfolioFolderGrid";
+import { FeaturedPortfolio } from "@/components/FeaturedPortfolio";
+import { foundationStudies } from "@/lib/foundation";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Paid Ads Portfolio: E-commerce, Real Estate & Home Services",
+  title: "Portfolio",
   description:
-    "Campaign results and case studies from Meta and Google ads for US e-commerce, home services, HVAC, and real estate lead generation.",
+    "Six real accounts. Each cover states the result. The original ad-account screenshot plays behind it.",
   alternates: {
     canonical: `${siteConfig.url}/portfolio`,
   },
@@ -14,29 +15,17 @@ export const metadata: Metadata = {
 
 export default function PortfolioHomePage() {
   return (
-    <div className="relative overflow-hidden py-14 sm:py-20">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_-20%,rgba(45,212,191,0.12),transparent_60%)]"
-      />
-      <div className="page-shell relative">
-        <p className="text-xs font-semibold tracking-widest text-teal-400/90 uppercase">
-          Portfolio
-        </p>
-        <h1
-          data-split
-          className="mt-3 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
-        >
-          Campaign results by industry
-        </h1>
-        <p className="mt-4 max-w-xl text-base text-zinc-400 sm:text-lg">
-          Six folders. Real ad account screenshots and custom case study boards
-          for e-commerce, home services, trades, Google, and Meta.
-        </p>
-        <div className="mt-12">
-          <PortfolioFolderGrid />
-        </div>
-      </div>
-    </div>
+    <FeaturedPortfolio
+      sectionId="portfolio-results"
+      heading={{
+        label: "Portfolio",
+        title: "Campaign results from real accounts",
+        description:
+          "The cover is the result. The screenshot plays behind it. Click a card to enlarge the account.",
+      }}
+      studies={foundationStudies.slice(0, 6)}
+      columns={3}
+      slideshow
+    />
   );
 }

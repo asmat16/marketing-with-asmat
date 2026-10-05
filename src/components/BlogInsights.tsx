@@ -4,12 +4,36 @@ import { siteConfig } from "@/lib/site";
 import { BlogCard } from "./blog/BlogCard";
 import { SectionHeading } from "./SectionHeading";
 
-export function BlogInsights() {
+const liveInsights = {
+  label: "Insights",
+    title: "Leads that turn into booked jobs",
+  description:
+    "Guides on booked jobs, remote media buyers, and ads plus CRM in one seat for US home service companies.",
+  hireLead: "Ready to hire?",
+  hireCta: "Book a free strategy call",
+};
+
+export function BlogInsights({
+  copy = liveInsights,
+  count = 3,
+  whatsappHref = siteConfig.links.whatsapp,
+}: {
+  copy?: {
+    label: string;
+    title: string;
+    description: string;
+    hireLead: string;
+    hireCta: string;
+  };
+  count?: number;
+  whatsappHref?: string;
+}) {
   const featuredSlugs = [
-    "hire-media-buyer-usa-meta-google-tiktok",
-    "ecommerce-meta-google-ads-that-sell",
-    "tiktok-vs-meta-vs-google-ads",
-  ];
+    "home-service-leads-not-bookings",
+    "hire-remote-media-buyer-home-services",
+    "ads-crm-funnel-creative-one-person",
+    "google-ads-hvac-home-service-leads-usa",
+  ].slice(0, count);
   const featured = featuredSlugs
     .map((slug) => blogPosts.find((post) => post.slug === slug))
     .filter((post): post is (typeof blogPosts)[number] => Boolean(post));
@@ -23,9 +47,9 @@ export function BlogInsights() {
       <div className="page-shell">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            label="Insights"
-            title="Ads, growth and performance marketing"
-            description="Guides on Meta Ads, Google Ads, tracking, and funnels written from real ad-account work with US brands in e-commerce, local services, and more."
+            label={copy.label}
+            title={copy.title}
+            description={copy.description}
           />
           <Link
             href="/blogs"
@@ -34,19 +58,19 @@ export function BlogInsights() {
             Read the blog
           </Link>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {featured.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-zinc-500">
-          Ready to hire?{" "}
+          {copy.hireLead}{" "}
           <Link href={siteConfig.links.book} className="text-teal-400 hover:underline">
-            Book a free strategy call
+            {copy.hireCta}
           </Link>
           {", "}
           <Link
-            href={siteConfig.links.whatsapp}
+            href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
             className="text-teal-400 hover:underline"

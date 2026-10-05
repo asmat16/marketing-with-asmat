@@ -1,11 +1,15 @@
 import { niches } from "@/lib/site";
 
-export function NicheBar() {
+export function NicheBar({
+  label = "Who I help scale with paid ads",
+}: {
+  label?: string;
+}) {
   return (
     <section className="border-y border-white/[0.08] bg-[var(--surface)] py-6">
       <div className="page-shell">
         <p className="mb-4 text-center text-xs font-semibold tracking-widest text-zinc-500 uppercase">
-          Who I help scale with paid ads
+          {label}
         </p>
         <ul className="flex flex-wrap items-center justify-center gap-3">
           {niches.map((niche) => (

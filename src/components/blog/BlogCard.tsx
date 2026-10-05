@@ -23,6 +23,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
             alt={post.coverAlt}
             width={1200}
             height={630}
+            data-motion="media"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
             loading="lazy"
             decoding="async"
@@ -33,6 +34,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
             alt={post.coverAlt}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+            data-motion="media"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         )}

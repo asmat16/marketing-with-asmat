@@ -75,7 +75,7 @@ If you cannot message them, you do not have a partner.
 ## How to hire me
 
 - [Book a free strategy call](/book)
-- [WhatsApp](https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.)
+- [WhatsApp](https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.)
 - Email asmat.llh@gmail.com
 - [Hire on LinkedIn](https://www.linkedin.com/in/asmat16/)
 - [Hire on Upwork](https://www.upwork.com/freelancers/proasmat)

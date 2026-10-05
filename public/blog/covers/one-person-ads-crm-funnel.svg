@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="One person for ads CRM funnel and creative">
+  <defs>
+    <linearGradient id="bgOne2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14141f"/>
+      <stop offset="1" stop-color="#232334"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgOne2)"/>
+  <g transform="translate(80,80)">
+    <circle cx="6" cy="8" r="6" fill="#2dd4bf"/>
+    <text x="24" y="14" font-family="system-ui, Arial, sans-serif" font-size="24" font-weight="600" fill="#2dd4bf">Marketing with Asmat</text>
+  </g>
+  <text x="80" y="286" font-family="system-ui, Arial, sans-serif" font-size="36" font-weight="600" fill="#f0c27a">End to end</text>
+  <text x="80" y="362" font-family="system-ui, Arial, sans-serif" font-size="48" font-weight="700" fill="#fafafa">Ads, Funnel, CRM, Creative</text>
+  <text x="80" y="470" font-family="system-ui, Arial, sans-serif" font-size="26" font-weight="500" fill="#a1a1aa">One operator for US home service companies</text>
+</svg>

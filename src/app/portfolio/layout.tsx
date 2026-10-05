@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Portfolio | Marketing with Asmat",
   description:
-    "Case studies and campaign results for e-commerce, real estate, home services, Google Ads, and Meta Ads.",
+    "Case studies from real ad accounts. Paid media proof for US home service companies. Some older screenshots are from other niches and are labeled as such.",
   robots: { index: true, follow: true },
 };
 
@@ -21,10 +21,10 @@ export default function PortfolioLayout({
             Marketing with Asmat
           </Link>
           <Link
-            href="https://www.marketingwithasmat.pro"
+            href="/"
             className="text-xs text-zinc-400 transition-colors hover:text-teal-300"
           >
-            Main site →
+            Home
           </Link>
         </div>
       </header>

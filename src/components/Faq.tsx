@@ -4,21 +4,36 @@ import { useState } from "react";
 import { faqs } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 
-export function Faq() {
+type FaqItem = { q: string; a: string };
+
+const liveHeading = {
+  label: "FAQ",
+  title: "Common questions before you book",
+  description:
+    "Straight answers about working together, timelines, and what to expect from your campaigns.",
+};
+
+export function Faq({
+  heading = liveHeading,
+  items = faqs,
+}: {
+  heading?: { label: string; title: string; description: string };
+  items?: readonly FaqItem[];
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section id="faq" className="border-t border-white/[0.08] bg-[var(--surface)] py-24 sm:py-28">
       <div className="mx-auto w-full max-w-5xl">
         <SectionHeading
-          label="FAQ"
-          title="Common questions before you book"
-          description="Straight answers about working together, timelines, and what to expect from your campaigns."
+          label={heading.label}
+          title={heading.title}
+          description={heading.description}
           align="center"
         />
 
         <ul className="mt-12 space-y-3">
-          {faqs.map((item, index) => {
+          {items.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <li

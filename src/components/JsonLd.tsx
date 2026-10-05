@@ -1,5 +1,6 @@
 import { blogPosts } from "@/lib/blog";
-import { faqs, siteConfig } from "@/lib/site";
+import { foundationFaqs } from "@/lib/foundation";
+import { siteConfig } from "@/lib/site";
 
 export function JsonLd() {
   const business = {
@@ -24,7 +25,7 @@ export function JsonLd() {
     founder: {
       "@type": "Person",
       name: "Asmat",
-      jobTitle: "Media Buyer",
+      jobTitle: "Media buyer for US home service companies",
       url: siteConfig.url,
       sameAs: [
         siteConfig.links.linkedin,
@@ -38,22 +39,29 @@ export function JsonLd() {
     },
     priceRange: "$$",
     serviceType: [
-      "Meta Ads Management",
-      "Google Ads Management",
-      "E-commerce Advertising",
-      "Lead Generation",
-      "Real Estate Advertising",
+      "Google Ads for home services",
+      "Meta Ads for home services",
+      "TikTok Ads for home services",
       "Home Service Advertising",
+      "Funnel and landing pages for home services",
+      "CRM automations for home services",
+      "Remote media buying",
     ],
     knowsAbout: [
+      "Google Ads",
       "Facebook Ads",
       "Instagram Ads",
-      "Google Ads",
-      "E-commerce Sales",
-      "Lead Generation",
-      "DTC Marketing",
       "TikTok Ads",
-      "Media Buying",
+      "HVAC advertising",
+      "Roofing advertising",
+      "Plumbing advertising",
+      "Lead Generation",
+      "CRM automations",
+      "Funnel management",
+      "Creative for home services",
+      "Remote media buyer",
+      "Performance marketing",
+      "Growth operator",
     ],
     sameAs: [
       siteConfig.links.linkedin,
@@ -62,24 +70,24 @@ export function JsonLd() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Paid media services for US businesses",
+      name: "Paid media for US home service companies",
       itemListElement: [
         {
           "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Meta Ads for e-commerce" },
+          itemOffered: { "@type": "Service", name: "Google Ads for HVAC companies" },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Google Ads for home services & real estate",
+            name: "Google Ads for roofing companies",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "TikTok ads for e-commerce",
+            name: "Google Ads for plumbing companies",
           },
         },
         {
@@ -87,6 +95,13 @@ export function JsonLd() {
           itemOffered: {
             "@type": "Service",
             name: "Media buying strategy call",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Remote growth operator for ads, funnel, and CRM",
           },
         },
       ],
@@ -97,7 +112,9 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Marketing with Asmat blog",
-    itemListElement: blogPosts.map((post, index) => ({
+    itemListElement: blogPosts
+      .filter((post) => !post.noindex)
+      .map((post, index) => ({
       "@type": "ListItem",
       position: index + 1,
       url: `${siteConfig.url}/blogs/${post.slug}`,
@@ -108,7 +125,7 @@ export function JsonLd() {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((item) => ({
+    mainEntity: foundationFaqs.map((item) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: {
@@ -124,7 +141,7 @@ export function JsonLd() {
     name: "Book a Free Strategy Call",
     url: `${siteConfig.url}/book`,
     description:
-      "Schedule a free 15-minute strategy call for Meta and Google ads.",
+      "Schedule a free 15-minute strategy call for Google, Meta, and TikTok ads for US home service companies.",
     potentialAction: {
       "@type": "ReserveAction",
       target: {

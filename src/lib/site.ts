@@ -2,12 +2,12 @@ export const siteConfig = {
   name: "Marketing with Asmat",
   url: "https://www.marketingwithasmat.pro",
   description:
-    "Hire a US-focused media buyer for Meta, Google, and TikTok ads. E-commerce and DTC sales, real estate and home service lead gen, 7+ years, $20M+ ad spend managed.",
+    "I help US HVAC, roofing, and plumbing companies turn ad leads into booked jobs. One person for Google Ads, Meta Ads, creative, funnel, and CRM follow-up.",
   email: "asmat.llh@gmail.com",
-  phone: "+923136109373",
-  phoneDisplay: "+92 313 6109373",
+  phone: "+16677882088",
+  phoneDisplay: "+1 667 788 2088",
   whatsapp:
-    "https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
+    "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
   calendly: {
     /** Bookings appear in your Calendly dashboard + email (calendly.com) */
     eventUrl: "https://calendly.com/asmat-llh/15",
@@ -26,29 +26,15 @@ export const siteConfig = {
     portfolio: "/portfolio",
     blog: "/blogs",
     whatsapp:
-      "https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
+      "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
     email: "mailto:asmat.llh@gmail.com",
   },
   keywords: [
-    "best media buyer",
-    "hire media buyer USA",
-    "Meta ads expert",
-    "Google ads specialist USA",
-    "TikTok ads expert",
-    "e-commerce media buyer",
-    "DTC Facebook ads",
-    "Meta ads for Shopify",
-    "Google Shopping ads specialist",
-    "real estate lead generation ads",
-    "Facebook ads real estate leads",
-    "best media buyer for home service business",
-    "home service media buyer",
-    "google ads contractor leads",
-    "lead generation home services",
-    "paid media buyer United States",
-    "meta google ads specialist",
-    "ecommerce ROAS specialist",
-    "sales ads expert",
+    "HVAC Google Ads",
+    "roofing Google Ads",
+    "plumbing Google Ads",
+    "home service media buyer USA",
+    "Google Ads for contractors",
   ],
 } as const;
 
@@ -61,63 +47,53 @@ export const heroStats = [
 
 export const services = [
   {
-    title: "E-commerce & DTC Sales Ads",
+    title: "Google Ads for HVAC, roofing, and plumbing",
     description:
-      "Meta and Google campaigns built to sell. Purchases, ROAS, and repeat buyers for Shopify and DTC brands. We do not run e-commerce for lead forms. We run it for revenue.",
+      "Search campaigns in your service area. The score is booked calls and jobs, not DIY clicks.",
     bullets: [
-      "Purchase & catalog campaigns (Advantage+, Shopping, PMax)",
-      "Creative testing for product, UGC, and offer angles",
-      "Pixel, CAPI, and ROAS reporting tied to actual sales",
+      "Service-area targeting",
+      "Call and form tracking",
+      "Offers that match the page after the click",
     ],
   },
   {
-    title: "Real Estate Lead Generation",
+    title: "Meta Ads for home service companies",
     description:
-      "Facebook, Instagram, and Google ads that bring in buyer, seller, and listing inquiries, not random clicks. Built for agents, teams, and local markets.",
+      "Facebook and Instagram for the season, the neighborhood, and proof of the work.",
     bullets: [
-      "Lead forms & landing pages for listings and markets",
-      "Geo targeting by city, zip, and commute patterns",
-      "Follow-up friendly lead quality over cheap volume",
+      "Lead forms and click to call",
+      "Job photos over stock rooms",
+      "Retargeting people who already visited",
     ],
   },
   {
-    title: "Home Service Appointment Ads",
+    title: "TikTok Ads when you can film the work",
     description:
-      "Facebook, Instagram, and Google campaigns for HVAC, cleaning, landscaping, remodeling, and other local service businesses that need booked jobs, not vanity metrics.",
+      "Short video for companies that can show a truck, a roof, or an install. Not required on day one.",
     bullets: [
-      "Service-area targeting & seasonal offers",
-      "Lead gen + click-to-call optimization",
-      "Retargeting website visitors & form abandoners",
+      "Hooks from the job",
+      "Service-area targeting",
+      "Winners can move to Meta",
     ],
   },
   {
-    title: "Med Spa & Aesthetic Lead Gen",
+    title: "Campaign setup and account audit",
     description:
-      "Meta and Google campaigns that fill consult calendars for injectables, laser, body contouring, and skincare, when you need booked appointments, not likes.",
+      "I check structure, tracking, and the offer, then rebuild for booked jobs in the service area.",
     bullets: [
-      "Lead forms & instant forms optimized for bookings",
-      "Offer creative that stays within ad-platform rules",
-      "Local radius targeting for qualified patients",
+      "Call and form tracking review",
+      "Account structure and budget notes",
+      "A short launch plan",
     ],
   },
   {
-    title: "Campaign Setup & Account Audit",
+    title: "Monthly media buying",
     description:
-      "Starting from scratch or inheriting a broken account? I audit structure, tracking, audiences, and creative, then rebuild for sales (e-commerce) or qualified lead volume (services).",
+      "Weekly changes. Creative refresh. Reporting on calls, forms, and booked jobs.",
     bullets: [
-      "Pixel, CAPI & conversion event review",
-      "Account structure & budget recommendations",
-      "30-day launch roadmap with clear KPIs",
-    ],
-  },
-  {
-    title: "Monthly Media Buying & Optimization",
-    description:
-      "Ongoing management with weekly optimizations, creative refreshes, and reporting on the metric that matters: ROAS and purchases for stores, cost per lead and booked jobs for services.",
-    bullets: [
-      "Weekly performance reviews",
-      "A/B testing on copy, creative & audiences",
-      "Scaling winners, cutting wasted spend fast",
+      "Weekly account work",
+      "Tests on copy, creative, and audiences",
+      "Scale winners, cut waste",
     ],
   },
 ] as const;
@@ -233,54 +209,42 @@ export const copyrightNotice =
   "© Asmat. All portfolio screenshots are confidential client work.";
 
 export const niches = [
-  { label: "E-commerce & DTC", icon: "◈" },
-  { label: "Real Estate", icon: "⌂" },
-  { label: "Home Services", icon: "⚙" },
-  { label: "HVAC & Contractors", icon: "✦" },
-  { label: "Lead Generation", icon: "◎" },
-  { label: "Paid Sales Ads", icon: "♡" },
+  { label: "HVAC", icon: "◈" },
+  { label: "Roofing", icon: "⌂" },
+  { label: "Plumbing", icon: "⚙" },
+  { label: "Home repair", icon: "✦" },
+  { label: "Landscaping", icon: "◎" },
+  { label: "Remodeling", icon: "♡" },
 ] as const;
 
 export const faqs = [
   {
-    q: "Do you do sales ads or lead generation?",
-    a: "I do both, and they are separate playbooks. E-commerce and DTC brands get purchase campaigns optimized for sales and ROAS. Real estate and home services get lead generation: qualified inquiries, calls, and booked jobs.",
+    q: "Which companies do you take?",
+    a: "US companies in HVAC, roofing, plumbing, home repair, landscaping, remodeling, interior design, solar installation, and EV charger installation. Service-area businesses. United States only.",
   },
   {
-    q: "What's included in the free strategy call?",
-    a: "A 15-minute Zoom where we review your business, current ads (if any), offers, and goals. You'll get honest feedback on what's working, what to fix, and whether Meta, Google, or both make sense for your niche.",
+    q: "Do you work with med spas, clinics, or online stores?",
+    a: "No. I do not take med spas, aesthetics, clinics, vein or vascular practices, e-commerce, or real estate.",
   },
   {
-    q: "How quickly can we launch?",
-    a: "Most accounts go live within 1–2 weeks after onboarding, including pixel/CAPI audit, offer alignment, creative direction, and campaign structure. Rush launches are possible if tracking is already in place.",
+    q: "Do you work outside the United States?",
+    a: "No. The ads, the listings, the pages, and the follow-up are for US service areas.",
   },
   {
-    q: "What results should I expect?",
-    a: "Results vary by offer, market, and budget. For stores, I optimize purchases and ROAS. For real estate and home services, I optimize qualified leads and booked jobs. Past accounts have seen 5X–50X+ ROAS on e-commerce and thousands of conversions on Google Search.",
+    q: "Is TikTok required?",
+    a: "No. Google and Meta book more of these jobs. TikTok is for companies that can film the work.",
   },
   {
-    q: "Can I hire you through Upwork?",
-    a: "Yes, I'm Top Rated Plus on Upwork with 7+ years of paid media experience. You can hire there for escrow protection, or work directly after our strategy call.",
+    q: "How fast can we launch?",
+    a: "Most paid media accounts go live in one to two weeks after tracking, the offer, and the service area are clear.",
   },
   {
-    q: "Do you create ad creative?",
-    a: "I direct creative strategy, hooks, and angles based on what converts in your niche. I can work with your in-house team, UGC creators, or recommend formats (product/UGC for DTC, listing and offer ads for real estate and home services).",
+    q: "Are the case studies all from home service companies?",
+    a: "No. They are paid media proof from real accounts. I will not relabel an e-commerce screenshot as a roofing company. Home service work is judged on calls, forms, and booked jobs or estimates.",
   },
   {
-    q: "Are you a media buyer for home service businesses in the USA?",
-    a: "Yes. I work with US-based HVAC, cleaning, landscaping, remodeling, and other home service companies that need qualified leads and phone calls from Meta and Google, not vanity clicks. Campaigns use service-area targeting, offer-led creative, and conversion tracking aligned to booked jobs.",
-  },
-  {
-    q: "How do I find the best media buyer for my business?",
-    a: "Look for results that match your model: ROAS and purchases for e-commerce, cost per lead and booked appointments for real estate and home services. Book a free 15-minute strategy call, message on WhatsApp, or hire on LinkedIn.",
-  },
-  {
-    q: "Do you run TikTok ads as well as Meta and Google?",
-    a: "Yes. TikTok is useful for DTC creative testing and prospecting. Meta and Google usually carry the conversion load. I recommend the mix based on your product, offer, and creative capacity, not a one-platform default.",
-  },
-  {
-    q: "Can I hire you for Meta or Google ads in the United States?",
-    a: "Yes. Most of my paid media work is for US e-commerce, real estate, and home service brands. You can book a strategy call, email, WhatsApp, or hire through LinkedIn or Upwork.",
+    q: "What is the first step?",
+    a: "A 15-minute call. Bring the trade, the service area, the current ads if you have them, and how a lead becomes a booked job today. You can also hire on Upwork or message on WhatsApp.",
   },
 ] as const;
 
@@ -289,84 +253,60 @@ export const processSteps = [
     step: "01",
     title: "Discovery call",
     description:
-      "We review your business, offers, current ads, and goals. Sales for e-commerce, or leads and booked jobs for services.",
+      "We review the trade, the service area, current ads, and how a lead becomes a booked job today.",
   },
   {
     step: "02",
     title: "Strategy & tracking",
     description:
-      "I map your funnel, fix tracking, and build a channel plan (Meta, Google, or both) for your niche.",
+      "I map the offer, fix tracking, and choose Google, Meta, or both for that service area.",
   },
   {
     step: "03",
     title: "Launch & optimize",
     description:
-      "Campaigns go live with tested creative and audiences. I optimize weekly toward more sales (DTC) or lower CPL and more bookings (lead gen).",
+      "Campaigns go live with a clear next step. I optimize weekly toward calls, forms, and booked jobs.",
   },
   {
     step: "04",
     title: "Scale what works",
     description:
-      "Winning campaigns get more budget; underperformers get cut. You get clear reporting on real business outcomes.",
+      "Winning campaigns get more budget. Weak ones get cut. You get a short read on what to do next.",
   },
 ] as const;
 
 /** Keyword-rich sections for SEO & readability (visible on homepage) */
 export const seoContentSections = [
   {
-    id: "ecommerce-dtc-media-buyer",
-    title: "E-commerce and DTC media buyer for ads that sell",
+    id: "hvac-google-ads",
+    title: "Google Ads for US HVAC companies",
     paragraphs: [
-      "Online stores do not need more leads. They need sales. I run Meta (Facebook & Instagram) and Google campaigns for Shopify and DTC brands structured around purchases, catalog ads, Shopping, and Performance Max, with creative and tracking built for ROAS, not form fills.",
-      "With 7+ years managing paid media and $20M+ in ad spend, I optimize for cost per purchase and return on ad spend. Every account includes pixel and CAPI setup, offer testing, and weekly scaling of what actually sells.",
+      "When an AC dies, people search Google. I run service-area Search campaigns for HVAC repair, replacement, and maintenance. The score is booked calls and jobs, not DIY clicks.",
+      "Tracking has to match the job: calls, forms, and what actually gets on the calendar.",
     ],
   },
   {
-    id: "real-estate-lead-gen",
-    title: "Real estate lead generation on Meta & Google",
+    id: "roofing-google-ads",
+    title: "Google Ads for US roofing companies",
     paragraphs: [
-      "Agents and teams need listing inquiries, buyer consults, and seller conversations, not random traffic. I build Facebook, Instagram, and Google campaigns around markets, listings, and lead forms so your CRM fills with people you can actually work.",
-      "Lead generation for real estate is a different mechanism from e-commerce sales. I target by city and zip, match creative to the offer, and report on cost per qualified lead instead of vanity reach.",
+      "Roofing ads should reach homeowners in your service area who need a repair or a replacement. I keep the geo tight and the offer on the page the same as the ad.",
+      "TODO: add the roofing offer details you want on this site.",
+    ],
+  },
+  {
+    id: "plumbing-google-ads",
+    title: "Google Ads for US plumbing companies",
+    paragraphs: [
+      "Plumbing jobs often start with a search. I build Google Ads around the work you want more of, then Meta when the season or the neighborhood needs it.",
+      "TODO: add the plumbing offer details you want on this site.",
     ],
   },
   {
     id: "home-service-media-buyer-usa",
-    title: "Best media buyer for home service businesses in the USA",
+    title: "Paid ads for US home service companies",
     paragraphs: [
-      "If you run an HVAC, plumbing, roofing, cleaning, landscaping, or remodeling company in the United States, you need a media buyer who understands local lead gen, not a store playbook. I manage Meta and Google campaigns built for service-area targeting, click-to-call, lead forms, and retargeting so you get qualified leads and booked jobs.",
-      "Business owners searching for a media buyer for their business often waste budget on broad audiences and weak offers. I focus on cost per lead, cost per booked call, and revenue, with weekly optimization, creative testing, and transparent reporting for US home service brands.",
-    ],
-  },
-  {
-    id: "home-service-lead-gen",
-    title: "Lead generation for home service businesses",
-    paragraphs: [
-      "Home service brands rely on qualified leads and phone calls. I build Meta and Google campaigns with seasonal offers, geo-targeted audiences, and remarketing that turns website visitors into booked jobs across the USA.",
-      "Whether you need Google Search ads for high-intent keywords like “HVAC repair near me” or Meta lead ads for local awareness, I focus on measurable outcomes: leads, calls, and booked work.",
-    ],
-  },
-  {
-    id: "med-spa-media-buyer",
-    title: "Also available: med spas & aesthetic clinics",
-    paragraphs: [
-      "This is a supporting niche, not the primary offer. When a med spa or aesthetic clinic needs booked consultations, I can run Meta and Google lead campaigns with local targeting and offer creative that follows platform rules.",
-      "The main work is still e-commerce sales plus real estate and home service lead generation.",
-    ],
-  },
-  {
-    id: "meta-google-specialist",
-    title: "Meta, Google, and TikTok ads specialist for US brands",
-    paragraphs: [
-      "As a Top Rated Plus media buyer, I manage Meta, Google, and TikTok campaigns for e-commerce brands (20X–50X+ ROAS on winning accounts) and lead gen for real estate and home services. Certification covers Meta and Google. TikTok is used when creative volume supports it.",
-      "Services include account audits, pixel and conversion API setup, campaign launches, creative strategy, retargeting funnels, and monthly management, aimed at sales or booked jobs, not vanity reach.",
-    ],
-  },
-  {
-    id: "hire-media-buyer",
-    title: "Hire a media buyer who can actually be reached",
-    paragraphs: [
-      "If you searched for the best media buyer, a Meta ads expert, or a Google ads specialist in the US, the next step should be a conversation, not a form maze. Book a free strategy call, email, WhatsApp, or hire on LinkedIn.",
-      "I work with founders and operators who already have a product or service and need paid acquisition that reports to revenue or qualified leads.",
+      "I work with HVAC, roofing, plumbing, home repair, landscaping, remodeling, interior, solar, and EV charger companies in the United States. Not med spas. Not stores. Not real estate.",
+      "Google Ads, Meta Ads, and TikTok Ads. The listing, the page, and the follow-up sit around the ads when they are the leak.",
     ],
   },
 ] as const;

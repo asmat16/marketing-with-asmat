@@ -19,4 +19,5 @@ export type BlogPost = {
   readingMinutes: number;
   faqs: BlogFaq[];
   content: string;
+  noindex?: boolean;
 };

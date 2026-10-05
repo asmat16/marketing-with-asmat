@@ -15,6 +15,7 @@ export const tiktokVsMetaGoogle: BlogPost = {
   ],
   category: "Paid Media",
   tags: ["tiktok ads", "meta ads", "google ads", "channel strategy", "USA"],
+  noindex: true,
   excerpt:
     "US brands keep asking which platform is best. The answer is the mix that matches your offer, tracking, and creative capacity.",
   cover: "/blog/covers/tiktok-meta-google-ads.svg",
@@ -59,6 +60,6 @@ TikTok rewards native video. If you can ship hooks weekly, it is a strong prospe
 
 A TikTok-only specialist will over-index TikTok. A Google-only shop will ignore creative. [Hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok) who can sequence the mix.
 
-[Book a call](/book) or [WhatsApp](https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.) if you want a channel plan against your actual offer.
+[Book a call](/book) or [WhatsApp](https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.) if you want a channel plan against your actual offer.
 `,
 };

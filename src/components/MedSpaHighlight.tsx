@@ -1,7 +1,24 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
-export function MedSpaHighlight() {
+const liveCopy = {
+  label: "Home services",
+  title: "Ads built for more bookings, not a pile of form fills",
+  description:
+    "Google, Meta, and TikTok for US HVAC, roofing, plumbing, landscaping, and home repair. The goal is calls, estimates, and jobs on the calendar.",
+  cta: "Book a 15-min call",
+};
+
+export function MedSpaHighlight({
+  copy = liveCopy,
+}: {
+  copy?: {
+    label: string;
+    title: string;
+    description: string;
+    cta: string;
+  };
+}) {
   return (
     <section className="relative overflow-hidden border-t border-white/[0.08] py-16">
       <div
@@ -15,23 +32,20 @@ export function MedSpaHighlight() {
         >
           <div className="max-w-2xl">
             <p className="text-xs font-semibold tracking-widest text-teal-400 uppercase">
-              Sales engine
+              {copy.label}
             </p>
             <h2 data-split className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-              E-commerce and DTC ads built to sell, not collect leads
+              {copy.title}
             </h2>
             <p className="mt-3 text-zinc-300 leading-relaxed">
-              Purchase campaigns, catalog ads, and product creative for Shopify
-              and DTC brands, so you get orders and ROAS, not a spreadsheet of
-              form fills. Lead gen is reserved for real estate and home
-              services.
+              {copy.description}
             </p>
           </div>
           <Link
             href={siteConfig.links.book}
             className="inline-flex h-12 shrink-0 items-center justify-center rounded-full bg-white px-8 text-sm font-bold text-zinc-950 transition-opacity hover:opacity-90"
           >
-            Get an e-commerce ad audit
+            {copy.cta}
           </Link>
         </div>
       </div>

@@ -5,6 +5,7 @@ export type Testimonial = {
   location: string;
   image: string;
   imageClass?: string;
+  frameClass?: string;
   quote: string;
   linkedin: string;
 };
@@ -41,13 +42,14 @@ export const testimonials: Testimonial[] = [
     linkedin: "https://www.linkedin.com/in/stephenkrain/",
   },
   {
-    id: "goalmogul",
-    name: "GoalMogul",
-    role: "Michael Cheng, Founder",
-    location: "New York, NY",
-    image: "/testimonials/michael-cheng.jpg",
+    id: "jason-wojo",
+    name: "Jason Wojo",
+    role: "WOJO LLC",
+    location: "",
+    image: "/testimonials/jason-wojo.jpg",
+    imageClass: "object-[center_18%]",
     quote:
-      "Working with Asmat gave us a clearer customer acquisition strategy. He connected audience research, creative messaging, paid media, and conversion optimization into one process. That approach helped us generate more meaningful prospects while keeping ROAS at the center of the decision-making.",
-    linkedin: "https://www.linkedin.com/in/goalmogul/",
+      "Asmat spent four years inside our agency and helped us manage 30+ clients at a time. He made a real difference in AI acquisition, client revenue, content strategy, ads management, and full-funnel strategy. He works as a growth and performance marketing expert.",
+    linkedin: "https://www.linkedin.com/in/jason-wojo/",
   },
 ];

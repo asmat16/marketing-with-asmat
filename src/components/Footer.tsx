@@ -11,7 +11,16 @@ const links = [
   { label: "Book a call", href: siteConfig.links.book },
 ] as const;
 
-export function Footer() {
+const liveBlurb =
+  "Paid ads for US HVAC, roofing, plumbing, and similar home service companies.";
+
+export function Footer({
+  blurb = liveBlurb,
+  whatsappHref = siteConfig.links.whatsapp,
+}: {
+  blurb?: string;
+  whatsappHref?: string;
+}) {
   const year = new Date().getFullYear();
 
   return (
@@ -21,26 +30,26 @@ export function Footer() {
           <div>
             <p className="font-semibold text-white">{siteConfig.name}</p>
             <p className="mt-1 max-w-sm text-sm text-zinc-400">
-              Media buyer for e-commerce sales, real estate and home service
-              lead gen on Meta & Google.
+              {blurb}
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-6 gap-y-2">
-            {links.map((item) => (
+            {links.map((item) => {
+              const href = item.label === "WhatsApp" ? whatsappHref : item.href;
+              return (
               <Link
                 key={item.label}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
                 rel={
-                  item.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
+                  href.startsWith("http") ? "noopener noreferrer" : undefined
                 }
                 className="text-sm text-zinc-400 transition-colors hover:text-teal-300"
               >
                 {item.label}
               </Link>
-            ))}
+              );
+            })}
           </nav>
         </div>
 

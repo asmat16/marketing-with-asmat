@@ -4,9 +4,9 @@ export const aiAdsStrategist: BlogPost = {
   slug: "ai-ads-strategist-creative-beats-ad-spend",
   title:
     "The Role of an AI Ads Strategist in 2026: How Creative Strategy Beats Ad Spend",
-  seoTitle: "AI Ads Strategist: Creative Beats Spend",
+  seoTitle: "What Is an AI Ads Strategist?",
   description:
-    "Meta Advantage+ and Google Performance Max automated targeting. In 2026, creative is the new targeting. Hire an AI ads strategist who directs hooks, copy, and UGC.",
+    "An AI ads strategist directs hooks, offers, and UGC so Meta and Google find buyers. What the role does in 2026, and what it does not automate.",
   keywords: [
     "AI ads strategist",
     "creative strategist for paid ads",
@@ -22,12 +22,12 @@ export const aiAdsStrategist: BlogPost = {
   coverAlt:
     "An AI ads strategist directing creative strategy, hooks, and UGC scripts that feed Meta and Google machine-learning algorithms in 2026",
   publishedAt: "2026-07-07",
-  updatedAt: "2026-09-21",
+  updatedAt: "2026-10-02",
   readingMinutes: 4,
   faqs: [
     {
       q: "What is an AI ads strategist?",
-      a: "An AI ads strategist combines creative direction with AI-powered execution. Instead of only tweaking audiences, they engineer the hooks, copy, and creative that train the platform to find buyers.",
+      a: "An AI ads strategist decides the hooks, offers, and creative that Meta and Google use to find buyers. The platforms handle a lot of the targeting. AI helps with research and angles. It does not run the account or guarantee results.",
     },
     {
       q: "If Meta and Google automate targeting, why hire a strategist?",
@@ -50,7 +50,7 @@ export const aiAdsStrategist: BlogPost = {
 
 So if AI is doing the targeting, what is the role of a media buyer today?
 
-In 2026, the answer is clear: creative is the new targeting. To win in paid media, you do not need a button pusher. You need an [AI ads strategist](/blogs/ai-ads-strategist-creative-beats-ad-spend) and a creative director rolled into one.
+In 2026, the answer is clear: creative is the new targeting. To win in paid media, you do not need a button pusher. You need an AI ads strategist and a creative director rolled into one.
 
 This is how I work with US e-commerce, real estate, and home service brands. The same person who writes the hook also reads the purchase or booked-appointment numbers. If you need to [hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok), start there.
 
@@ -90,7 +90,7 @@ UGC still converts on Meta. A good brief scripts the first three seconds, the pr
 
 Many brands hire a copywriter, an editor, a developer, and a media buyer as four separate people. That leads to slow work and finger pointing.
 
-The modern solution is one [performance marketer](/#meta-google-specialist) who plans creative, builds the page, and runs the ads. You can see that full-path work in the [campaign portfolio](/portfolio).
+The modern solution is one [performance marketer](/who-i-help) who plans creative, builds the page, and runs the ads. You can see that full-path work in the [campaign portfolio](/portfolio).
 
 For local US offers, pair this with [Meta ads that book med spa consults](/blogs/meta-ads-med-spa-book-consults) or [Google Ads that book HVAC jobs](/blogs/google-ads-hvac-home-service-leads-usa).
 

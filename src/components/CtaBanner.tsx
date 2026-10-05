@@ -1,7 +1,24 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
-export function CtaBanner() {
+const liveCta = {
+  title: "Ready to grow sales, or fill the pipeline with real leads?",
+  description:
+    "Book a free strategy call. We'll review your offers, ad accounts, and the fastest path to purchases or qualified leads.",
+  primary: "Book free call",
+  secondary: "Hire on Upwork",
+};
+
+export function CtaBanner({
+  copy = liveCta,
+}: {
+  copy?: {
+    title: string;
+    description: string;
+    primary: string;
+    secondary: string;
+  };
+}) {
   return (
     <section className="border-t border-white/[0.08] py-20">
       <div className="page-shell">
@@ -18,18 +35,17 @@ export function CtaBanner() {
               data-split
               className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
             >
-              Ready to grow sales, or fill the pipeline with real leads?
+              {copy.title}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-zinc-300">
-              Book a free strategy call. We&apos;ll review your offers, ad
-              accounts, and the fastest path to purchases or qualified leads.
+              {copy.description}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 href={siteConfig.links.book}
                 className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/20 transition-all hover:shadow-teal-500/35"
               >
-                Book free call
+                {copy.primary}
               </Link>
               <Link
                 href={siteConfig.links.upwork}
@@ -37,7 +53,7 @@ export function CtaBanner() {
                 rel="noopener noreferrer"
                 className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 text-sm font-semibold text-white transition-all hover:border-indigo-400/40 hover:bg-indigo-500/10"
               >
-                Hire on Upwork
+                {copy.secondary}
               </Link>
             </div>
           </div>

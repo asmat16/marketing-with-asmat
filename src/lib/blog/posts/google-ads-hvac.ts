@@ -3,10 +3,10 @@ import type { BlogPost } from "../types";
 export const googleAdsHvac: BlogPost = {
   slug: "google-ads-hvac-home-service-leads-usa",
   title:
-    "How HVAC and Home Service Companies in the USA Get Real Leads from Google Ads",
-  seoTitle: "Google Ads for HVAC Leads in the USA",
+    "HVAC Google Ads: How Heating and Cooling Companies Get Booked Jobs",
+  seoTitle: "HVAC Google Ads for Booked Jobs",
   description:
-    "How HVAC, plumbing, and home service companies in the USA use Google Ads to get phone calls and booked jobs. Hire a media buyer who tracks booked work, not junk clicks.",
+    "Google Ads for HVAC and heating and cooling repair companies in the US. Tight service areas, call tracking, and booked jobs instead of DIY clicks.",
   keywords: [
     "google ads HVAC USA",
     "google ads contractor leads",
@@ -30,9 +30,13 @@ export const googleAdsHvac: BlogPost = {
   coverAlt:
     "Google Ads for HVAC and home service companies in the USA that book repair jobs and phone calls",
   publishedAt: "2026-09-21",
-  updatedAt: "2026-09-21",
+  updatedAt: "2026-10-02",
   readingMinutes: 6,
   faqs: [
+    {
+      q: "Do heating and cooling companies use Google Ads?",
+      a: "Yes. People search when the heat or the AC fails. The account should cover the cities you actually serve, skip DIY searches, and judge results by booked jobs, not cheap clicks.",
+    },
     {
       q: "Should an HVAC company use Google or Facebook ads?",
       a: "Use Google Ads first for urgent repair. People search when something breaks. Use Meta ads to stay in front of people who visited your site or need a bigger project like a new system.",
@@ -54,13 +58,13 @@ export const googleAdsHvac: BlogPost = {
       a: "It depends on job value and your city. A cheap lead that never books is worse than a higher lead cost that becomes a real job. Judge cost per booked job. Read more in cost per lead vs booked appointment.",
     },
   ],
-  content: `When an AC dies in July, the homeowner does not open Instagram and wait. They search Google. That is why [Google Ads for HVAC companies](/blogs/google-ads-hvac-home-service-leads-usa) still works so well for plumbing, roofing, and other home service brands in the United States.
+  content: `When an AC dies in July, the homeowner does not open Instagram and wait. They search Google. That is why Google Ads for HVAC companies still works so well for plumbing, roofing, and other home service brands in the United States.
 
 The problem is not Google. The problem is how most accounts are set up. Too many businesses pay for clicks from the wrong town, the wrong search, or people who only want a DIY video.
 
-I am Asmat, a USA-focused [media buyer for home service businesses](/#home-service-media-buyer-usa). This guide shows a simple way to run Google Ads for booked jobs. Not for pretty reports.
+I am Asmat, a USA-focused [media buyer for home service businesses](/who-i-help). This guide shows a simple way to run Google Ads for booked jobs. Not for pretty reports.
 
-If you want the same plan on Facebook and Instagram, read [Meta ads for med spas and local offers](/blogs/meta-ads-med-spa-book-consults) after this. The follow-up rules are similar even if the platform is different.
+If you want the same follow-up rules on Facebook and Instagram, read [ads, CRM, funnel, and creative in one person](/blogs/ads-crm-funnel-creative-one-person) after this.
 
 ## What a good lead means for home services
 
@@ -145,7 +149,7 @@ For many trades, Google Local Service Ads sit at the top and charge per lead, no
 
 Use Search ads and Local Service Ads together when you can. Search captures the typed need. Local Service Ads add trust with the Google screen.
 
-For clinic and consult businesses, the mix is different. That playbook is in the [med spa and home service ads guide](/blogs/med-spa-home-service-ads-guide).
+If follow-up is slow, ads will look like they failed. Read [why home service companies get leads but not booked jobs](/blogs/home-service-leads-not-bookings).
 
 ## A simple way to see if the account is healthy
 

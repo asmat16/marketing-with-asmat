@@ -5,22 +5,29 @@ import { useState } from "react";
 import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/site";
 
-const nav = [
-  { href: "/#testimonials", label: "Reviews" },
-  { href: siteConfig.links.portfolio, label: "Portfolio" },
-  { href: siteConfig.links.blog, label: "Blog" },
-  { href: "/#services", label: "Services" },
-  { href: "/#book", label: "Book" },
-  { href: "/#contact", label: "Contact" },
-] as const;
-
-export function Header() {
+export function Header({
+  home = "/",
+  ctaLabel = "Book a call",
+  navItems,
+}: {
+  home?: string;
+  ctaLabel?: string;
+  navItems?: readonly { href: string; label: string }[];
+}) {
   const [open, setOpen] = useState(false);
+  const nav = navItems ?? [
+    { href: `${home}#testimonials`, label: "Reviews" },
+    { href: siteConfig.links.portfolio, label: "Portfolio" },
+    { href: siteConfig.links.blog, label: "Blog" },
+    { href: `${home}#services`, label: "Services" },
+    { href: `${home}#book`, label: "Book" },
+    { href: `${home}#contact`, label: "Contact" },
+  ];
 
   return (
     <header className="site-chrome fixed top-9 z-50 border-b border-white/[0.08] bg-[var(--background)]/85 backdrop-blur-xl">
       <div className="page-shell flex h-16 items-center justify-between">
-        <Link href="/" className="text-white" onClick={() => setOpen(false)}>
+        <Link href={home} className="text-white" onClick={() => setOpen(false)}>
           <Logo accent />
         </Link>
 
@@ -64,7 +71,7 @@ export function Header() {
             href={siteConfig.links.book}
             className="rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-4 py-2 text-sm font-semibold text-zinc-950 shadow-md shadow-teal-500/20 transition-all hover:shadow-teal-500/35"
           >
-            Book a call
+            {ctaLabel}
           </Link>
         </div>
       </div>

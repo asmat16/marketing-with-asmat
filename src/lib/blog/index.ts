@@ -9,11 +9,17 @@ import { hireMediaBuyerUsa } from "./posts/hire-media-buyer-usa";
 import { ecommerceMetaGoogle } from "./posts/ecommerce-meta-google";
 import { tiktokVsMetaGoogle } from "./posts/tiktok-vs-meta-google";
 import { facebookAdsRealEstate } from "./posts/facebook-ads-real-estate";
+import { homeServiceLeadsNotBookings } from "./posts/home-service-leads-not-bookings";
+import { hireRemoteGrowthOperator } from "./posts/hire-remote-growth-operator";
+import { adsCrmFunnelOnePerson } from "./posts/ads-crm-funnel-one-person";
 import type { BlogPost } from "./types";
 
 export type { BlogPost, BlogFaq } from "./types";
 
 export const blogPosts: BlogPost[] = [
+  homeServiceLeadsNotBookings,
+  hireRemoteGrowthOperator,
+  adsCrmFunnelOnePerson,
   hireMediaBuyerUsa,
   ecommerceMetaGoogle,
   tiktokVsMetaGoogle,

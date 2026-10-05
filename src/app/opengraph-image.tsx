@@ -50,7 +50,7 @@ export default function OgImage() {
             letterSpacing: "-0.02em",
           }}
         >
-          Meta & Google Media Buyer
+          Meta, Google, funnel, CRM
         </div>
         <div
           style={{
@@ -62,7 +62,7 @@ export default function OgImage() {
             lineHeight: 1.3,
           }}
         >
-          E-commerce · Real estate · Home services. Sales and lead gen
+          HVAC · Roofing · Plumbing. Booked jobs for US home service companies
         </div>
         <div
           style={{

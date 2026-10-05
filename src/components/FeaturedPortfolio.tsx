@@ -4,6 +4,24 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { copyrightNotice, featuredCaseStudies } from "@/lib/site";
+
+type CaseStudy = {
+  image: string;
+  cover?: string;
+  coverAlt?: string;
+  platform: string;
+  title: string;
+  headline: string;
+  description: string;
+  tags: readonly string[];
+};
+
+const liveHeading = {
+  label: "Case studies",
+  title: "Campaign results from real ad accounts",
+  description:
+    "Screenshots from Meta Ads Manager, Google Ads, and Analytics. Confidential client work. Click any card to enlarge.",
+};
 import { SectionHeading } from "./SectionHeading";
 
 const container = {
@@ -19,7 +37,113 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-export function FeaturedPortfolio() {
+function StudyVisual({
+  study,
+  index,
+  slideshow,
+}: {
+  study: CaseStudy;
+  index: number;
+  slideshow: boolean;
+}) {
+  const [showShot, setShowShot] = useState(false);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (!slideshow || !study.cover) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let cancelled = false;
+    let timer = 0;
+    const cycle = (shot: boolean) => {
+      timer = window.setTimeout(() => {
+        if (cancelled) return;
+        setShowShot(shot);
+        cycle(!shot);
+      }, shot ? 2800 : 4600 + index * 280);
+    };
+    timer = window.setTimeout(() => cycle(true), 1400 + index * 420);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [slideshow, study.cover, index]);
+
+  if (!study.cover) {
+    return (
+      <>
+        <Image
+          src={study.image}
+          alt={study.title}
+          fill
+          data-motion="media"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, 33vw"
+          quality={72}
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
+        <span className="absolute left-4 top-4 rounded-full bg-teal-500/90 px-3 py-1 text-xs font-bold text-zinc-950">
+          {study.platform}
+        </span>
+        <p className="absolute bottom-14 left-4 text-3xl font-bold text-white drop-shadow-lg">
+          {study.headline}
+        </p>
+        <p className="absolute right-3 top-3 rounded bg-black/50 px-2 py-0.5 text-[10px] text-zinc-400 backdrop-blur-sm">
+          © Asmat
+        </p>
+      </>
+    );
+  }
+
+  const revealShot = slideshow && showShot && !paused;
+
+  return (
+    <div
+      className="absolute inset-0"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <motion.div
+        className="absolute inset-0"
+        animate={slideshow && !paused ? { scale: [1, 1.06] } : { scale: 1 }}
+        transition={{ duration: 14, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+      >
+        <Image
+          src={study.image}
+          alt=""
+          fill
+          aria-hidden
+          className="object-cover object-top"
+          sizes="(max-width: 1024px) 100vw, 33vw"
+          quality={72}
+        />
+      </motion.div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={study.cover}
+        alt={study.coverAlt ?? study.headline}
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+          revealShot ? "opacity-0" : "opacity-100"
+        }`}
+      />
+    </div>
+  );
+}
+
+export function FeaturedPortfolio({
+  heading = liveHeading,
+  studies = featuredCaseStudies,
+  sectionId = "portfolio",
+  columns = 2,
+  slideshow = false,
+}: {
+  heading?: { label: string; title: string; description: string };
+  studies?: readonly CaseStudy[];
+  sectionId?: string;
+  columns?: 2 | 3;
+  slideshow?: boolean;
+}) {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   useEffect(() => {
@@ -33,7 +157,7 @@ export function FeaturedPortfolio() {
 
   return (
     <section
-      id="portfolio"
+      id={sectionId}
       className="relative border-t border-white/[0.08] bg-[var(--surface)] py-24 sm:py-28"
     >
       <div
@@ -43,9 +167,9 @@ export function FeaturedPortfolio() {
 
       <div className="page-shell relative">
         <SectionHeading
-          label="Case studies"
-          title="Campaign results from real ad accounts"
-          description="Screenshots from Meta Ads Manager, Google Ads, and Analytics. Confidential client work. Click any card to enlarge."
+          label={heading.label}
+          title={heading.title}
+          description={heading.description}
           align="center"
         />
 
@@ -54,9 +178,9 @@ export function FeaturedPortfolio() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="mt-14 grid gap-6 sm:grid-cols-2"
+          className={`mt-14 grid gap-6 ${columns === 3 ? "md:grid-cols-3" : "sm:grid-cols-2"}`}
         >
-          {featuredCaseStudies.map((study, index) => (
+          {studies.map((study, index) => (
             <motion.article
               key={study.image}
               variants={item}
@@ -64,25 +188,7 @@ export function FeaturedPortfolio() {
               onClick={() => setLightbox(index)}
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-zinc-800/50">
-                <Image
-                  src={study.image}
-                  alt={study.title}
-                  fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, 50vw"
-                quality={72}
-                loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-                <span className="absolute left-4 top-4 rounded-full bg-teal-500/90 px-3 py-1 text-xs font-bold text-zinc-950">
-                  {study.platform}
-                </span>
-                <p className="absolute bottom-14 left-4 text-3xl font-bold text-white drop-shadow-lg">
-                  {study.headline}
-                </p>
-                <p className="absolute right-3 top-3 rounded bg-black/50 px-2 py-0.5 text-[10px] text-zinc-400 backdrop-blur-sm">
-                  © Asmat
-                </p>
+                <StudyVisual study={study} index={index} slideshow={slideshow} />
               </div>
               <div className="border-t border-white/[0.06] p-5 transition-colors group-hover:border-teal-500/20 group-hover:bg-[var(--card-hover)]">
                 <h3 className="text-lg font-semibold text-white group-hover:text-teal-50">
@@ -130,14 +236,14 @@ export function FeaturedPortfolio() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={featuredCaseStudies[lightbox].image}
-              alt={featuredCaseStudies[lightbox].title}
+              src={studies[lightbox].image}
+              alt={studies[lightbox].title}
               width={1400}
               height={900}
               className="h-auto max-h-[85vh] w-full rounded-lg object-contain"
             />
             <p className="mt-4 text-center text-sm text-zinc-400">
-              {featuredCaseStudies[lightbox].title} · © Asmat
+              {studies[lightbox].title} · © Asmat
             </p>
           </div>
         </div>

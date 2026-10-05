@@ -24,45 +24,81 @@ export function PageMotion() {
       const mm = gsap.matchMedia();
 
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        const yFrom = gsap.utils.clamp(16, 32, window.innerWidth * 0.016);
+        const inView = (el: HTMLElement) =>
+          el.getBoundingClientRect().top < window.innerHeight * 0.92;
 
         gsap.utils.toArray<HTMLElement>("[data-split]").forEach((el) => {
-          SplitText.create(el, {
-            type: "lines",
-            autoSplit: true,
-            aria: "auto",
-            onSplit(self) {
-              const inView =
-                el.getBoundingClientRect().top < window.innerHeight * 0.92;
+          const play = (targets: gsap.TweenTarget) => {
+            const visible = inView(el);
+            return gsap.from(targets, {
+              x: -28,
+              autoAlpha: 0,
+              duration: 0.72,
+              stagger: 0.045,
+              ease: "power3.out",
+              immediateRender: true,
+              scrollTrigger: visible
+                ? undefined
+                : {
+                    trigger: el,
+                    start: "top 88%",
+                    once: true,
+                  },
+            });
+          };
 
-              return gsap.from(self.lines, {
-                autoAlpha: 0,
-                y: 28,
-                duration: 0.7,
-                stagger: 0.08,
-                ease: "power3.out",
-                immediateRender: true,
-                scrollTrigger: inView
-                  ? undefined
-                  : {
-                      trigger: el,
-                      start: "top 88%",
-                      once: true,
-                    },
-              });
-            },
-          });
+          try {
+            SplitText.create(el, {
+              type: "words",
+              autoSplit: true,
+              aria: "auto",
+              onSplit(self) {
+                return play(self.words);
+              },
+            });
+          } catch {
+            play(el);
+          }
         });
 
         gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((el) => {
           gsap.from(el, {
+            x: -36,
             autoAlpha: 0,
-            y: yFrom,
-            duration: 0.68,
+            duration: 0.75,
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
               start: "top 90%",
+              once: true,
+            },
+          });
+        });
+
+        gsap.utils.toArray<HTMLElement>("[data-motion='media']").forEach((el) => {
+          gsap.from(el, {
+            x: -28,
+            scale: 1.04,
+            autoAlpha: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 92%",
+              once: true,
+            },
+          });
+        });
+
+        gsap.utils.toArray<HTMLElement>("[data-motion='step']").forEach((el) => {
+          gsap.from(el, {
+            x: -16,
+            autoAlpha: 0,
+            duration: 0.6,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 92%",
               once: true,
             },
           });

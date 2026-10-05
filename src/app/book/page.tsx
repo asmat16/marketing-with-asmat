@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book a Free Strategy Call",
   description:
-    "Schedule a free 15-minute Zoom call with Asmat. Meta and Google media buyer for e-commerce sales, real estate, and home service lead generation.",
+    "Schedule a free 15-minute Zoom call with Asmat. Google, Meta, and TikTok ads for US HVAC, roofing, plumbing, landscaping, and home repair.",
   alternates: {
     canonical: `${siteConfig.url}/book`,
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Book a Free Strategy Call | Marketing with Asmat",
     description:
-      "Pick a time for a free ad strategy call. E-commerce sales, real estate & home service paid media.",
+      "Pick a time for a free ad strategy call. HVAC, roofing, plumbing, and similar US home service companies.",
     url: `${siteConfig.url}/book`,
   },
 };
@@ -40,8 +40,9 @@ export default function BookPage() {
             Book your free strategy call
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-zinc-400">
-            15 minutes on Zoom. We&apos;ll review your offers, ad accounts,
-            and the fastest path to more sales or qualified leads.
+            15 minutes on Zoom. Bring the trade, the service area, and the
+            current ads if you have them. We will talk about booked jobs, not
+            cheap form fills.
           </p>
 
           <div className="mt-8 rounded-xl border border-teal-500/20 bg-teal-500/5 p-4 text-sm text-zinc-300">

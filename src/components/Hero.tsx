@@ -5,6 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { heroStats, siteConfig } from "@/lib/site";
 
+type HeroCopy = {
+  preview?: string;
+  eyebrow: string;
+  headlineBefore: string;
+  headlineAccent: string;
+  headlineAfter: string;
+  support: string;
+  primaryCta: string;
+  secondaryCta: string;
+  specializingLabel: string;
+  specializing: string;
+  imageAlt: string;
+};
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
@@ -14,9 +28,38 @@ const fadeUp = {
   }),
 };
 
-export function Hero() {
+const liveHero: HeroCopy = {
+  eyebrow: "US HVAC, roofing, plumbing. One person on the path.",
+  headlineBefore: "Home service companies get leads, not ",
+  headlineAccent: "booked jobs",
+  headlineAfter: ".",
+  support:
+    "The gap is the rest of the work. Creative. Content. Funnel. CRM automations. Google Ads and Meta Ads. Most owners hire four people for that. I do it in one seat. AI helps me move faster. I still make the calls.",
+  primaryCta: "Book a 15-min call",
+  secondaryCta: "View case studies",
+  specializingLabel: "I work with",
+  specializing: "HVAC · Roofing · Plumbing · Landscaping · Home repair",
+  imageAlt:
+    "Asmat, media buyer for US home service companies",
+};
+
+export function Hero({
+  copy = liveHero,
+  stats = heroStats,
+  primaryHref = siteConfig.links.book,
+  secondaryHref = "#portfolio",
+  imageSrc = "/asmat-hero.png",
+  portrait = false,
+}: {
+  copy?: HeroCopy;
+  stats?: readonly { value: string; label: string }[];
+  primaryHref?: string;
+  secondaryHref?: string;
+  imageSrc?: string;
+  portrait?: boolean;
+}) {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden pt-[7.25rem] pb-16 sm:pt-[7.75rem] sm:pb-20">
+    <section className={`relative overflow-hidden pt-[7.25rem] pb-16 sm:pt-[7.75rem] sm:pb-20 ${portrait ? "" : "min-h-[92vh]"}`}>
       <div
         aria-hidden
         className="bg-grid pointer-events-none absolute inset-0 opacity-60"
@@ -41,25 +84,36 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-teal-300 uppercase"
+            className={`inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-teal-300 uppercase ${copy.preview ? "" : "mb-5"}`}
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-400" />
             </span>
-            Results backed by $20M+ ad spend
+            {copy.eyebrow}
           </motion.p>
+          {copy.preview ? (
+            <motion.p
+              custom={0}
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              className="mt-3 mb-5 max-w-xl text-xs leading-relaxed text-zinc-500"
+            >
+              {copy.preview}
+            </motion.p>
+          ) : null}
 
           <motion.h1
             custom={1}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-[1.85rem] font-bold tracking-tight text-white sm:text-[2.45rem] sm:leading-[1.14] lg:text-[2.85rem] lg:leading-[1.12]"
+            className="text-[1.5rem] font-bold tracking-tight text-white sm:text-[2.05rem] sm:leading-[1.2] lg:text-[2.2rem] lg:leading-[1.22]"
           >
-            I don&apos;t just buy Media. I build{" "}
-            <span className="text-gradient">Paid Growth Engines</span> that
-            drive Revenue.
+            {copy.headlineBefore}
+            <span className="text-gradient">{copy.headlineAccent}</span>
+            {copy.headlineAfter}
           </motion.h1>
 
           <motion.p
@@ -69,9 +123,7 @@ export function Hero() {
             variants={fadeUp}
             className="mt-5 max-w-xl text-[0.95rem] leading-[1.65] text-zinc-300 sm:mt-6 sm:text-base sm:leading-[1.7] lg:text-[1.05rem] lg:leading-[1.72]"
           >
-            I&apos;ve managed $20M+ in ad spend across eCommerce, DTC, real
-            estate, and home services with a focus on turning advertising spend
-            into predictable customer acquisition.
+            {copy.support}
           </motion.p>
 
           <motion.div
@@ -82,16 +134,16 @@ export function Hero() {
             className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <Link
-              href={siteConfig.links.book}
+              href={primaryHref}
               className="group inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/25 transition-all hover:shadow-teal-500/40 hover:brightness-110"
             >
-              Book a free strategy call
+              {copy.primaryCta}
             </Link>
             <Link
-              href="#portfolio"
+              href={secondaryHref}
               className="inline-flex h-13 items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-indigo-400/40 hover:bg-indigo-500/10 hover:text-indigo-100"
             >
-              View case studies
+              {copy.secondaryCta}
             </Link>
           </motion.div>
 
@@ -102,7 +154,7 @@ export function Hero() {
             variants={fadeUp}
             className="mt-10 grid grid-cols-2 gap-2 sm:mt-11 sm:grid-cols-4 sm:gap-2.5"
           >
-            {heroStats.map((stat, index) => {
+            {stats.map((stat, index) => {
               const valueStyles = [
                 "text-teal-300",
                 "text-indigo-200/95",
@@ -144,16 +196,31 @@ export function Hero() {
               aria-hidden
               className="pointer-events-none absolute bottom-4 left-1/2 h-6 w-[50%] -translate-x-1/2 rounded-[100%] bg-black/50 blur-2xl"
             />
-            <div data-parallax="6" className="relative z-10 w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[400px]">
-              <Image
-                src="/asmat-hero.png"
-                alt="Asmat, Meta and Google media buyer for e-commerce, real estate, and home services"
-                width={520}
-                height={871}
-                priority
-                className="h-auto w-full object-contain object-bottom drop-shadow-[0_28px_56px_rgba(0,0,0,0.55)]"
-                sizes="(max-width: 1024px) 90vw, 400px"
-              />
+            <div data-parallax="6" className={`relative z-10 w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[400px] ${portrait ? "mb-20" : ""}`}>
+              {portrait ? (
+                <div className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_28px_56px_rgba(0,0,0,0.55)]">
+                  <Image
+                    src={imageSrc}
+                    alt={copy.imageAlt}
+                    fill
+                    priority
+                    data-motion="media"
+                    className="object-cover object-[center_18%]"
+                    sizes="340px"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={imageSrc}
+                  alt={copy.imageAlt}
+                  width={520}
+                  height={871}
+                  priority
+                  data-motion="media"
+                  className="h-auto w-full object-contain object-bottom drop-shadow-[0_28px_56px_rgba(0,0,0,0.55)]"
+                  sizes="(max-width: 1024px) 90vw, 400px"
+                />
+              )}
             </div>
           </div>
 
@@ -169,10 +236,10 @@ export function Hero() {
 
           <div className="absolute bottom-0 left-4 right-4 z-20 rounded-xl border border-white/10 bg-[var(--surface)]/95 p-4 backdrop-blur-md">
             <p className="text-xs font-semibold tracking-wide text-teal-400 uppercase">
-              Specializing in
+              {copy.specializingLabel}
             </p>
             <p className="mt-1 text-sm leading-snug text-zinc-200">
-              E-commerce · Real estate · Home services · DTC sales
+              {copy.specializing}
             </p>
           </div>
         </motion.div>

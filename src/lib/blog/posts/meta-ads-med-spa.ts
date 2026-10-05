@@ -3,9 +3,9 @@ import type { BlogPost } from "../types";
 export const metaAdsMedSpa: BlogPost = {
   slug: "meta-ads-med-spa-book-consults",
   title: "Meta Ads for Med Spas: How to Book Consults Without Wasting Spend",
-  seoTitle: "Meta Ads for Med Spas That Book Consults",
+  seoTitle: "Meta Ads for Med Spas",
   description:
-    "A simple Meta Ads plan for med spas and aesthetic clinics in the USA. Offers, lead forms, ad rules, and how to track booked consults so you can hire the right media buyer.",
+    "Meta ads for med spas that book consults, not likes. Offers, lead forms, and same-day follow-up for US clinics, plus when to add Google Ads.",
   keywords: [
     "meta ads med spa",
     "facebook ads aesthetic clinic USA",
@@ -29,8 +29,9 @@ export const metaAdsMedSpa: BlogPost = {
   coverAlt:
     "Meta Facebook and Instagram ads for US med spas designed to book treatment consults",
   publishedAt: "2026-09-21",
-  updatedAt: "2026-09-21",
+  updatedAt: "2026-10-02",
   readingMinutes: 6,
+  noindex: true,
   faqs: [
     {
       q: "Why do my Botox ads keep getting rejected on Meta?",
@@ -55,7 +56,7 @@ export const metaAdsMedSpa: BlogPost = {
   ],
   content: `Boosted posts can make a clinic look busy online and still leave empty chairs. Med spas in the USA do not need more likes. They need people who will sit for a consult and buy a treatment.
 
-[Meta ads for med spas](/blogs/meta-ads-med-spa-book-consults) (Facebook and Instagram) can do that. It works when the offer is clear, the form is simple, and the ads follow the rules for medical and beauty ads.
+Meta ads for med spas (Facebook and Instagram) can do that. It works when the offer is clear, the form is simple, and the ads follow the rules for medical and beauty ads. If the clinic also wants people who are already searching, that setup is in [Google Ads for med spas](/blogs/med-spa-home-service-ads-guide).
 
 I help aesthetic clinics as a [media buyer for med spas](/#med-spa-media-buyer). This is the plan I use when the goal is booked consults.
 

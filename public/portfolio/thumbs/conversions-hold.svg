@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="Conversion volume held across several Google campaigns">
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="42%" r="48%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="800" fill="#0b0e14"/>
+  <rect width="1280" height="800" fill="url(#glow)"/>
+  <rect x="0" y="0" width="8" height="800" fill="#2dd4bf"/>
+  
+  <text x="64" y="92" fill="#5eead4" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="2.4">GOOGLE · LEAD GEN</text>
+  <rect x="860" y="58" width="196" height="46" rx="23" fill="#818cf8" fill-opacity="0.16" stroke="#818cf8" stroke-opacity="0.45"/>
+  <text x="958" y="88" text-anchor="middle" fill="#c7d2fe" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="1.2">AI ANALYSIS</text>
+  <rect x="1070" y="58" width="146" height="46" rx="23" fill="#2dd4bf" fill-opacity="0.12" stroke="#2dd4bf" stroke-opacity="0.4"/>
+  <text x="1143" y="88" text-anchor="middle" fill="#99f6e4" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="1.2">SYSTEM</text>
+  <text x="64" y="300" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="124" font-weight="700" letter-spacing="-3">Held</text>
+  <text x="64" y="368" fill="#e4e4e7" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Across campaigns</text>
+  <text x="64" y="710" fill="#a1a1aa" font-family="Arial, Helvetica, sans-serif" font-size="30">Same standard. Several niches.</text>
+      <line x1="800" y1="360" x2="1120" y2="360" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="800" cy="360" r="16" fill="#2dd4bf"/>
+      <circle cx="960" cy="360" r="16" fill="#2dd4bf"/>
+      <circle cx="1120" cy="360" r="16" fill="#818cf8"/>
+      <text x="960" y="430" text-anchor="middle" fill="#a1a1aa" font-family="Arial, Helvetica, sans-serif" font-size="24">Volume held</text>
+</svg>

@@ -2,11 +2,10 @@ import type { BlogPost } from "../types";
 
 export const medSpaHomeService: BlogPost = {
   slug: "med-spa-home-service-ads-guide",
-  title:
-    "Med Spa and Home Service Marketing in the US: A Media Buyer's Guide to High-Converting Ads",
-  seoTitle: "Med Spa and Home Service Ads Guide",
+  title: "Google Ads and Meta Ads for Med Spas",
+  seoTitle: "Google and Meta Ads for Med Spas",
   description:
-    "A media buyer's playbook for US med spa and home service marketing. Meta lead ads, Google Search, Local Service Ads, and retargeting that book consults and make the phone ring.",
+    "Google Ads and Meta ads for US med spas: search for people already looking, offers that book consults, and the home-service setup for calls.",
   keywords: [
     "med spa ads expert",
     "google ads specialist for lead generation",
@@ -25,14 +24,19 @@ export const medSpaHomeService: BlogPost = {
     "local marketing",
   ],
   excerpt:
-    "Local lead generation is not e-commerce. This playbook shows how med spas and home service businesses in the US get the phone ringing and the consult calendar booked.",
+    "Google Ads and Meta ads for US med spas, plus the home-service search setup. Booked consults and phone calls, not extra traffic.",
   cover: "/blog/covers/med-spa-home-service-ads-guide.svg?v=2",
   coverAlt:
     "A media buyer's playbook for US med spa and home service lead generation using Meta Lead Ads, Google Search, Local Service Ads, and retargeting",
   publishedAt: "2026-07-12",
-  updatedAt: "2026-09-21",
+  updatedAt: "2026-10-02",
   readingMinutes: 5,
+  noindex: true,
   faqs: [
+    {
+      q: "Do Google Ads work for med spas?",
+      a: "They work when someone is already searching for a treatment in your city. Meta is usually the better place for an offer that books the first consult. Many clinics use both. The number that matters is cost per booked consult.",
+    },
     {
       q: "How is med spa and home service advertising different from e-commerce?",
       a: "E-commerce optimizes for online purchases. Local service businesses optimize for booked consults and phone calls. The goal is qualified appointment requests. That changes the offer, the lead form, the targeting radius, and how you measure success.",
@@ -56,7 +60,9 @@ export const medSpaHomeService: BlogPost = {
   ],
   content: `Running ads for local, service-based businesses in the United States requires a different playbook than e-commerce. Whether you operate a med spa in Austin or an HVAC company in Chicago, your goal is not to collect likes. Your goal is to get the phone to ring and the consultation calendar booked.
 
-Many local businesses burn cash on broad brand campaigns managed by teams that do not understand local lead generation. To win in your market, you need a [Google Ads and Meta Ads expert](/#meta-google-specialist) who knows the difference between traffic and booked jobs.
+If you are comparing Google Ads for med spas with Meta ads, each one has a job. Google catches people already searching. Meta books the consult from a clear offer. Home service companies use the same split: search when something breaks, Meta when the job is a bigger decision.
+
+Many local businesses burn cash on broad brand campaigns managed by teams that do not understand local lead generation. To win in your market, you need a [Google Ads and Meta Ads expert](/who-i-help) who knows the difference between traffic and booked jobs.
 
 This guide lays out the two playbooks I use for local clients. One for med spas and aesthetic clinics. One for home service businesses.
 

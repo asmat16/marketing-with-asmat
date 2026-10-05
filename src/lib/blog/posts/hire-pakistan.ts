@@ -18,12 +18,13 @@ export const hirePakistan: BlogPost = {
   tags: ["hiring", "media buyer", "USA brands", "Upwork", "Pakistan"],
   excerpt:
     "US brands are replacing expensive agencies with elite freelance media buyers from Pakistan. Here is why it works and how to hire the top 1%.",
-  cover: "/blog/covers/hire-media-buyer-pakistan.webp",
+  cover: "/blog/covers/hire-media-buyer-pakistan.svg",
   coverAlt:
     "A freelance media buyer from Pakistan managing US brands' Meta and Google ads dashboards with a global connection to the United States",
   publishedAt: "2026-06-28",
   updatedAt: "2026-09-21",
   readingMinutes: 9,
+  noindex: true,
   faqs: [
     {
       q: "Is it safe to hire a freelance media buyer from Pakistan?",

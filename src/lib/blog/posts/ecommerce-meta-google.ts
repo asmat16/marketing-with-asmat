@@ -15,6 +15,7 @@ export const ecommerceMetaGoogle: BlogPost = {
   ],
   category: "E-commerce",
   tags: ["e-commerce", "meta ads", "google ads", "ROAS", "DTC"],
+  noindex: true,
   excerpt:
     "Stores do not need more leads. They need purchases. This is the Meta and Google playbook I use for US DTC brands.",
   cover: "/blog/covers/ecommerce-meta-google-ads.svg",
@@ -57,6 +58,6 @@ TikTok is a creative laboratory, not always the checkout engine. Use it when you
 
 ## Work together
 
-[Book a strategy call](/book), [WhatsApp](https://wa.me/923136109373?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.), or [hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok) who already lives in purchase metrics.
+[Book a strategy call](/book), [WhatsApp](https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.), or [hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok) who already lives in purchase metrics.
 `,
 };

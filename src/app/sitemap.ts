@@ -24,12 +24,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    ...blogPosts.map((post) => ({
+    ...blogPosts
+      .filter((post) => !post.noindex)
+      .map((post) => ({
       url: `${siteConfig.url}/blogs/${post.slug}`,
       lastModified: new Date(post.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.85,
     })),
+    {
+      url: `${siteConfig.url}/systems`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteConfig.url}/who-i-help`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteConfig.url}/constraints`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     {
       url: `${siteConfig.url}/portfolio`,
       lastModified,

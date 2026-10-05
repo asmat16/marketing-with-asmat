@@ -3,7 +3,13 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
-export function StickyMobileCta() {
+export function StickyMobileCta({
+  label = "Book free call",
+  whatsappHref = siteConfig.links.whatsapp,
+}: {
+  label?: string;
+  whatsappHref?: string;
+}) {
   return (
     <div className="site-chrome fixed bottom-0 z-40 border-t border-white/10 bg-[var(--background)]/95 p-3 backdrop-blur-lg md:hidden">
       <div className="flex gap-2">
@@ -11,10 +17,10 @@ export function StickyMobileCta() {
           href={siteConfig.links.book}
           className="flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 py-3 text-sm font-bold text-zinc-950"
         >
-          Book free call
+          {label}
         </Link>
         <Link
-          href={siteConfig.links.whatsapp}
+          href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center rounded-full border border-teal-400/40 px-4 py-3 text-sm font-medium text-teal-200"

@@ -7,6 +7,7 @@ const tickerItems = testimonials.map((t) => ({
   id: t.id,
   image: t.image,
   imageClass: t.imageClass,
+  frameClass: t.frameClass,
   name: t.name,
   snippet: t.quote.slice(0, 72) + (t.quote.length > 72 ? "…" : ""),
 }));
@@ -25,7 +26,9 @@ export function TestimonialTicker() {
             key={`${item.id}-${i}`}
             className="inline-flex shrink-0 items-center gap-2.5 text-[11px] text-zinc-400"
           >
-            <span className="relative h-5 w-5 overflow-hidden rounded-full bg-[var(--surface)] ring-1 ring-white/15">
+            <span
+              className={`relative h-5 w-5 overflow-hidden rounded-full bg-[var(--surface)] ring-1 ring-white/15 ${item.frameClass ?? ""}`}
+            >
               <Image
                 src={item.image}
                 alt=""
