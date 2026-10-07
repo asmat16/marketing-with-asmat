@@ -6,15 +6,15 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
 import { demoWhatsapp } from "@/lib/demo-content";
-import { audiences, foundationNav } from "@/lib/foundation";
-import { siteConfig } from "@/lib/site";
+import { audiences, footerBlurb, foundationNav } from "@/lib/foundation";
+import { pageMeta, siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Who I help",
+export const metadata: Metadata = pageMeta({
+  title: "Who I Help",
   description:
-    "I work with US HVAC, roofing, plumbing, and similar home service companies. Booked jobs and estimates. Not med spas, stores, or real estate.",
-  alternates: { canonical: "https://www.marketingwithasmat.pro/who-i-help" },
-};
+    "DTC e-commerce brands in women's apparel, skincare, beauty, and jewelry, plus B2B and B2C lead gen businesses in the US.",
+  path: "/who-i-help",
+});
 
 export default function WhoIHelpPage() {
   return (
@@ -27,12 +27,12 @@ export default function WhoIHelpPage() {
             Who I help
           </p>
           <h1 data-split className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Operators who run a US home service company
+            Brands that sell online and businesses that need real leads
           </h1>
           <p data-reveal className="mt-5 max-w-3xl text-lg leading-relaxed text-zinc-400">
-            HVAC, roofing, plumbing, landscaping, and home repair. United
-            States only. I run ads so you get more booked jobs, more booked
-            appointments, and more revenue. Not a pile of cheap leads.
+            DTC e-commerce brands and lead gen businesses in the US. I run the
+            ads and build the system around them, so you get more sales and
+            more qualified leads. Not just more clicks.
           </p>
 
           <ul className="mt-14 grid gap-5 lg:grid-cols-2">
@@ -69,7 +69,7 @@ export default function WhoIHelpPage() {
           </div>
         </div>
       </main>
-      <Footer blurb="Paid ads for US HVAC, roofing, plumbing, and similar home service companies." />
+      <Footer blurb={footerBlurb} />
       <StickyMobileCta label="Book a call" whatsappHref={demoWhatsapp} />
       <ScrollToTop />
     </>

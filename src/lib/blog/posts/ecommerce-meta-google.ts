@@ -15,14 +15,13 @@ export const ecommerceMetaGoogle: BlogPost = {
   ],
   category: "E-commerce",
   tags: ["e-commerce", "meta ads", "google ads", "ROAS", "DTC"],
-  noindex: true,
   excerpt:
     "Stores do not need more leads. They need purchases. This is the Meta and Google playbook I use for US DTC brands.",
   cover: "/blog/covers/ecommerce-meta-google-ads.svg",
   coverAlt:
     "E-commerce Meta and Google ads structure for Shopify purchases and ROAS",
   publishedAt: "2026-09-22",
-  updatedAt: "2026-09-22",
+  updatedAt: "2026-10-07",
   readingMinutes: 6,
   faqs: [
     {

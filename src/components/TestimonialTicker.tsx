@@ -13,17 +13,36 @@ const tickerItems = testimonials.map((t) => ({
 }));
 
 export function TestimonialTicker() {
-  const doubled = [...tickerItems, ...tickerItems];
-
   return (
-    <div
-      className="site-chrome fixed top-0 z-[60] h-9 overflow-hidden border-b border-white/[0.08] bg-[var(--surface)]/95 backdrop-blur-md"
-      aria-hidden
-    >
+    <div className="site-chrome fixed top-0 z-[60] h-9 overflow-hidden border-b border-white/[0.08] bg-[var(--surface)]/95 backdrop-blur-md">
       <div className="flex h-full animate-testimonial-marquee items-center gap-8 whitespace-nowrap px-4">
-        {doubled.map((item, i) => (
+        {tickerItems.map((item) => (
           <span
-            key={`${item.id}-${i}`}
+            key={item.id}
+            className="inline-flex shrink-0 items-center gap-2.5 text-[11px] text-zinc-400"
+          >
+            <span
+              className={`relative h-5 w-5 overflow-hidden rounded-full bg-[var(--surface)] ring-1 ring-white/15 ${item.frameClass ?? ""}`}
+            >
+              <Image
+                src={item.image}
+                alt=""
+                width={20}
+                height={20}
+                className={`h-full w-full object-cover ${item.imageClass ?? ""}`}
+              />
+            </span>
+            <span className="font-medium text-zinc-300">{item.name}</span>
+            <span className="text-zinc-500">,</span>
+            <span className="max-w-[280px] truncate italic text-zinc-500">
+              &ldquo;{item.snippet}&rdquo;
+            </span>
+          </span>
+        ))}
+        {tickerItems.map((item) => (
+          <span
+            key={`${item.id}-dup`}
+            aria-hidden="true"
             className="inline-flex shrink-0 items-center gap-2.5 text-[11px] text-zinc-400"
           >
             <span

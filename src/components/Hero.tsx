@@ -29,18 +29,19 @@ const fadeUp = {
 };
 
 const liveHero: HeroCopy = {
-  eyebrow: "US HVAC, roofing, plumbing. One person on the path.",
-  headlineBefore: "Home service companies get leads, not ",
-  headlineAccent: "booked jobs",
+  eyebrow: "Paid ads, creative, funnels, tracking, and automations. Built around revenue.",
+  headlineBefore: "You bring the business. I build the system that brings the ",
+  headlineAccent: "customers",
   headlineAfter: ".",
   support:
-    "The gap is the rest of the work. Creative. Content. Funnel. CRM automations. Google Ads and Meta Ads. Most owners hire four people for that. I do it in one seat. AI helps me move faster. I still make the calls.",
+    "Most brands do not have an ad problem. They have gaps between the ad, the creative, the funnel, tracking, and follow-up. I connect that path from first click to a sale or a lead, so the marketing works as one revenue system.",
   primaryCta: "Book a 15-min call",
-  secondaryCta: "View case studies",
+  secondaryCta: "See how I work",
   specializingLabel: "I work with",
-  specializing: "HVAC · Roofing · Plumbing · Landscaping · Home repair",
+  specializing:
+    "Women's apparel · Skincare & beauty · Jewelry · DTC brands · B2B lead gen · B2C lead gen",
   imageAlt:
-    "Asmat, media buyer for US home service companies",
+    "Asmat, performance marketer and media buyer for DTC brands and lead gen businesses",
 };
 
 export function Hero({

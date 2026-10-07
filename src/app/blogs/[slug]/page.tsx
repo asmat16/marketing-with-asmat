@@ -176,13 +176,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           <div className="mt-12 rounded-2xl border border-teal-500/20 bg-teal-500/5 p-6 sm:p-8">
             <h2 className="text-xl font-bold text-white">
-              Hire a media buyer for your US home service company
+              Hire a performance marketer for your brand
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-              I help US HVAC, roofing, plumbing, landscaping, and home repair
-              companies turn leads into booked jobs. Ads, creative, funnel, and
-              CRM in one seat. 7+ years. $20M+ ad spend managed. Top Rated Plus
-              on Upwork.
+              I help DTC brands and lead gen businesses grow with Meta Ads,
+              Google Ads, creative, funnel, and CRM follow-up. One person who
+              owns the whole path. 7+ years. $20M+ ad spend managed. Top Rated
+              Plus on Upwork.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -207,7 +207,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <section className="mt-16 rounded-2xl border border-white/10 bg-[var(--card)] p-6 sm:flex sm:gap-5">
             <Image
               src="/asmat-hero.png"
-                alt="Asmat, media buyer for US home service companies"
+                alt="Asmat, performance marketer and media buyer for DTC brands and lead gen businesses"
               width={160}
               height={160}
               className="h-20 w-20 shrink-0 rounded-full border border-teal-400/30 object-cover object-top"
@@ -218,10 +218,10 @@ export default async function BlogPostPage({ params }: PageProps) {
               </p>
               <h2 className="mt-1 text-lg font-semibold text-white">Asmat</h2>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Senior media buyer. I run Google Ads, Meta Ads, creative,
-                funnel, and CRM follow-up for US HVAC, roofing, plumbing,
-                landscaping, and home repair companies. The goal is booked
-                jobs, not cheap form fills.
+                Senior media buyer. I run Meta Ads, Google Ads, creative,
+                funnel, and CRM follow-up for DTC brands and lead gen
+                businesses. The goal is sales and qualified leads, not cheap
+                clicks.
               </p>
               <p className="mt-3 text-sm">
                 <Link href="/#contact" className="text-teal-400 hover:underline">

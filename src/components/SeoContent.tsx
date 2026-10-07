@@ -9,9 +9,9 @@ type SeoSection = {
 
 const liveHeading = {
   label: "Expertise",
-  title: "Paid ads for US HVAC, roofing and plumbing",
+  title: "Paid ads for DTC brands and lead gen",
   description:
-    "Google Ads, Meta Ads, and TikTok Ads for US home service companies. Booked jobs and estimates, not cheap form fills.",
+    "Meta Ads, Google Ads, creative, tracking, and funnels. Sales and qualified calls, not cheap clicks.",
 };
 
 export function SeoContent({

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export function StickyMobileCta({
-  label = "Book free call",
+  label = "Book a call",
   whatsappHref = siteConfig.links.whatsapp,
 }: {
   label?: string;

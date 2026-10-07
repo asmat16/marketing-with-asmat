@@ -6,9 +6,9 @@ import { SectionHeading } from "./SectionHeading";
 
 const liveInsights = {
   label: "Insights",
-    title: "Leads that turn into booked jobs",
+    title: "Notes on ads that actually sell",
   description:
-    "Guides on booked jobs, remote media buyers, and ads plus CRM in one seat for US home service companies.",
+    "Why ads stall after the click, why creative matters more than targeting now, and how one person can own ads, funnel, and follow-up.",
   hireLead: "Ready to hire?",
   hireCta: "Book a free strategy call",
 };
@@ -29,10 +29,10 @@ export function BlogInsights({
   whatsappHref?: string;
 }) {
   const featuredSlugs = [
-    "home-service-leads-not-bookings",
-    "hire-remote-media-buyer-home-services",
-    "ads-crm-funnel-creative-one-person",
-    "google-ads-hvac-home-service-leads-usa",
+    "ads-creative-funnel-tracking-one-system",
+    "ecommerce-meta-google-ads-that-sell",
+    "funnel-optimization-expert-before-meta-ads",
+    "hire-media-buyer-usa-meta-google-tiktok",
   ].slice(0, count);
   const featured = featuredSlugs
     .map((slug) => blogPosts.find((post) => post.slug === slug))

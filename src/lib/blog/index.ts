@@ -12,11 +12,13 @@ import { facebookAdsRealEstate } from "./posts/facebook-ads-real-estate";
 import { homeServiceLeadsNotBookings } from "./posts/home-service-leads-not-bookings";
 import { hireRemoteGrowthOperator } from "./posts/hire-remote-growth-operator";
 import { adsCrmFunnelOnePerson } from "./posts/ads-crm-funnel-one-person";
+import { adsCreativeFunnelSystem } from "./posts/ads-creative-funnel-system";
 import type { BlogPost } from "./types";
 
 export type { BlogPost, BlogFaq } from "./types";
 
 export const blogPosts: BlogPost[] = [
+  adsCreativeFunnelSystem,
   homeServiceLeadsNotBookings,
   hireRemoteGrowthOperator,
   adsCrmFunnelOnePerson,
@@ -45,7 +47,7 @@ export function getRelatedPosts(slug: string, limit = 3) {
   if (!current) return blogPosts.filter((p) => p.slug !== slug).slice(0, limit);
 
   const scored = blogPosts
-    .filter((post) => post.slug !== slug)
+    .filter((post) => post.slug !== slug && !post.noindex)
     .map((post) => ({
       post,
       score: post.tags.filter((tag) => current.tags.includes(tag)).length,

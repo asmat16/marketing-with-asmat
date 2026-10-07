@@ -32,6 +32,7 @@ export const googleAdsHvac: BlogPost = {
   publishedAt: "2026-09-21",
   updatedAt: "2026-10-02",
   readingMinutes: 6,
+  noindex: true,
   faqs: [
     {
       q: "Do heating and cooling companies use Google Ads?",

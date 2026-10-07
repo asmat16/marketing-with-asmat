@@ -1,13 +1,15 @@
+import type { Metadata } from "next";
+
 export const siteConfig = {
   name: "Marketing with Asmat",
   url: "https://www.marketingwithasmat.pro",
   description:
-    "I help US HVAC, roofing, and plumbing companies turn ad leads into booked jobs. One person for Google Ads, Meta Ads, creative, funnel, and CRM follow-up.",
+    "I help DTC brands and lead gen businesses grow with Meta Ads, Google Ads, creative strategy, funnels, and CRM follow-up. One person who owns the whole system.",
   email: "asmat.llh@gmail.com",
   phone: "+16677882088",
   phoneDisplay: "+1 667 788 2088",
   whatsapp:
-    "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
+    "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20ads%20and%20growth%20for%20my%20brand.",
   calendly: {
     /** Bookings appear in your Calendly dashboard + email (calendly.com) */
     eventUrl: "https://calendly.com/asmat-llh/15",
@@ -26,15 +28,15 @@ export const siteConfig = {
     portfolio: "/portfolio",
     blog: "/blogs",
     whatsapp:
-      "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.",
+      "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20ads%20and%20growth%20for%20my%20brand.",
     email: "mailto:asmat.llh@gmail.com",
   },
   keywords: [
-    "HVAC Google Ads",
-    "roofing Google Ads",
-    "plumbing Google Ads",
-    "home service media buyer USA",
-    "Google Ads for contractors",
+    "performance marketer",
+    "DTC media buyer",
+    "Meta Ads for Shopify",
+    "Google Ads for e-commerce",
+    "lead gen ads USA",
   ],
 } as const;
 
@@ -47,49 +49,49 @@ export const heroStats = [
 
 export const services = [
   {
-    title: "Google Ads for HVAC, roofing, and plumbing",
+    title: "Meta Ads and Google Ads",
     description:
-      "Search campaigns in your service area. The score is booked calls and jobs, not DIY clicks.",
+      "Paid social, Search, Shopping, and Performance Max for DTC brands and lead gen businesses.",
     bullets: [
-      "Service-area targeting",
-      "Call and form tracking",
-      "Offers that match the page after the click",
+      "Daily account work",
+      "Creative tests every week",
+      "Scale winners, cut waste",
     ],
   },
   {
-    title: "Meta Ads for home service companies",
+    title: "Creative strategy",
     description:
-      "Facebook and Instagram for the season, the neighborhood, and proof of the work.",
+      "Hooks, UGC scripts, statics, and ad copy so the ads do not go stale.",
     bullets: [
-      "Lead forms and click to call",
-      "Job photos over stock rooms",
-      "Retargeting people who already visited",
+      "Angles and hooks",
+      "UGC briefs and scripts",
+      "New ads on a weekly rhythm",
     ],
   },
   {
-    title: "TikTok Ads when you can film the work",
+    title: "Store, funnel, and tracking",
     description:
-      "Short video for companies that can show a truck, a roof, or an install. Not required on day one.",
+      "The page after the click, pixel, Conversions API, GTM, and GA4 you can trust.",
     bullets: [
-      "Hooks from the job",
-      "Service-area targeting",
-      "Winners can move to Meta",
+      "Product and landing pages",
+      "Pixel and Conversions API",
+      "Purchases and qualified leads counted",
     ],
   },
   {
-    title: "Campaign setup and account audit",
+    title: "CRM and follow-up",
     description:
-      "I check structure, tracking, and the offer, then rebuild for booked jobs in the service area.",
+      "Email and SMS so carts and leads do not sit. One person on the path from click to sale.",
     bullets: [
-      "Call and form tracking review",
-      "Account structure and budget notes",
-      "A short launch plan",
+      "Abandoned cart flows",
+      "Lead follow-up",
+      "GoHighLevel when that is the tool",
     ],
   },
   {
     title: "Monthly media buying",
     description:
-      "Weekly changes. Creative refresh. Reporting on calls, forms, and booked jobs.",
+      "Weekly changes. Creative refresh. Reporting on sales, ROAS, and qualified calls.",
     bullets: [
       "Weekly account work",
       "Tests on copy, creative, and audiences",
@@ -208,43 +210,64 @@ export const featuredCaseStudies = [
 export const copyrightNotice =
   "© Asmat. All portfolio screenshots are confidential client work.";
 
+export function pageMeta({
+  title,
+  description,
+  path = "",
+  ogTitle,
+}: {
+  title: string;
+  description: string;
+  path?: string;
+  ogTitle?: string;
+}): Metadata {
+  const url = `${siteConfig.url}${path}`;
+  const socialTitle = ogTitle ?? title;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url,
+      siteName: siteConfig.name,
+      title: socialTitle,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description,
+    },
+  };
+}
+
 export const niches = [
-  { label: "HVAC", icon: "◈" },
-  { label: "Roofing", icon: "⌂" },
-  { label: "Plumbing", icon: "⚙" },
-  { label: "Home repair", icon: "✦" },
-  { label: "Landscaping", icon: "◎" },
-  { label: "Remodeling", icon: "♡" },
+  { label: "Women's apparel", icon: "◈" },
+  { label: "Skincare", icon: "⌂" },
+  { label: "Beauty", icon: "⚙" },
+  { label: "Jewelry", icon: "✦" },
+  { label: "DTC brands", icon: "◎" },
+  { label: "Lead gen", icon: "♡" },
 ] as const;
 
 export const faqs = [
   {
-    q: "Which companies do you take?",
-    a: "US companies in HVAC, roofing, plumbing, home repair, landscaping, remodeling, interior design, solar installation, and EV charger installation. Service-area businesses. United States only.",
+    q: "Which businesses do you work with?",
+    a: "DTC e-commerce brands, mostly on Shopify. Women's apparel, skincare, beauty, jewelry, and similar products. I also run lead gen for B2B and B2C companies that need qualified calls and booked meetings.",
   },
   {
-    q: "Do you work with med spas, clinics, or online stores?",
-    a: "No. I do not take med spas, aesthetics, clinics, vein or vascular practices, e-commerce, or real estate.",
-  },
-  {
-    q: "Do you work outside the United States?",
-    a: "No. The ads, the listings, the pages, and the follow-up are for US service areas.",
-  },
-  {
-    q: "Is TikTok required?",
-    a: "No. Google and Meta book more of these jobs. TikTok is for companies that can film the work.",
+    q: "Do you only run ads?",
+    a: "No. Ads without good creative, a page that converts, and follow-up still stall. I own the path from first click to sale.",
   },
   {
     q: "How fast can we launch?",
-    a: "Most paid media accounts go live in one to two weeks after tracking, the offer, and the service area are clear.",
-  },
-  {
-    q: "Are the case studies all from home service companies?",
-    a: "No. They are paid media proof from real accounts. I will not relabel an e-commerce screenshot as a roofing company. Home service work is judged on calls, forms, and booked jobs or estimates.",
+    a: "Most accounts go live in one to two weeks, once tracking, the offer, and the creatives are ready.",
   },
   {
     q: "What is the first step?",
-    a: "A 15-minute call. Bring the trade, the service area, the current ads if you have them, and how a lead becomes a booked job today. You can also hire on Upwork or message on WhatsApp.",
+    a: "A 15-minute call. Bring your ad account, your store or landing page link, and the one thing you want to fix first. You can also hire on Upwork or message on WhatsApp.",
   },
 ] as const;
 
@@ -253,19 +276,19 @@ export const processSteps = [
     step: "01",
     title: "Discovery call",
     description:
-      "We review the trade, the service area, current ads, and how a lead becomes a booked job today.",
+      "We review the brand, the products or offer, current ads, and how a click becomes a sale today.",
   },
   {
     step: "02",
     title: "Strategy & tracking",
     description:
-      "I map the offer, fix tracking, and choose Google, Meta, or both for that service area.",
+      "I map the offer, fix tracking, and choose Meta, Google, or both.",
   },
   {
     step: "03",
     title: "Launch & optimize",
     description:
-      "Campaigns go live with a clear next step. I optimize weekly toward calls, forms, and booked jobs.",
+      "Campaigns go live with a clear next step. I optimize weekly toward sales, ROAS, and qualified calls.",
   },
   {
     step: "04",
@@ -278,35 +301,35 @@ export const processSteps = [
 /** Keyword-rich sections for SEO & readability (visible on homepage) */
 export const seoContentSections = [
   {
-    id: "hvac-google-ads",
-    title: "Google Ads for US HVAC companies",
+    id: "meta-google-ads",
+    title: "Meta Ads and Google Ads for DTC brands",
     paragraphs: [
-      "When an AC dies, people search Google. I run service-area Search campaigns for HVAC repair, replacement, and maintenance. The score is booked calls and jobs, not DIY clicks.",
-      "Tracking has to match the job: calls, forms, and what actually gets on the calendar.",
+      "Most brands hire someone to run ads. The ads are only one part. I also work the creative, the store or landing page, tracking, and follow-up.",
+      "The score is purchases, ROAS, and qualified calls, not cheap clicks.",
     ],
   },
   {
-    id: "roofing-google-ads",
-    title: "Google Ads for US roofing companies",
+    id: "creative-strategy",
+    title: "Creative strategy that keeps accounts alive",
     paragraphs: [
-      "Roofing ads should reach homeowners in your service area who need a repair or a replacement. I keep the geo tight and the offer on the page the same as the ad.",
-      "TODO: add the roofing offer details you want on this site.",
+      "Two ads cannot carry an account. I plan hooks, write copy and UGC scripts, and keep new creatives going in every week.",
+      "Real products and real customers beat polished stock.",
     ],
   },
   {
-    id: "plumbing-google-ads",
-    title: "Google Ads for US plumbing companies",
+    id: "lead-gen-ads",
+    title: "Lead gen for B2B and B2C",
     paragraphs: [
-      "Plumbing jobs often start with a search. I build Google Ads around the work you want more of, then Meta when the season or the neighborhood needs it.",
-      "TODO: add the plumbing offer details you want on this site.",
+      "Lead gen is a big part of my work. The goal is qualified calls and booked meetings, not a pile of cheap form fills.",
+      "Google Search, Meta, and LinkedIn when it fits.",
     ],
   },
   {
-    id: "home-service-media-buyer-usa",
-    title: "Paid ads for US home service companies",
+    id: "one-person-system",
+    title: "One person who owns the whole path",
     paragraphs: [
-      "I work with HVAC, roofing, plumbing, home repair, landscaping, remodeling, interior, solar, and EV charger companies in the United States. Not med spas. Not stores. Not real estate.",
-      "Google Ads, Meta Ads, and TikTok Ads. The listing, the page, and the follow-up sit around the ads when they are the leak.",
+      "Ads, creative, funnel, tracking, and CRM follow-up sit with me. You should not need four or five people for this.",
+      "AI helps me move faster. I still make the calls.",
     ],
   },
 ] as const;

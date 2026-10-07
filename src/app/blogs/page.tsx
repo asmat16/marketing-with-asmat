@@ -5,33 +5,21 @@ import { Header } from "@/components/Header";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
 import { blogPosts } from "@/lib/blog";
-import { siteConfig } from "@/lib/site";
+import { footerBlurb } from "@/lib/foundation";
+import { pageMeta, siteConfig } from "@/lib/site";
 
-const title = "Guides on HVAC and home service ads";
+const title = "Guides on paid ads, creative, and funnels";
 const description =
-  "HVAC Google Ads, tracking, and booked jobs for US home service companies.";
+  "Plain guides on Meta Ads, Google Ads, creative, tracking, and follow-up.";
 const listedPosts = blogPosts.filter((post) => !post.noindex);
 
 export const metadata: Metadata = {
-  title,
-  description,
+  ...pageMeta({
+    title: "Guides on Paid Ads, Creative, and Funnels",
+    description,
+    path: "/blogs",
+  }),
   authors: [{ name: "Asmat", url: siteConfig.url }],
-  alternates: {
-    canonical: `${siteConfig.url}/blogs`,
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: `${siteConfig.url}/blogs`,
-    title,
-    description,
-    siteName: siteConfig.name,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-  },
   robots: {
     index: true,
     follow: true,
@@ -89,7 +77,7 @@ export default function BlogsPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer blurb={footerBlurb} />
       <StickyMobileCta />
     </>
   );

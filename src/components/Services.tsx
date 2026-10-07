@@ -9,9 +9,9 @@ type ServiceItem = {
 
 const liveHeading = {
   label: "Services",
-    title: "Paid ads for US home service companies",
+    title: "Paid ads for DTC brands and lead gen",
   description:
-    "Google Ads, Meta Ads, and TikTok Ads for US HVAC, roofing, plumbing, landscaping, and home repair. The goal is more bookings and estimates.",
+    "Meta Ads, Google Ads, creative, funnel, and follow-up. The goal is more sales and more qualified calls.",
 };
 
 export function Services({

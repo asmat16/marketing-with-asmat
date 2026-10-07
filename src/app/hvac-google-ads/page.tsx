@@ -5,18 +5,17 @@ import { Header } from "@/components/Header";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
-import { foundationNav } from "@/lib/foundation";
+import { footerBlurb, foundationNav } from "@/lib/foundation";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Google Ads for HVAC companies",
-  description:
-    "TODO: Meta description for HVAC Google Ads. Draft page. US home service companies only.",
+  title: "Draft landing",
+  description: "Draft page. Not indexed. Performance marketing for DTC brands and lead gen.",
   alternates: { canonical: `${siteConfig.url}/hvac-google-ads` },
   robots: { index: false, follow: false },
 };
 
-export default function HvacGoogleAdsPage() {
+export default function DraftLandingPage() {
   return (
     <>
       <TestimonialTicker />
@@ -24,19 +23,15 @@ export default function HvacGoogleAdsPage() {
       <main className="min-h-screen bg-[var(--background)] pt-36 pb-20 md:pb-0">
         <div className="page-shell">
           <p className="text-xs font-medium tracking-widest text-teal-400/90 uppercase">
-            HVAC
+            Draft
           </p>
           <h1 data-split className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Google Ads for US HVAC companies
+            This landing is not live yet
           </h1>
           <p data-reveal className="mt-5 max-w-3xl text-lg leading-relaxed text-zinc-400">
-            TODO: Write the HVAC page. Cover repair, replacement, and
-            maintenance. Service-area Search. Booked calls and jobs, not DIY
-            clicks.
-          </p>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-500">
-            TODO: Add proof, offer, tracking notes, and what you need from the
-            company before launch.
+            The public site is for DTC brands and lead gen businesses. Book a
+            call if you want Meta Ads, Google Ads, creative, funnel, and
+            follow-up in one seat.
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <Link
@@ -46,15 +41,15 @@ export default function HvacGoogleAdsPage() {
               Book a 15-min call
             </Link>
             <Link
-              href="/blogs/google-ads-hvac-home-service-leads-usa"
+              href="/"
               className="inline-flex h-12 items-center rounded-full border border-white/15 px-6 text-sm font-semibold text-white"
             >
-              Read the HVAC guide
+              Back to home
             </Link>
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer blurb={footerBlurb} />
       <StickyMobileCta label="Book a call" />
       <ScrollToTop />
     </>

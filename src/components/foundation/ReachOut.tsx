@@ -6,7 +6,6 @@ const links = [
   { label: "Reach out", href: demoWhatsapp, external: true },
   { label: "LinkedIn", href: siteConfig.links.linkedin, external: true },
   { label: "Upwork", href: siteConfig.links.upwork, external: true },
-  { label: "Hire me", href: siteConfig.links.upwork, external: true },
   { label: "Email me", href: siteConfig.links.email },
 ] as const;
 

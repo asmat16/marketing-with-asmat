@@ -11,7 +11,6 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Process } from "@/components/Process";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
@@ -22,7 +21,7 @@ import { WorkJourney } from "@/components/foundation/WorkJourney";
 import { demoChannels, demoWhatsapp } from "@/lib/demo-content";
 import {
   capabilities,
-  engagement,
+  footerBlurb,
   foundationFaqs,
   foundationHero,
   foundationNav,
@@ -31,13 +30,13 @@ import {
   foundationStudies,
   problemCards,
 } from "@/lib/foundation";
-import { siteConfig } from "@/lib/site";
+import { pageMeta, siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: siteConfig.url,
-  },
-};
+export const metadata: Metadata = pageMeta({
+  title: "Performance Marketer for DTC Brands and Lead Gen",
+  description: siteConfig.description,
+  ogTitle: "You bring the business. I build the system that brings the customers.",
+});
 
 export default function Home() {
   return (
@@ -69,14 +68,16 @@ export default function Home() {
               className="rounded-2xl border border-teal-500/25 bg-teal-500/5 p-6 sm:p-8"
             >
               <h2 className="text-xl font-semibold text-white sm:text-2xl">
-                US home service companies only
+                DTC brands and lead gen businesses
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-300">
-                I work with HVAC, roofing, plumbing, landscaping, and home
-                repair companies in the United States. Paid social ads. Google
-                Search ads. Google Business Profile. Website and funnel work.
-                CRM automations. $20M+ managed. The goal is booked jobs,
-                booked appointments, free quotes, and estimates.
+                I work with e-commerce brands that sell online. Women's apparel,
+                skincare, beauty, jewelry, and other DTC brands, most of them
+                on Shopify. I also run lead gen for B2B and B2C companies that
+                need qualified calls, not cheap form fills. Meta Ads. Google
+                Ads. TikTok and LinkedIn when they fit. Creative, funnel,
+                tracking, and follow-up. $20M+ managed. The goal is sales,
+                ROAS, and qualified leads that turn into customers.
               </p>
             </article>
 
@@ -115,8 +116,8 @@ export default function Home() {
               <p>
                 AI cannot sit in your account and decide like a person.
                 It does not have your customer in mind. It does not feel when
-                an ad is tired. It does not know when a lead should get a
-                call right now. That takes human judgment. Emotional
+                an ad is tired. It does not know when a buyer needs one more
+                reason to check out. That takes human judgment. Emotional
                 intelligence. Campaign decisions.
               </p>
               <p>
@@ -137,7 +138,7 @@ export default function Home() {
               What I do
             </p>
             <h2 data-split className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              The work from finding a customer to booking the job
+              The work from first click to the sale
             </h2>
             <ol className="mt-12 grid gap-4 sm:grid-cols-2">
               {capabilities.map((item) => (
@@ -181,19 +182,6 @@ export default function Home() {
 
         <ProblemSelector />
 
-        <Process
-          sectionId="engagement"
-          gridClassName="sm:grid-cols-2 xl:grid-cols-5"
-          heading={{
-            label: "How we start",
-            title: "Onboarding, ads, funnel, then daily growth",
-            description:
-              "Plain steps. From first call to more booked jobs and more revenue.",
-          }}
-          steps={engagement}
-        />
-        <ReachOut />
-
         <section
           id="about"
           className="scroll-mt-28 border-t border-white/[0.08] py-24 sm:py-28"
@@ -205,7 +193,7 @@ export default function Home() {
             >
               <Image
                 src="/asmat-portrait.jpg"
-                alt="Asmat, media buyer for US home service companies"
+                alt="Asmat, performance marketer and media buyer for DTC brands and lead gen businesses"
                 fill
                 className="object-cover object-[center_18%]"
                 sizes="280px"
@@ -216,19 +204,24 @@ export default function Home() {
                 About
               </p>
               <h2 data-split className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                I run paid ads for US home service companies.
+                I build the system around your ads.
               </h2>
               <div data-reveal className="mt-5 space-y-4 text-base leading-relaxed text-zinc-400">
                 <p>
-                  I have spent 7+ years inside Meta, Google, and TikTok
-                  accounts. $20M+ managed. I now take US home service companies
-                  only. HVAC, roofing, plumbing, home repair, landscaping,
-                  remodeling, interior, solar, and EV chargers.
+                  I have spent 7+ years inside Meta, Google, TikTok, and
+                  LinkedIn ad accounts. $20M+ managed. Four of those years were
+                  inside an agency, running 30+ client accounts at a time.
                 </p>
                 <p>
-                  I do not take med spas, clinics, e-commerce, or real estate.
-                  The work is booked jobs and qualified estimates, not cheap
-                  form fills.
+                  Most of my best numbers come from e-commerce. Women's apparel,
+                  skincare, beauty, jewelry, and other DTC brands. I also run
+                  lead gen for B2B and B2C companies where the goal is a
+                  qualified call, not a cheap form fill.
+                </p>
+                <p>
+                  I am not just the person who runs the ads. I look at the
+                  creative, the offer, the page, the tracking, and the
+                  follow-up. That is where most of the money is lost.
                 </p>
               </div>
               <Link
@@ -247,10 +240,10 @@ export default function Home() {
             whatsappHref={demoWhatsapp}
             copy={{
               label: "Insights",
-              title: "Leads that turn into booked jobs",
+              title: "Notes on ads that actually sell",
               description:
-                "Why home service companies stall after the click, how to hire one remote operator, and how ads, funnel, and CRM sit in one seat.",
-              hireLead: "Want to talk about your company?",
+                "Why ads stall after the click, why creative matters more than targeting now, and how one person can own ads, funnel, and follow-up.",
+              hireLead: "Want to talk about your brand?",
               hireCta: "Book a 15-min call",
             }}
           />
@@ -261,16 +254,16 @@ export default function Home() {
             label: "FAQ",
             title: "Questions before you book",
             description:
-              "Who I take, what I do not take, and how a first call works.",
+              "Who I work with, what I do, and how a first call works.",
           }}
           items={foundationFaqs}
         />
 
         <CtaBanner
           copy={{
-            title: "Tell me about the company and the service area.",
+            title: "Tell me about your brand and what you sell.",
             description:
-              "Book a 15-minute call. We will look at the ads, Google Business Profile, the website, and how a lead becomes a job.",
+              "Book a 15-minute call. We will look at your ads, your store or landing page, your tracking, and what happens after someone clicks.",
             primary: "Book a 15-min call",
             secondary: "Hire on Upwork",
           }}
@@ -281,7 +274,7 @@ export default function Home() {
             label: "Book a strategy call",
             title: "Fifteen minutes on the problem",
             description:
-              "Pick a time. Bring the current ads, the service area, and how you follow up a lead today.",
+              "Pick a time. Bring your ad account, your store or landing page link, and the one thing you want to fix first.",
           }}
         />
 
@@ -298,7 +291,7 @@ export default function Home() {
           }}
         />
       </main>
-      <Footer blurb="Paid ads for US HVAC, roofing, plumbing, and similar home service companies." />
+      <Footer blurb={footerBlurb} />
       <StickyMobileCta label="Book a call" whatsappHref={demoWhatsapp} />
       <ScrollToTop />
     </>

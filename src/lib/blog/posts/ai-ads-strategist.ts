@@ -52,7 +52,7 @@ So if AI is doing the targeting, what is the role of a media buyer today?
 
 In 2026, the answer is clear: creative is the new targeting. To win in paid media, you do not need a button pusher. You need an AI ads strategist and a creative director rolled into one.
 
-This is how I work with US e-commerce, real estate, and home service brands. The same person who writes the hook also reads the purchase or booked-appointment numbers. If you need to [hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok), start there.
+This is how I work with DTC brands and lead gen businesses. The same person who writes the hook also reads the purchase or booked-appointment numbers. If you need to [hire a media buyer](/blogs/hire-media-buyer-usa-meta-google-tiktok), start there.
 
 ## Why creative strategy is the real lever
 
@@ -92,7 +92,7 @@ Many brands hire a copywriter, an editor, a developer, and a media buyer as four
 
 The modern solution is one [performance marketer](/who-i-help) who plans creative, builds the page, and runs the ads. You can see that full-path work in the [campaign portfolio](/portfolio).
 
-For local US offers, pair this with [Meta ads that book med spa consults](/blogs/meta-ads-med-spa-book-consults) or [Google Ads that book HVAC jobs](/blogs/google-ads-hvac-home-service-leads-usa).
+For local US offers, pair this with [funnel work before you scale Meta](/blogs/funnel-optimization-expert-before-meta-ads).
 
 ## Stop running generic ads
 

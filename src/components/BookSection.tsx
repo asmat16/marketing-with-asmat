@@ -28,23 +28,6 @@ export function BookSection({
           align="center"
         />
 
-        <div className="mt-8 rounded-xl border border-white/10 bg-teal-500/5 p-4 text-center text-sm text-zinc-300">
-          <p>
-            <strong className="text-teal-300">Where bookings appear:</strong>{" "}
-            Every appointment shows in your{" "}
-            <Link
-              href="https://calendly.com/app/scheduled_events"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-teal-400 underline hover:text-teal-300"
-            >
-              Calendly dashboard
-            </Link>
-            , syncs to your connected calendar, and sends email notifications
-            to {siteConfig.email}.
-          </p>
-        </div>
-
         <div className="mt-8">
           <CalendlyEmbed minHeight={720} />
         </div>

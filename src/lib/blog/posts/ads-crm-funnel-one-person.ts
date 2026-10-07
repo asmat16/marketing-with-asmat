@@ -32,6 +32,7 @@ export const adsCrmFunnelOnePerson: BlogPost = {
   publishedAt: "2026-10-05",
   updatedAt: "2026-10-05",
   readingMinutes: 7,
+  noindex: true,
   faqs: [
     {
       q: "Can one person manage Google Ads, Meta Ads, creative, funnel, and CRM?",

@@ -50,7 +50,7 @@ export const funnelOptimization: BlogPost = {
 
 The reason you are not seeing the return you want is that your funnel is broken. Before you spend another dollar, you need a [funnel optimization expert](/blogs/funnel-optimization-expert-before-meta-ads) to fix leaks in the path from click to booked call.
 
-This is the work I do for US clinics and home service companies before we scale spend.
+This is the work I do for DTC brands and lead gen businesses before we scale spend.
 
 ## Traffic without conversion is expensive guessing
 
@@ -74,11 +74,11 @@ Pair this with [cost per booked appointment tracking](/blogs/cost-per-lead-vs-bo
 
 ### 1. Message match
 
-If your Meta ad promises a free consultation for HVAC replacement, but the click goes to a generic plumbing homepage, people leave. The page must mirror the hook, the offer, and the look of the ad.
+If your Meta ad promises a first-order bundle, but the click goes to a generic homepage, people leave. The page must mirror the hook, the offer, and the look of the ad.
 
 ### 2. Simple lead forms
 
-For med spas, clinics, and home services, the goal is booked appointments. Every extra field reduces conversion. Ask for what you need to qualify the lead, and nothing more.
+For lead gen, the goal is booked calls. Every extra field reduces conversion. Ask for what you need to qualify the lead, and nothing more.
 
 ### 3. Trust in the first seconds
 
@@ -101,7 +101,7 @@ You cannot fix leaks you cannot see. Before launch, pixel, CAPI, and Google Tag 
 
 Most owners obsess over cost per click. Conversion rate is where the real money lives. Halving CPC might save cents. Doubling conversion halves cost per customer.
 
-For local campaigns, apply this to [Google Ads for home services](/blogs/google-ads-hvac-home-service-leads-usa) and [Meta ads for med spas](/blogs/meta-ads-med-spa-book-consults).
+For local campaigns, apply this to [cost per lead vs booked appointment](/blogs/cost-per-lead-vs-booked-appointment).
 
 See [portfolio results](/portfolio), then [book a free call](/book) if you want the funnel and the ads owned by one person. [Upwork hiring](https://www.upwork.com/freelancers/proasmat) is available too.
 `,

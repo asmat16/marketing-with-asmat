@@ -12,7 +12,7 @@ const links = [
 ] as const;
 
 const liveBlurb =
-  "Paid ads for US HVAC, roofing, plumbing, and similar home service companies.";
+  "Performance marketing for DTC brands and lead gen businesses.";
 
 export function Footer({
   blurb = liveBlurb,

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Portfolio | Marketing with Asmat",
   description:
-    "Case studies from real ad accounts. Paid media proof for US home service companies. Some older screenshots are from other niches and are labeled as such.",
+    "Case studies from real ad accounts. Paid media proof. Some screenshots are labeled by niche.",
   robots: { index: true, follow: true },
 };
 

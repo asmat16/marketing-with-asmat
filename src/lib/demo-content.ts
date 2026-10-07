@@ -194,11 +194,11 @@ export const demoFaqs = [
   },
   {
     q: "Who should I hire as a media buyer for a US brand?",
-    a: "Hire for proof that matches the model: purchases and ROAS for e-commerce, qualified leads and booked jobs for real estate and home services. Asmat is a media buyer based in Pakistan who manages Meta, Google, and TikTok for United States brands. The work is in English, with Top Rated Plus history on Upwork, 7+ years, and $20M+ in managed ad spend.",
+    a: "Hire for proof that matches the model: purchases and ROAS for e-commerce, qualified leads and booked meetings for lead gen. The work is in English, with Top Rated Plus history on Upwork, 7+ years, and $20M+ in managed ad spend.",
   },
   {
-    q: "Can a media buyer in Pakistan run ads for a US business?",
-    a: "Yes. The ad accounts, the customers, and the reporting are for the US market. Being based in Pakistan is why the rate is more accessible than a typical US agency, not a reason the media buying is junior. Start with a diagnosis or an Upwork contract so the scope is clear.",
+    q: "Can you run ads for a US business remotely?",
+    a: "Yes. The ad accounts, the customers, and the reporting are for the US market. Start with a diagnosis or an Upwork contract so the scope is clear.",
   },
 ] as const;
 
@@ -304,7 +304,7 @@ export const demoSeoSections = [
     title: "Hire a media buyer you can actually reach",
     paragraphs: [
       "If you searched for a media buyer, a Meta ads expert, or a Google ads specialist in the US, the next step is a diagnosis, not a form maze. Book a free strategy call, email, WhatsApp, or hire on LinkedIn.",
-      "I am based in Pakistan and I run paid acquisition for businesses in the United States. You get senior Meta, Google, and TikTok work, 7+ years and $20M+ in managed spend, without a typical US agency retainer.",
+      "I run paid acquisition for businesses in the United States. You get senior Meta, Google, and TikTok work, 7+ years and $20M+ in managed spend.",
     ],
   },
 ] as const;
@@ -347,11 +347,11 @@ export const demoContact = {
 export const demoWhatsappDisplay = "+1 667 788 2088";
 
 export const demoWhatsapp =
-  "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20paid%20ads%20for%20my%20business.";
+  "https://wa.me/16677882088?text=Hi%20Asmat%2C%20I%20want%20to%20talk%20about%20ads%20and%20growth%20for%20my%20brand.";
 
 export const demoChannels = [
   {
-    label: "Hire on WhatsApp",
+    label: "Message on WhatsApp",
     value: demoWhatsappDisplay,
     href: demoWhatsapp,
     external: true,
@@ -363,12 +363,12 @@ export const demoChannels = [
     external: true,
   },
   {
-    label: "Email us",
+    label: "Email me",
     value: siteConfig.email,
     href: siteConfig.links.email,
   },
   {
-    label: "Hire on LinkedIn",
+    label: "Connect on LinkedIn",
     value: "View profile",
     href: siteConfig.links.linkedin,
     external: true,

@@ -25,7 +25,7 @@ export function JsonLd() {
     founder: {
       "@type": "Person",
       name: "Asmat",
-      jobTitle: "Media buyer for US home service companies",
+      jobTitle: "Performance marketer for DTC brands and lead gen",
       url: siteConfig.url,
       sameAs: [
         siteConfig.links.linkedin,
@@ -39,12 +39,12 @@ export function JsonLd() {
     },
     priceRange: "$$",
     serviceType: [
-      "Google Ads for home services",
-      "Meta Ads for home services",
-      "TikTok Ads for home services",
-      "Home Service Advertising",
-      "Funnel and landing pages for home services",
-      "CRM automations for home services",
+      "Meta Ads for DTC brands",
+      "Google Ads for e-commerce",
+      "Creative strategy",
+      "Funnel and landing pages",
+      "CRM and email follow-up",
+      "Lead generation ads",
       "Remote media buying",
     ],
     knowsAbout: [
@@ -52,16 +52,13 @@ export function JsonLd() {
       "Facebook Ads",
       "Instagram Ads",
       "TikTok Ads",
-      "HVAC advertising",
-      "Roofing advertising",
-      "Plumbing advertising",
+      "Shopify ads",
+      "DTC advertising",
       "Lead Generation",
       "CRM automations",
       "Funnel management",
-      "Creative for home services",
-      "Remote media buyer",
+      "Creative strategy",
       "Performance marketing",
-      "Growth operator",
     ],
     sameAs: [
       siteConfig.links.linkedin,
@@ -70,24 +67,24 @@ export function JsonLd() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Paid media for US home service companies",
+      name: "Performance marketing for DTC brands and lead gen",
       itemListElement: [
         {
           "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Google Ads for HVAC companies" },
+          itemOffered: { "@type": "Service", name: "Meta Ads for DTC brands" },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Google Ads for roofing companies",
+            name: "Google Ads for e-commerce",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Google Ads for plumbing companies",
+            name: "Lead gen ads for B2B and B2C",
           },
         },
         {
@@ -141,7 +138,7 @@ export function JsonLd() {
     name: "Book a Free Strategy Call",
     url: `${siteConfig.url}/book`,
     description:
-      "Schedule a free 15-minute strategy call for Google, Meta, and TikTok ads for US home service companies.",
+      "Schedule a free 15-minute strategy call for Meta Ads, Google Ads, creative, funnels, and CRM follow-up.",
     potentialAction: {
       "@type": "ReserveAction",
       target: {

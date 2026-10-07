@@ -59,7 +59,7 @@ export default async function OgImage({
             fontSize: 24,
           }}
         >
-          Google, Meta, and TikTok ads for US home service companies
+          Meta Ads, Google Ads, creative, funnel, and CRM for DTC and lead gen
         </div>
       </div>
     ),

@@ -6,11 +6,11 @@ const liveHeading = {
   label: "Results",
   title: "Experience backed by measurable outcomes",
   description:
-    "7+ years managing Meta and Google ads for US home service companies, with a focus on booked jobs and lead quality.",
+    "7+ years managing Meta and Google ads for DTC brands and lead gen businesses, with a focus on sales, ROAS, and lead quality.",
 };
 
 const liveCredentialsBlurb =
-  "Meta and Google certified. Paid media for US HVAC, roofing, plumbing, landscaping, and home repair.";
+  "Meta and Google certified. Paid media for DTC brands and lead gen businesses.";
 
 export function Results({
   heading = liveHeading,

@@ -32,6 +32,7 @@ export const homeServiceLeadsNotBookings: BlogPost = {
   publishedAt: "2026-10-05",
   updatedAt: "2026-10-05",
   readingMinutes: 8,
+  noindex: true,
   faqs: [
     {
       q: "Why do HVAC and plumbing companies get leads that never book?",

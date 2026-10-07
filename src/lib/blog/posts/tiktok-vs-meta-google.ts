@@ -15,14 +15,13 @@ export const tiktokVsMetaGoogle: BlogPost = {
   ],
   category: "Paid Media",
   tags: ["tiktok ads", "meta ads", "google ads", "channel strategy", "USA"],
-  noindex: true,
   excerpt:
     "US brands keep asking which platform is best. The answer is the mix that matches your offer, tracking, and creative capacity.",
   cover: "/blog/covers/tiktok-meta-google-ads.svg",
   coverAlt:
     "Comparison of TikTok, Meta, and Google ads for US e-commerce and lead generation",
   publishedAt: "2026-09-22",
-  updatedAt: "2026-09-22",
+  updatedAt: "2026-10-07",
   readingMinutes: 6,
   faqs: [
     {
@@ -30,15 +29,15 @@ export const tiktokVsMetaGoogle: BlogPost = {
       a: "TikTok can find cheap attention and winning creative. Meta usually converts more reliably once the pixel and offer are clean. Use both when you can feed creative.",
     },
     {
-      q: "Do home service businesses need TikTok?",
-      a: "Usually no as a first channel. Google Search and Meta lead ads book jobs faster for HVAC and local services.",
+      q: "Do lead gen businesses need TikTok first?",
+      a: "Usually no. Google Search and Meta are faster when the goal is a qualified call or booked meeting.",
     },
   ],
   content: `“Best ads platform” is the wrong question. The right question is which channel matches the job: create demand, capture demand, or test creative.
 
 ## Capture demand: Google
 
-When someone searches “HVAC repair near me” or a product SKU, Google is the closest thing to intent. [Home service Google Ads](/blogs/google-ads-hvac-home-service-leads-usa) and Shopping exist for this.
+When someone searches a product SKU or a buying phrase, Google is the closest thing to intent. Shopping, Search, and Performance Max exist for this.
 
 ## Create demand: Meta
 

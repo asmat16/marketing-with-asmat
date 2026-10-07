@@ -77,14 +77,7 @@ export function Contact({
           >
             <h3 className="text-lg font-semibold text-white">Send a message</h3>
             <p className="mt-2 text-sm text-zinc-400">
-              Leads from this form are emailed to{" "}
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="text-teal-400 hover:underline"
-              >
-                {siteConfig.email}
-              </a>{" "}
-              (usually within 24 hours).
+              I usually reply within 24 hours.
             </p>
             <div className="mt-6">
               <ContactForm />

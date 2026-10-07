@@ -2,10 +2,10 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 const liveCopy = {
-  label: "Home services",
-  title: "Ads built for more bookings, not a pile of form fills",
+  label: "DTC and lead gen",
+  title: "Ads built to sell, not a pile of cheap clicks",
   description:
-    "Google, Meta, and TikTok for US HVAC, roofing, plumbing, landscaping, and home repair. The goal is calls, estimates, and jobs on the calendar.",
+    "Meta, Google, creative, funnel, and follow-up for DTC brands and lead gen businesses. The goal is purchases and qualified calls.",
   cta: "Book a 15-min call",
 };
 

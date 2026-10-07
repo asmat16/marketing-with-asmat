@@ -33,6 +33,7 @@ export const hireRemoteGrowthOperator: BlogPost = {
   publishedAt: "2026-10-05",
   updatedAt: "2026-10-05",
   readingMinutes: 8,
+  noindex: true,
   faqs: [
     {
       q: "Who should a US HVAC company hire for Google and Meta ads?",

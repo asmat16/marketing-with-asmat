@@ -11,21 +11,9 @@ const desk = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Preview · Paid media for US home services",
+  title: "Preview · Performance marketing",
   description:
-    "Private preview for US HVAC, roofing, plumbing, landscaping, remodeling, solar, and EV charger companies. Not the live site.",
-  keywords: [
-    "HVAC Google Ads",
-    "roofing Facebook ads",
-    "plumbing Google Ads",
-    "home service media buyer USA",
-    "landscaping ads",
-    "remodeling lead generation",
-    "solar installation ads",
-    "EV charger installation ads",
-    "Google Business Profile optimization",
-    "GoHighLevel for home services",
-  ],
+    "Private preview. Not the live site. DTC brands and lead gen businesses.",
   robots: {
     index: false,
     follow: false,
@@ -33,21 +21,19 @@ export const metadata: Metadata = {
     googleBot: { index: false, follow: false },
   },
   openGraph: {
-    title: "Preview · Paid media for US home services",
-    description:
-      "Private preview. US home service companies only. Google Ads, Meta Ads, TikTok Ads, Google Business Profile, content, funnels, and GoHighLevel.",
+    title: "Preview · Performance marketing",
+    description: "Private preview. Not the live site.",
     url: `${siteConfig.url}/demo`,
   },
   twitter: {
     card: "summary",
-    title: "Preview · Paid media for US home services",
-    description:
-      "Private preview. US home service companies only. Google Ads, Meta Ads, TikTok Ads, Google Business Profile, content, funnels, and GoHighLevel.",
+    title: "Preview · Performance marketing",
+    description: "Private preview. Not the live site.",
   },
 };
 
 export default function DemoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return <div className={`${desk.variable} trades-root`}>{children}</div>;
+  return <div className={desk.variable}>{children}</div>;
 }

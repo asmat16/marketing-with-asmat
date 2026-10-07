@@ -39,7 +39,7 @@ export const hireMediaBuyerUsa: BlogPost = {
       a: "Book a free strategy call, WhatsApp, email, or hire on LinkedIn or Upwork.",
     },
   ],
-  content: `People type “best media buyer” into Google when ads already feel expensive. They want a person who can run [Meta and Google ads that actually sell](/blogs/ecommerce-meta-google-ads-that-sell), or who can fill a calendar for [real estate](/blogs/facebook-ads-real-estate-lead-generation) and home services.
+  content: `People type “best media buyer” into Google when ads already feel expensive. They want a person who can run [Meta and Google ads that actually sell](/blogs/ecommerce-meta-google-ads-that-sell), or who can fill a calendar with qualified calls.
 
 I am that operator for US brands: 7+ years, $20M+ in ad spend, Top Rated Plus on Upwork. This page is the hiring brief I wish clients had before they wasted a quarter on the wrong partner.
 
@@ -48,7 +48,7 @@ I am that operator for US brands: 7+ years, $20M+ in ad spend, Top Rated Plus on
 A media buyer is not someone who only turns campaigns on. The work that moves revenue:
 
 1. Offer and landing path before spend scales.
-2. Pixel, CAPI, and conversion events that match sales or booked jobs.
+2. Pixel, CAPI, and conversion events that match sales or qualified calls.
 3. Creative testing that feeds the algorithm, not random posts.
 4. Channel mix: Meta and Google first, [TikTok when creative volume supports it](/blogs/tiktok-vs-meta-vs-google-ads).
 5. Weekly cuts and scales against one primary KPI.
@@ -57,9 +57,9 @@ If your current “expert” only talks about reach, they are not buying media. 
 
 ## Sales ads vs lead generation
 
-E-commerce and DTC need purchase campaigns, catalogs, Shopping, and ROAS. Real estate and home services need qualified inquiries, calls, and booked jobs. Mixing those playbooks is how accounts stall.
+E-commerce and DTC need purchase campaigns, catalogs, Shopping, and ROAS. Lead gen needs qualified inquiries, calls, and booked meetings. Mixing those playbooks is how accounts stall.
 
-I keep them separate. [HVAC and home service Google Ads](/blogs/google-ads-hvac-home-service-leads-usa) are not the same structure as a Shopify catalog.
+I keep them separate. A Shopify catalog is not the same structure as a lead gen Search account.
 
 ## How to evaluate a Meta or Google ads expert
 

@@ -27,7 +27,7 @@ export function ProblemSelector() {
         <SectionHeading
           label="Start here"
           title="What is the current problem in your system?"
-          description="Pick the one that sounds like your business. I can help with ads, creatives, the funnel, tracking, Google Business Profile, and follow-up. You should not need four or five people for this."
+          description="Pick the one that sounds like your business. I can help with ads, creatives, the funnel, tracking, and follow-up. You should not need four or five people for this."
         />
 
         <div className="mt-10 flex flex-wrap gap-2">

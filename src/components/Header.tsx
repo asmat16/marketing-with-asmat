@@ -16,12 +16,11 @@ export function Header({
 }) {
   const [open, setOpen] = useState(false);
   const nav = navItems ?? [
-    { href: `${home}#testimonials`, label: "Reviews" },
-    { href: siteConfig.links.portfolio, label: "Portfolio" },
+    { href: "/systems", label: "How I work" },
+    { href: "/who-i-help", label: "Who I Help" },
+    { href: "/#proof", label: "Proof" },
     { href: siteConfig.links.blog, label: "Blog" },
-    { href: `${home}#services`, label: "Services" },
-    { href: `${home}#book`, label: "Book" },
-    { href: `${home}#contact`, label: "Contact" },
+    { href: "/#about", label: "About" },
   ];
 
   return (

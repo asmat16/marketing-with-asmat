@@ -150,14 +150,14 @@ export function WorkJourney() {
           data-split
           className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl"
         >
-          From first call to the first booked appointment
+          From first call to your first winning campaign
         </h2>
         <p
           data-reveal
           className="mt-5 max-w-3xl text-base leading-relaxed text-zinc-400 sm:text-lg"
         >
           The path moves on its own. Tap a step if you want to stay there. New
-          company, existing company, or an agency with more than one account.
+          brand, growing brand, or an agency with more than one account.
         </p>
 
         <div className="mt-10">
@@ -232,35 +232,7 @@ export function WorkJourney() {
           </div>
         </div>
 
-        <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,280px)_1fr] lg:gap-12">
-          <div className="space-y-5 rounded-3xl border border-white/10 bg-[var(--card)] p-5 sm:p-6">
-            <p className="text-[11px] font-semibold tracking-widest text-teal-300 uppercase">
-              On this step
-            </p>
-            {SCORE_KEYS.map((score) => (
-              <div key={score.key}>
-                <div className="flex items-end justify-between gap-3">
-                  <p className="text-sm font-semibold text-white">{score.label}</p>
-                  <p className="font-mono text-xl font-bold leading-none" style={{ color: score.color }}>
-                    <span data-score-num={score.key}>{step[score.key]}</span>
-                    <span className="text-sm text-zinc-500">%</span>
-                  </p>
-                </div>
-                <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-white/10">
-                  <div
-                    data-score-fill={score.key}
-                    className="h-full origin-left rounded-full"
-                    style={{
-                      background: score.color,
-                      transform: `scaleX(${step[score.key] / 100})`,
-                      boxShadow: `0 0 16px ${score.color}88`,
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
+        <div className="mt-10">
           <div className="relative [perspective:1400px]">
             <article
               key={step.id}

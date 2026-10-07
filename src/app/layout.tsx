@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "Google Ads, Meta Ads, Funnel and CRM for US Home Services | Marketing with Asmat",
+      "Performance Marketer for DTC Brands and Lead Gen | Marketing with Asmat",
     template: "%s | Marketing with Asmat",
   },
   description: siteConfig.description,
@@ -30,15 +30,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Home service leads that become booked jobs",
+    title: "You bring the business. I build the system that brings the customers.",
     description: siteConfig.description,
     images: [
-      { url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name },
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "You bring the business. I build the system that brings the customers.",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Home service leads that become booked jobs",
+    title: "You bring the business. I build the system that brings the customers.",
     description: siteConfig.description,
   },
   robots: {

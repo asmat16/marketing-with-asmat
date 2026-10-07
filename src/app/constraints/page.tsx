@@ -7,14 +7,15 @@ import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { TestimonialTicker } from "@/components/TestimonialTicker";
 import { ReachOut } from "@/components/foundation/ReachOut";
 import { demoWhatsapp } from "@/lib/demo-content";
-import { foundationNav, problems } from "@/lib/foundation";
+import { footerBlurb, foundationNav, problems } from "@/lib/foundation";
+import { pageMeta } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "What is the current problem",
+export const metadata: Metadata = pageMeta({
+  title: "What Is Holding Your Growth Back",
   description:
-    "Common problems in a home service ads system: weak leads, unmanaged ads, few creatives, funnel leaks, bad tracking, no CRM follow-up, and a weak Google listing.",
-  alternates: { canonical: "https://www.marketingwithasmat.pro/constraints" },
-};
+    "Common problems behind weak ad results: not enough creatives, a leaky store or landing page, bad tracking, no follow-up, and a weak offer.",
+  path: "/constraints",
+});
 
 export default function ConstraintsPage() {
   return (
@@ -65,7 +66,7 @@ export default function ConstraintsPage() {
           <ReachOut />
         </div>
       </main>
-      <Footer blurb="Paid ads for US HVAC, roofing, plumbing, and similar home service companies." />
+      <Footer blurb={footerBlurb} />
       <StickyMobileCta label="Book a call" whatsappHref={demoWhatsapp} />
       <ScrollToTop />
     </>

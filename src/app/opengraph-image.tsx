@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
-export const alt = siteConfig.description;
+export const alt =
+  "You bring the business. I build the system that brings the customers.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -42,19 +43,19 @@ export default function OgImage() {
         </div>
         <div
           style={{
-            fontSize: 56,
+            fontSize: 40,
             fontWeight: 700,
             color: "#fafafa",
             lineHeight: 1.15,
-            maxWidth: 900,
+            maxWidth: 980,
             letterSpacing: "-0.02em",
           }}
         >
-          Meta, Google, funnel, CRM
+          You bring the business. I build the system that brings the customers.
         </div>
         <div
           style={{
-            fontSize: 36,
+            fontSize: 28,
             fontWeight: 500,
             color: "#a1a1aa",
             marginTop: 16,
@@ -62,7 +63,7 @@ export default function OgImage() {
             lineHeight: 1.3,
           }}
         >
-          HVAC · Roofing · Plumbing. Booked jobs for US home service companies
+          Paid ads · Creative · Funnels · Tracking · Automations
         </div>
         <div
           style={{
