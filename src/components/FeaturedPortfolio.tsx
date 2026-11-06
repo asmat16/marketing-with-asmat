@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { copyrightNotice, featuredCaseStudies } from "@/lib/site";
 
@@ -137,12 +138,14 @@ export function FeaturedPortfolio({
   sectionId = "portfolio",
   columns = 2,
   slideshow = false,
+  fullPortfolioHref,
 }: {
   heading?: { label: string; title: string; description: string };
   studies?: readonly CaseStudy[];
   sectionId?: string;
   columns?: 2 | 3;
   slideshow?: boolean;
+  fullPortfolioHref?: string;
 }) {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
@@ -172,6 +175,23 @@ export function FeaturedPortfolio({
           description={heading.description}
           align="center"
         />
+
+        {fullPortfolioHref ? (
+          <div className="mt-10 flex justify-center">
+            <Link
+              href={fullPortfolioHref}
+              className="group inline-flex flex-col items-center gap-1 rounded-3xl bg-gradient-to-r from-teal-400 to-teal-500 px-10 py-5 text-center text-zinc-950 shadow-xl shadow-teal-500/30 transition hover:-translate-y-1 hover:shadow-teal-500/50 sm:px-14"
+            >
+              <span className="text-lg font-bold sm:text-xl">
+                Go to the portfolio{" "}
+                <span className="inline-block transition group-hover:translate-x-1">→</span>
+              </span>
+              <span className="text-sm font-medium text-zinc-900/80">
+                Click here to see the full portfolio: case studies, ad results, UGC and designs
+              </span>
+            </Link>
+          </div>
+        ) : null}
 
         <motion.div
           variants={container}
@@ -211,6 +231,20 @@ export function FeaturedPortfolio({
             </motion.article>
           ))}
         </motion.div>
+
+        {fullPortfolioHref ? (
+          <div className="mt-12 flex flex-col items-center gap-3 text-center">
+            <Link
+              href={fullPortfolioHref}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-7 py-3.5 text-sm font-semibold text-zinc-950 shadow-lg shadow-teal-500/25 transition hover:-translate-y-0.5 hover:shadow-teal-500/40"
+            >
+              See the full portfolio →
+            </Link>
+            <p className="text-sm text-zinc-400">
+              Six full case studies, ad account results, UGC videos and ad designs.
+            </p>
+          </div>
+        ) : null}
 
         <p className="mt-10 text-center text-xs text-zinc-500">
           {copyrightNotice}

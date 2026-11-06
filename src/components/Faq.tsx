@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { faqs } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 
@@ -20,8 +17,6 @@ export function Faq({
   heading?: { label: string; title: string; description: string };
   items?: readonly FaqItem[];
 }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
     <section id="faq" className="border-t border-white/[0.08] bg-[var(--surface)] py-24 sm:py-28">
       <div className="mx-auto w-full max-w-5xl">
@@ -32,42 +27,24 @@ export function Faq({
           align="center"
         />
 
-        <ul className="mt-12 space-y-3">
-          {items.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <li
-                key={item.q}
-                data-reveal
-                className="overflow-hidden rounded-xl border border-white/10 bg-[var(--card)] transition-colors hover:border-teal-500/20"
-              >
-                <button
-                  type="button"
-                  className="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-[var(--card-hover)]"
-                  aria-expanded={isOpen}
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                >
-                  <span className="font-medium text-white">{item.q}</span>
-                  <span
-                    className={`mt-0.5 shrink-0 text-teal-400 transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
-                    aria-hidden
-                  >
+        <div className="mt-12 space-y-3">
+          {items.map((item) => (
+            <details
+              key={item.q}
+              className="group rounded-xl border border-white/10 bg-[var(--card)] open:border-teal-500/20"
+            >
+              <summary className="cursor-pointer list-none px-5 py-4 [&::-webkit-details-marker]:hidden">
+                <span className="flex items-start justify-between gap-4">
+                  <h3 className="font-medium text-white">{item.q}</h3>
+                  <span className="mt-0.5 shrink-0 text-teal-400 group-open:rotate-45" aria-hidden>
                     +
                   </span>
-                </button>
-                <div
-                  className={`grid transition-all duration-300 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="px-5 pb-4 text-sm leading-relaxed text-zinc-400">
-                      {item.a}
-                    </p>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                </span>
+              </summary>
+              <p className="px-5 pb-4 text-sm leading-relaxed text-zinc-400">{item.a}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );

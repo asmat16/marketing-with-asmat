@@ -23,6 +23,8 @@ export type PortfolioFolder = {
   glow: string;
   icon: string;
   slides: PortfolioSlide[];
+  /** Off-position galleries stay available by URL and stay out of the index. */
+  index?: boolean;
 };
 
 export const portfolioFolders: PortfolioFolder[] = [
@@ -63,6 +65,7 @@ export const portfolioFolders: PortfolioFolder[] = [
   },
   {
     slug: "home-services",
+    index: false,
     title: "Home Services Portfolio",
     tagline: "Contractors · cleaning · local leads",
     gradient: "from-amber-400 via-orange-500 to-red-700",
@@ -93,6 +96,7 @@ export const portfolioFolders: PortfolioFolder[] = [
   },
   {
     slug: "hvac-trades",
+    index: false,
     title: "HVAC & Trades Portfolio",
     tagline: "Service-area targeting & booked jobs",
     gradient: "from-sky-400 via-blue-500 to-indigo-800",
@@ -183,6 +187,7 @@ export const portfolioFolders: PortfolioFolder[] = [
   },
   {
     slug: "med-spa",
+    index: false,
     title: "Med Spa Portfolio",
     tagline: "Consult bookings & treatment leads",
     gradient: "from-rose-400 via-fuchsia-500 to-violet-700",

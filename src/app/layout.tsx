@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ContactPopup } from "@/components/ContactPopup";
 import { PageMotion } from "@/components/PageMotion";
 import { siteConfig } from "@/lib/site";
 
@@ -30,20 +31,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "You bring the business. I build the system that brings the customers.",
+    title: "More sales and booked calls from the ads you already run.",
     description: siteConfig.description,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "You bring the business. I build the system that brings the customers.",
+        alt: "More sales and booked calls from the ads you already run.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "You bring the business. I build the system that brings the customers.",
+    title: "More sales and booked calls from the ads you already run.",
     description: siteConfig.description,
   },
   robots: {
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 };
@@ -72,6 +74,7 @@ export default function RootLayout({
       <body className="min-h-full antialiased">
         <PageMotion />
         {children}
+        <ContactPopup />
       </body>
     </html>
   );

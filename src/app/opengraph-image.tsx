@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
 export const alt =
-  "You bring the business. I build the system that brings the customers.";
+  "More sales and booked calls from the ads you already run.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -51,7 +51,7 @@ export default function OgImage() {
             letterSpacing: "-0.02em",
           }}
         >
-          You bring the business. I build the system that brings the customers.
+          More sales and booked calls from the ads you already run.
         </div>
         <div
           style={{

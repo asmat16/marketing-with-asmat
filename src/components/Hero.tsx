@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { contactPopupHref, openContactPopup } from "@/components/ContactPopup";
 import { heroStats, siteConfig } from "@/lib/site";
 
 type HeroCopy = {
@@ -30,13 +31,13 @@ const fadeUp = {
 
 const liveHero: HeroCopy = {
   eyebrow: "Paid ads, creative, funnels, tracking, and automations. Built around revenue.",
-  headlineBefore: "You bring the business. I build the system that brings the ",
-  headlineAccent: "customers",
+  headlineBefore: "More sales and booked calls from the ads you ",
+  headlineAccent: "already run",
   headlineAfter: ".",
   support:
     "Most brands do not have an ad problem. They have gaps between the ad, the creative, the funnel, tracking, and follow-up. I connect that path from first click to a sale or a lead, so the marketing works as one revenue system.",
-  primaryCta: "Book a 15-min call",
-  secondaryCta: "See how I work",
+  primaryCta: "Contact me",
+  secondaryCta: "Book a 15-min call",
   specializingLabel: "I work with",
   specializing:
     "Women's apparel · Skincare & beauty · Jewelry · DTC brands · B2B lead gen · B2C lead gen",
@@ -134,12 +135,22 @@ export function Hero({
             variants={fadeUp}
             className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
-            <Link
-              href={primaryHref}
-              className="group inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/25 transition-all hover:shadow-teal-500/40 hover:brightness-110"
-            >
-              {copy.primaryCta}
-            </Link>
+            {primaryHref === contactPopupHref ? (
+              <button
+                type="button"
+                onClick={openContactPopup}
+                className="group inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/25 transition-all hover:shadow-teal-500/40 hover:brightness-110"
+              >
+                {copy.primaryCta}
+              </button>
+            ) : (
+              <Link
+                href={primaryHref}
+                className="group inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-lg shadow-teal-500/25 transition-all hover:shadow-teal-500/40 hover:brightness-110"
+              >
+                {copy.primaryCta}
+              </Link>
+            )}
             <Link
               href={secondaryHref}
               className="inline-flex h-13 items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-indigo-400/40 hover:bg-indigo-500/10 hover:text-indigo-100"

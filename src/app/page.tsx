@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { AnswerHub } from "@/components/AnswerHub";
 import { BlogInsights } from "@/components/BlogInsights";
 import { BookSection } from "@/components/BookSection";
 import { Contact } from "@/components/Contact";
@@ -31,11 +32,22 @@ import {
   problemCards,
 } from "@/lib/foundation";
 import { pageMeta, siteConfig } from "@/lib/site";
+import { ContactMeButton } from "@/components/ContactMeButton";
+
+function ContactMe() {
+  return (
+    <div className="border-t border-white/[0.08] py-8">
+      <div className="page-shell flex justify-center">
+        <ContactMeButton className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-teal-500 px-8 text-sm font-bold text-zinc-950 shadow-md shadow-teal-500/20" />
+      </div>
+    </div>
+  );
+}
 
 export const metadata: Metadata = pageMeta({
-  title: "Performance Marketer for DTC Brands and Lead Gen",
+  title: "Meta and Google Ads for US DTC Brands",
   description: siteConfig.description,
-  ogTitle: "You bring the business. I build the system that brings the customers.",
+  ogTitle: "More sales and booked calls from the ads you already run.",
 });
 
 export default function Home() {
@@ -48,8 +60,8 @@ export default function Home() {
         <Hero
           copy={foundationHero}
           stats={foundationStats}
-          primaryHref={siteConfig.links.book}
-          secondaryHref="/systems"
+          primaryHref="#contact"
+          secondaryHref={siteConfig.links.book}
           imageSrc="/asmat-portrait.jpg"
           portrait
         />
@@ -60,6 +72,7 @@ export default function Home() {
           description="Real people I worked with. Their words. Their LinkedIn."
         />
         <ReachOut />
+        <ContactMe />
 
         <section className="border-t border-white/[0.08] py-16 sm:py-20">
           <div className="page-shell">
@@ -68,16 +81,21 @@ export default function Home() {
               className="rounded-2xl border border-teal-500/25 bg-teal-500/5 p-6 sm:p-8"
             >
               <h2 className="text-xl font-semibold text-white sm:text-2xl">
-                DTC brands and lead gen businesses
+                DTC brands and lead gen businesses in the United States
               </h2>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-300">
-                I work with e-commerce brands that sell online. Women's apparel,
-                skincare, beauty, jewelry, and other DTC brands, most of them
-                on Shopify. I also run lead gen for B2B and B2C companies that
-                need qualified calls, not cheap form fills. Meta Ads. Google
-                Ads. TikTok and LinkedIn when they fit. Creative, funnel,
-                tracking, and follow-up. $20M+ managed. The goal is sales,
-                ROAS, and qualified leads that turn into customers.
+              <p
+                id="direct-answer"
+                className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-300"
+              >
+                Marketing with Asmat is a performance marketer for United
+                States DTC brands and lead gen businesses. I work with stores
+                that sell online. Women&apos;s apparel, skincare, beauty,
+                jewelry, and other DTC brands, most of them on Shopify. I also
+                run lead gen for B2B and B2C companies that need qualified
+                calls, not cheap form fills. Meta Ads. Google Ads. TikTok and
+                LinkedIn when they fit. Creative, funnel, tracking, and
+                follow-up. $20M+ managed. The goal is sales, ROAS, and
+                qualified leads that turn into customers.
               </p>
             </article>
 
@@ -99,6 +117,7 @@ export default function Home() {
         </section>
 
         <WorkJourney />
+        <ContactMe />
 
         <section className="border-t border-white/[0.08] bg-[var(--surface)] py-24 sm:py-28">
           <div className="page-shell max-w-3xl">
@@ -170,6 +189,7 @@ export default function Home() {
             </p>
           </div>
         </section>
+        <ContactMe />
 
         <FeaturedPortfolio
           sectionId="proof"
@@ -177,8 +197,10 @@ export default function Home() {
           studies={foundationStudies.slice(0, 6)}
           columns={3}
           slideshow
+          fullPortfolioHref={siteConfig.links.portfolio}
         />
         <ReachOut />
+        <ContactMe />
 
         <ProblemSelector />
 
@@ -213,7 +235,7 @@ export default function Home() {
                   inside an agency, running 30+ client accounts at a time.
                 </p>
                 <p>
-                  Most of my best numbers come from e-commerce. Women's apparel,
+                  Most of my best numbers come from e-commerce. Women&apos;s apparel,
                   skincare, beauty, jewelry, and other DTC brands. I also run
                   lead gen for B2B and B2C companies where the goal is a
                   qualified call, not a cheap form fill.
@@ -233,10 +255,11 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <ContactMe />
 
         <div id="insights">
           <BlogInsights
-            count={4}
+            count={2}
             whatsappHref={demoWhatsapp}
             copy={{
               label: "Insights",
@@ -249,6 +272,7 @@ export default function Home() {
           />
         </div>
 
+        <AnswerHub />
         <Faq
           heading={{
             label: "FAQ",
@@ -256,8 +280,11 @@ export default function Home() {
             description:
               "Who I work with, what I do, and how a first call works.",
           }}
-          items={foundationFaqs}
+          items={foundationFaqs.filter(
+            (item) => !("featured" in item && item.featured),
+          )}
         />
+        <ContactMe />
 
         <CtaBanner
           copy={{

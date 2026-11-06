@@ -1,31 +1,15 @@
 import type { Metadata } from "next";
-import { FeaturedPortfolio } from "@/components/FeaturedPortfolio";
-import { foundationStudies } from "@/lib/foundation";
-import { siteConfig } from "@/lib/site";
+import { PortfolioSite } from "@/components/portfolio-site/PortfolioSite";
+import { pageMeta } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
+export const metadata: Metadata = pageMeta({
+  title: "Portfolio: Meta & Google Ads Case Studies",
+  ogTitle: "Asmat's portfolio: case studies from real ad accounts",
   description:
-    "Six real accounts. Each cover states the result. The original ad-account screenshot plays behind it.",
-  alternates: {
-    canonical: `${siteConfig.url}/portfolio`,
-  },
-  robots: { index: true, follow: true },
-};
+    "Five full case studies from live Meta and Google Ads accounts: KIMITH athleisure, Performance AC home services, The10 Jewelry, a high-ticket education client and Google Search for food DTC. The challenge, the plan, the execution and the result.",
+  path: "/portfolio",
+});
 
 export default function PortfolioHomePage() {
-  return (
-    <FeaturedPortfolio
-      sectionId="portfolio-results"
-      heading={{
-        label: "Portfolio",
-        title: "Campaign results from real accounts",
-        description:
-          "The cover is the result. The screenshot plays behind it. Click a card to enlarge the account.",
-      }}
-      studies={foundationStudies.slice(0, 6)}
-      columns={3}
-      slideshow
-    />
-  );
+  return <PortfolioSite />;
 }

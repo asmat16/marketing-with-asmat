@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   ...pageMeta({
     title: "Book a Free Strategy Call",
     description:
-      "Pick a time. Bring your ad account, your store or landing page link, and the one thing you want to fix first.",
+      "Book a free 15-minute strategy call for US DTC brands and lead gen. Bring your ad account, store or landing page, and the one thing you want to fix.",
     path: "/book",
   }),
   robots: { index: true, follow: true },

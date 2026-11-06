@@ -31,12 +31,11 @@ export function PageMotion() {
           const play = (targets: gsap.TweenTarget) => {
             const visible = inView(el);
             return gsap.from(targets, {
-              x: -28,
-              autoAlpha: 0,
+              y: 18,
               duration: 0.72,
               stagger: 0.045,
               ease: "power3.out",
-              immediateRender: true,
+              immediateRender: false,
               scrollTrigger: visible
                 ? undefined
                 : {
@@ -63,10 +62,10 @@ export function PageMotion() {
 
         gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((el) => {
           gsap.from(el, {
-            x: -36,
-            autoAlpha: 0,
+            y: 24,
             duration: 0.75,
             ease: "power3.out",
+            immediateRender: false,
             scrollTrigger: {
               trigger: el,
               start: "top 90%",
@@ -77,11 +76,11 @@ export function PageMotion() {
 
         gsap.utils.toArray<HTMLElement>("[data-motion='media']").forEach((el) => {
           gsap.from(el, {
-            x: -28,
-            scale: 1.04,
-            autoAlpha: 0,
+            y: 20,
+            scale: 1.03,
             duration: 0.9,
             ease: "power3.out",
+            immediateRender: false,
             scrollTrigger: {
               trigger: el,
               start: "top 92%",
@@ -92,10 +91,10 @@ export function PageMotion() {
 
         gsap.utils.toArray<HTMLElement>("[data-motion='step']").forEach((el) => {
           gsap.from(el, {
-            x: -16,
-            autoAlpha: 0,
+            y: 12,
             duration: 0.6,
             ease: "power3.out",
+            immediateRender: false,
             scrollTrigger: {
               trigger: el,
               start: "top 92%",

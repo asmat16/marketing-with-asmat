@@ -4,8 +4,9 @@ export const siteConfig = {
   name: "Marketing with Asmat",
   url: "https://www.marketingwithasmat.pro",
   description:
-    "I help DTC brands and lead gen businesses grow with Meta Ads, Google Ads, creative strategy, funnels, and CRM follow-up. One person who owns the whole system.",
+    "Meta Ads and Google Ads for US DTC brands and lead gen. Creative, funnel, tracking, and follow-up. $20M+ managed. Book a 15-minute call.",
   email: "asmat.llh@gmail.com",
+  businessEmail: "asmat@marketingwithasmat.pro",
   phone: "+16677882088",
   phoneDisplay: "+1 667 788 2088",
   whatsapp:
@@ -32,10 +33,10 @@ export const siteConfig = {
     email: "mailto:asmat.llh@gmail.com",
   },
   keywords: [
-    "performance marketer",
-    "DTC media buyer",
-    "Meta Ads for Shopify",
-    "Google Ads for e-commerce",
+    "Meta Ads for DTC brands",
+    "Google Ads for Shopify",
+    "hire media buyer USA",
+    "performance marketer United States",
     "lead gen ads USA",
   ],
 } as const;
@@ -224,9 +225,12 @@ export function pageMeta({
   const url = `${siteConfig.url}${path}`;
   const socialTitle = ogTitle ?? title;
   return {
-    title,
+    title: { absolute: `${title} | ${siteConfig.name}` },
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: { "en-US": url },
+    },
     openGraph: {
       type: "website",
       locale: "en_US",
@@ -234,6 +238,10 @@ export function pageMeta({
       siteName: siteConfig.name,
       title: socialTitle,
       description,
+    },
+    other: {
+      "geo.region": "US",
+      "geo.placename": "United States",
     },
     twitter: {
       card: "summary_large_image",
@@ -255,7 +263,7 @@ export const niches = [
 export const faqs = [
   {
     q: "Which businesses do you work with?",
-    a: "DTC e-commerce brands, mostly on Shopify. Women's apparel, skincare, beauty, jewelry, and similar products. I also run lead gen for B2B and B2C companies that need qualified calls and booked meetings.",
+    a: "United States DTC brands, mostly on Shopify, and B2B or B2C lead gen businesses that need qualified calls. Apparel, skincare, beauty, jewelry, and similar products are the core.",
   },
   {
     q: "Do you only run ads?",
@@ -267,7 +275,7 @@ export const faqs = [
   },
   {
     q: "What is the first step?",
-    a: "A 15-minute call. Bring your ad account, your store or landing page link, and the one thing you want to fix first. You can also hire on Upwork or message on WhatsApp.",
+    a: "A 15-minute call. Bring your ad account, your store or landing page link, and the one thing you want to fix first. You can also hire on Upwork or message on WhatsApp at +1 667 788 2088.",
   },
 ] as const;
 

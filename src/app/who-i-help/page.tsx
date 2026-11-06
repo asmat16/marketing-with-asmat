@@ -10,9 +10,9 @@ import { audiences, footerBlurb, foundationNav } from "@/lib/foundation";
 import { pageMeta, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Who I Help",
+  title: "US DTC Brands and Lead Gen I Work With",
   description:
-    "DTC e-commerce brands in women's apparel, skincare, beauty, and jewelry, plus B2B and B2C lead gen businesses in the US.",
+    "I work with United States DTC brands in apparel, skincare, beauty, and jewelry, plus B2B and B2C lead gen businesses that need qualified calls.",
   path: "/who-i-help",
 });
 

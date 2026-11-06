@@ -3,20 +3,20 @@ import { featuredCaseStudies } from "@/lib/site";
 export const foundationNav = [
   { href: "/systems", label: "How I work" },
   { href: "/who-i-help", label: "Who I Help" },
-  { href: "/#proof", label: "Proof" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/blogs", label: "Blog" },
   { href: "/#about", label: "About" },
 ] as const;
 
 export const foundationHero = {
   eyebrow: "Paid ads, creative, funnels, tracking, and automations. Built around revenue.",
-  headlineBefore: "You bring the business. I build the system that brings the ",
-  headlineAccent: "customers",
+  headlineBefore: "More sales and booked calls from the ads you ",
+  headlineAccent: "already run",
   headlineAfter: ".",
   support:
-    "Most brands do not have an ad problem. They have gaps between the ad, the creative, the funnel, tracking, and follow-up. I connect that path from first click to a sale or a lead, so the marketing works as one revenue system.",
-  primaryCta: "Book a 15-min call",
-  secondaryCta: "See how I work",
+    "Most brands in the United States do not have an ad problem. They have gaps between the ad, the creative, the funnel, tracking, and follow-up. I connect that path from first click to a sale or a qualified call.",
+  primaryCta: "Contact me",
+  secondaryCta: "Book a 15-min call",
   specializingLabel: "I work with",
   specializing:
     "Women's apparel · Skincare & beauty · Jewelry · DTC brands · B2B lead gen · B2C lead gen",
@@ -320,8 +320,38 @@ export const audiences = [
 
 export const foundationFaqs = [
   {
+    q: "Who is Asmat?",
+    a: "Asmat is a performance marketer for United States DTC brands and lead gen businesses. He runs Meta Ads, Google Ads, creative, funnels, tracking, and CRM follow-up. 7+ years. $20M+ in ad spend managed. Top Rated Plus on Upwork.",
+    featured: true,
+  },
+  {
+    q: "Do you work with businesses in the United States?",
+    a: "Yes. The work is remote for brands selling in the United States. Book a call, message WhatsApp at +1 667 788 2088, email asmat.llh@gmail.com, or hire on Upwork.",
+    featured: true,
+  },
+  {
+    q: "What does a media buyer do for a DTC brand?",
+    a: "A media buyer owns the path from the ad to the sale. That means the offer, creative tests, Meta Ads, Google Ads, the product page or landing page, pixel and Conversions API, and follow-up. The score is purchases and ROAS, not cheap clicks.",
+    featured: true,
+  },
+  {
+    q: "Should a Shopify brand use Meta Ads or Google Ads?",
+    a: "Most Shopify brands in the US need both. Meta Ads find new buyers with creative. Google Ads, including Shopping and Performance Max, catch people who are already searching. I run both and keep the score on purchases and ROAS.",
+    featured: true,
+  },
+  {
+    q: "How much does it cost to hire a media buyer?",
+    a: "The fee is set on the first call. It depends on ad spend and whether you need ads only, or ads plus creative, the store or landing page, tracking, and follow-up.",
+    featured: true,
+  },
+  {
+    q: "How do I hire you from the US?",
+    a: "Book a free 15-minute call, message WhatsApp at +1 667 788 2088, email asmat.llh@gmail.com, or hire on Upwork. Bring your ad account, your store or landing page, and the one problem you want fixed first.",
+    featured: true,
+  },
+  {
     q: "Which businesses do you work with?",
-    a: "DTC e-commerce brands, mostly on Shopify. Women's apparel, skincare, beauty, jewelry, and similar products. I also run lead gen for B2B and B2C companies that need qualified calls and booked meetings.",
+    a: "United States DTC brands, mostly on Shopify, and B2B or B2C lead gen businesses that need qualified calls. Apparel, skincare, beauty, jewelry, and similar products are the core.",
   },
   {
     q: "Do you only run ads?",
@@ -336,12 +366,12 @@ export const foundationFaqs = [
     a: "Yes. I plan the hooks and angles, write the ad copy and UGC scripts, and brief the statics and videos. New creatives go in every week so the account does not go stale.",
   },
   {
-    q: "Do you work with lead gen and service businesses too?",
-    a: "Yes. Lead gen is a big part of my work. B2B and B2C. The goal there is qualified calls and booked meetings, not a pile of cheap form fills.",
+    q: "Do you work with lead gen businesses too?",
+    a: "Yes. Lead gen is a big part of the work. B2B and B2C companies in the US. The goal is qualified calls and booked meetings, not a pile of cheap form fills.",
   },
   {
     q: "Do you work with agencies?",
-    a: "Yes. I spent four years inside an agency running 30+ client accounts at a time. I can plug into your team and run the media buying and creative strategy for your e-commerce clients.",
+    a: "Yes. I spent four years inside an agency running 30+ client accounts at a time. I can plug into a team and run media buying and creative strategy for e-commerce clients.",
   },
   {
     q: "How fast can we launch?",
@@ -350,10 +380,6 @@ export const foundationFaqs = [
   {
     q: "Are the case studies real?",
     a: "Yes. They are screenshots from real ad accounts. Client names are kept private.",
-  },
-  {
-    q: "What is the first step?",
-    a: "A 15-minute call. Bring your ad account, your store or landing page link, and the one thing you want to fix first. You can also hire on Upwork or message on WhatsApp.",
   },
   {
     q: "Can one person really do ads, creative, funnel, and CRM?",

@@ -2,6 +2,9 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 const links = [
+  { label: "Who I help", href: "/who-i-help" },
+  { label: "How I work", href: "/systems" },
+  { label: "Answers", href: "/#answers" },
   { label: "Blog", href: siteConfig.links.blog },
   { label: "Portfolio", href: siteConfig.links.portfolio },
   { label: "Email", href: siteConfig.links.email },

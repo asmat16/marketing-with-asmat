@@ -10,9 +10,9 @@ import { footerBlurb, foundationNav, journeySteps } from "@/lib/foundation";
 import { pageMeta, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "How I Work",
+  title: "How I Run Ads, Creative, and Follow-up",
   description:
-    "The path from first call to more sales. Audience, creative, Meta Ads, Google Ads, store and funnel, tracking, and CRM follow-up.",
+    "The path for US brands from first call to more sales. Audience, creative, Meta Ads, Google Ads, the store or landing page, tracking, and CRM follow-up.",
   path: "/systems",
 });
 

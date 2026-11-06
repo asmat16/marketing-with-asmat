@@ -11,7 +11,7 @@ export const costPerLead: BlogPost = {
     "cost per booked appointment",
     "cost per lead vs booked appointment",
     "hire media buyer USA",
-    "med spa lead quality",
+    "qualified lead cost",
     "lead gen tracking",
     "qualified leads not vanity metrics",
   ],
@@ -19,7 +19,7 @@ export const costPerLead: BlogPost = {
   tags: [
     "tracking",
     "lead generation",
-    "med spa",
+    "booked calls",
     "lead gen",
     "USA",
   ],
@@ -29,7 +29,7 @@ export const costPerLead: BlogPost = {
   coverAlt:
     "Scoreboard comparing cheap cost per lead with cost per booked appointment for US local businesses",
   publishedAt: "2026-09-21",
-  updatedAt: "2026-09-21",
+  updatedAt: "2026-10-28",
   readingMinutes: 5,
   faqs: [
     {
@@ -152,6 +152,6 @@ I do not celebrate a cheap CPL if the calendar is empty. We look at booked consu
 
 You can see [campaign examples in the portfolio](/portfolio). If you want this kind of review for your US account, [book a free 15 minute call](/book).
 
-If you are still comparing agencies and freelancers, this [guide to hiring a freelance media buyer](/blogs/why-us-brands-hire-freelance-media-buyers-from-pakistan) shows what proof to ask for.
+If you are still comparing agencies and freelancers, this [guide to hiring a media buyer in the USA](/blogs/hire-media-buyer-usa-meta-google-tiktok) shows what proof to ask for.
 `,
 };

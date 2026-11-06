@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortfolioSlideshow } from "@/components/portfolio/PortfolioSlideshow";
 import { getPortfolioFolder, portfolioFolders } from "@/lib/portfolio";
@@ -21,7 +22,19 @@ export async function generateMetadata({
     title: `${folder.title} | Paid Ads Case Studies`,
     description: `${folder.tagline}. Real Meta and Google campaign results from Marketing with Asmat.`,
     alternates: { canonical: url },
-    robots: { index: true, follow: true },
+    robots:
+      folder.index === false
+        ? { index: false, follow: true, googleBot: { index: false, follow: true } }
+        : {
+            index: true,
+            follow: true,
+            googleBot: {
+              index: true,
+              follow: true,
+              "max-image-preview": "large" as const,
+              "max-snippet": -1,
+            },
+          },
     openGraph: {
       title: folder.title,
       description: folder.tagline,
@@ -43,10 +56,28 @@ export default async function PortfolioFolderPage({
   }
 
   return (
-    <div className="py-10 sm:py-14">
-      <div className="page-shell">
-        <PortfolioSlideshow folder={folder} />
-      </div>
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <header className="border-b border-white/[0.08] bg-[var(--background)]/90 backdrop-blur-xl">
+        <div className="page-shell flex h-14 items-center justify-between">
+          <Link href="/portfolio" className="text-sm font-semibold text-white">
+            Marketing with Asmat
+          </Link>
+          <Link
+            href="/"
+            className="text-xs text-zinc-400 transition-colors hover:text-teal-300"
+          >
+            Home
+          </Link>
+        </div>
+      </header>
+      <main className="py-10 sm:py-14">
+        <div className="page-shell">
+          <PortfolioSlideshow folder={folder} />
+        </div>
+      </main>
+      <footer className="border-t border-white/[0.08] py-8 text-center text-xs text-zinc-500">
+        © Asmat. Confidential client work shown for portfolio purposes.
+      </footer>
     </div>
   );
 }

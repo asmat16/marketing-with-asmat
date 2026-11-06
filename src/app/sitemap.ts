@@ -56,7 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.85,
     },
-    ...portfolioFolders.map((folder) => ({
+    ...portfolioFolders
+      .filter((folder) => folder.index !== false)
+      .map((folder) => ({
       url: `${siteConfig.url}/portfolio/${folder.slug}`,
       lastModified,
       changeFrequency: "monthly" as const,
