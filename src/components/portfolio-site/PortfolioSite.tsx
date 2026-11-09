@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Footer } from "@/components/Footer";
 import {
   allCases,
+  caseSlugAliases,
   creativeWork,
   featuredCases,
   moreCases,
@@ -33,15 +34,16 @@ const officeHours = "Monday to Friday · 9am to 5pm US Eastern Time (ET)";
 const stats = [
   { value: 20, prefix: "$", suffix: "M+", label: "Ad budget managed" },
   { value: 200, prefix: "$", suffix: "K+", label: "Earned on Upwork in the last 3 years" },
-  { value: 80, prefix: "", suffix: "+", label: "US clients managed at The Vojo Media" },
+  { value: 80, prefix: "", suffix: "+", label: "US clients managed at Wojo Media" },
   { value: 8, prefix: "", suffix: "+ yrs", label: "On Meta and Google Ads" },
 ];
 
 const marquee = [
   "KIMITH",
   "Performance AC",
-  "The10 Jewelry",
-  "The Vojo Media",
+  "The Lovery",
+  "Wojo Media",
+  "Ketolibriyum",
   "ShapedBae",
   "Women's apparel",
   "Skincare & beauty",
@@ -427,7 +429,8 @@ function closeCase() {
 }
 
 function CaseModalHost() {
-  const slug = useSearchParams().get("case");
+  const requested = useSearchParams().get("case");
+  const slug = requested ? (caseSlugAliases[requested] ?? requested) : null;
   const index = slug ? allCases.findIndex((study) => study.slug === slug) : -1;
   if (index < 0) return null;
 
@@ -834,7 +837,7 @@ function AboutContact() {
                 $200K+ in the last three years.
               </p>
               <p>
-                At The Vojo Media I manage 80+ US client accounts. I work with US clients
+                At Wojo Media I manage 80+ US client accounts. I work with US clients
                 only, Monday to Friday, 9am to 5pm US Eastern Time, so you get answers
                 during your business day.
               </p>

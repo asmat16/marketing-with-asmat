@@ -145,13 +145,17 @@ export const featuredCases: CaseStudy[] = [
     tags: ["Meta Ads", "Lead gen", "Home services", "Booked calls"],
   },
   {
-    slug: "vojo-media-investor-education",
+    slug: "wojo-media-investor-education",
     category: "leadgen",
     niche: "High-ticket education lead gen · Agency client",
-    client: "The Vojo Media client",
+    client: "Wojo Media client",
     clientNote:
-      "Run through The Vojo Media, the agency where I manage 80+ US client accounts. The client is an Airbnb and short-term rental investing education program. Its name stays private.",
-    website: { label: "thevojomedia.com", href: "https://thevojomedia.com" },
+      "Run through Wojo Media, the Inc. 5000 agency where I manage 80+ US client accounts. The client is an Airbnb and short-term rental investing education program. Its name stays private.",
+    website: { label: "thewojomedia.com", href: "https://www.thewojomedia.com" },
+    instagram: {
+      label: "@thejasonwojo",
+      href: "https://www.instagram.com/thejasonwojo/",
+    },
     platform: "Meta Ads + Hyros",
     period: "Aug 4 – Sep 2, 2026",
     headline: "1,159 leads, 419 sales calls and $150K in sales in 30 days",
@@ -165,7 +169,7 @@ export const featuredCases: CaseStudy[] = [
       { value: "4.1X", label: "Revenue ROAS" },
     ],
     image: {
-      src: "/portfolio/case-studies/vojo-airbnb-education.png",
+      src: "/portfolio/case-studies/wojo-airbnb-education.png",
       width: 1024,
       height: 487,
       alt: "Meta Ads Manager ad sets with Hyros overlay, Aug 4 to Sep 2 2026: 1,159 leads, 419 calls, 28 sales, $150,136 revenue, $36,371 ad spend",
@@ -192,15 +196,22 @@ export const featuredCases: CaseStudy[] = [
     tags: ["Meta Ads", "Hyros", "High-ticket", "Agency"],
   },
   {
-    slug: "the10-jewelry",
+    slug: "the-lovery-jewelry",
     category: "ecommerce",
     niche: "Fine jewelry · High-ticket DTC e-commerce",
-    client: "The10 Jewelry",
+    client: "The Lovery (formerly The10 Jewelry)",
+    clientNote:
+      "The brand sold as The10 Jewelry when I ran this account. It now trades as The Lovery: 14K gold fine jewelry with genuine diamonds and gemstones.",
+    website: { label: "thelovery.com", href: "https://thelovery.com" },
+    instagram: {
+      label: "@thelovery",
+      href: "https://www.instagram.com/thelovery/",
+    },
     platform: "Meta Ads",
     period: "Dec 2021 – Mar 2022",
     headline: "$115K managed for $1,150 jewelry orders, and cost per purchase cut 58%",
     summary:
-      "The10 Jewelry sells fine jewelry with an average order above $1,100. Over 16 weeks on a $30K monthly budget I cut cost per purchase from $385 to $162 and brought in about $652K in tracked sales.",
+      "The Lovery sells 14K gold fine jewelry with an average order above $1,100. Over 16 weeks on a $30K monthly budget I cut cost per purchase from $385 to $162 and brought in about $652K in tracked sales.",
     shift: { label: "Cost per purchase", from: "$385", to: "$162" },
     metrics: [
       { value: "$652K", label: "Tracked revenue" },
@@ -209,13 +220,13 @@ export const featuredCases: CaseStudy[] = [
       { value: "$1,155", label: "Average order value" },
     ],
     image: {
-      src: "/portfolio/case-studies/the10-jewelry-meta.png",
+      src: "/portfolio/case-studies/the-lovery-jewelry-meta.png",
       width: 1024,
       height: 391,
-      alt: "The10 Jewelry Meta Ads Manager: CBO updated ad copy at 10.68 ROAS, dynamic retargeting at 5.76 ROAS",
+      alt: "The Lovery (then The10 Jewelry) Meta Ads Manager: CBO updated ad copy at 10.68 ROAS, dynamic retargeting at 5.76 ROAS",
     },
     screenshotNote:
-      "Meta Ads Manager, campaign level, from The10 Jewelry's account. Read across the blue-marked columns: website purchases, purchase conversion value and purchase ROAS. The rebuilt CBO campaign with new ad copy hit 10.68X, and dynamic retargeting returned 5.76X on $9,063 in value. Weekly spend and purchase totals come from the client's weekly report.",
+      "Meta Ads Manager, campaign level, from the brand's account while it was still named The10 Jewelry. Read across the blue-marked columns: website purchases, purchase conversion value and purchase ROAS. The rebuilt CBO campaign with new ad copy hit 10.68X, and dynamic retargeting returned 5.76X on $9,063 in value. Weekly spend and purchase totals come from the client's weekly report.",
     challenge:
       "Selling $1,000+ jewelry on Meta is hard. Buyers take longer to decide, and this ran right after iOS 14 cut how much Meta could see. The brand had a $30K monthly budget and a target of 600 purchases in four months, starting in the expensive holiday season, with week-one cost per purchase at $385.",
     plan: [
@@ -238,14 +249,20 @@ export const featuredCases: CaseStudy[] = [
   {
     slug: "keto-food-google-search",
     category: "ecommerce",
-    niche: "Food delivery DTC · Google Search",
-    client: "Keto meal delivery brand (Canada)",
-    clientNote: "Client name kept private. Currency shown as Canadian dollars.",
+    niche: "Keto meal delivery DTC · Google Search",
+    client: "Ketolibriyum (now Clean Cravings)",
+    clientNote:
+      "Ontario keto and low-carb meal delivery brand, now selling as Clean Cravings. Currency shown as Canadian dollars, as it appears in the account.",
+    website: { label: "ketolibriyum.ca", href: "https://ketolibriyum.ca" },
+    instagram: {
+      label: "@cleancravingskitchen",
+      href: "https://www.instagram.com/cleancravingskitchen/",
+    },
     platform: "Google Ads",
     period: "All-time keyword view",
     headline: "Google Search turned CA$21K into CA$633K in sales at 29.87X",
     summary:
-      "A keto food delivery brand needed Google to bring orders, not browsers. I locked down brand search, tested competitor and category terms, and cut everything that did not pay back.",
+      "Ketolibriyum, a keto meal delivery brand in Ontario, needed Google to bring orders, not browsers. I locked down brand search, tested competitor and category terms, and cut everything that did not pay back.",
     shift: { label: "Cost per conversion", from: "Generic keto CPCs", to: "CA$3.67" },
     metrics: [
       { value: "29.87X", label: "Conv. value / cost" },
@@ -567,6 +584,12 @@ export const moreCases: CaseStudy[] = [
 ];
 
 export const allCases = [...featuredCases, ...moreCases];
+
+/** Case links already sent in outreach emails keep opening the right study. */
+export const caseSlugAliases: Record<string, string> = {
+  "vojo-media-investor-education": "wojo-media-investor-education",
+  "the10-jewelry": "the-lovery-jewelry",
+};
 
 export type CreativeWork = {
   src: string;
