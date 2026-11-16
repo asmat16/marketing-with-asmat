@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { siteConfig } from "@/lib/site";
+import { isUpworkSafePath } from "@/lib/upwork-safe";
 
 export const contactPopupHref = "#contact";
 
@@ -42,17 +44,20 @@ const channels = [
 ] as const;
 
 export function ContactPopup() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const titleId = useId();
+  const suppressed = isUpworkSafePath(pathname);
 
   useEffect(() => {
+    if (suppressed) return;
     const onOpen = () => setOpen(true);
     window.addEventListener("open-contact-popup", onOpen);
     return () => window.removeEventListener("open-contact-popup", onOpen);
-  }, []);
+  }, [suppressed]);
 
   useEffect(() => {
-    if (!open) return;
+    if (suppressed || !open) return;
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
     };
@@ -63,9 +68,9 @@ export function ContactPopup() {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = previous;
     };
-  }, [open]);
+  }, [open, suppressed]);
 
-  if (!open) return null;
+  if (suppressed || !open) return null;
 
   return (
     <div className="fixed inset-0 z-[80] flex items-end justify-center p-4 sm:items-center">

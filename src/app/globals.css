@@ -17,6 +17,20 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
+
+  /* Upwork portfolio page only */
+  --color-uw-paper: #f3efe7;
+  --color-uw-card: #fbf9f4;
+  --color-uw-tint: #e8e1d2;
+  --color-uw-ink: #15140f;
+  --color-uw-soft: #55524a;
+  --color-uw-mute: #706c62;
+  --color-uw-accent: #e8451b;
+  --color-uw-accent-deep: #bf370f;
+  --color-uw-accent-soft: #ff7d55;
+  --font-uw-display: var(--uw-display), "Helvetica Neue", Arial, sans-serif;
+  --font-uw-body: var(--uw-body), system-ui, sans-serif;
+  --font-uw-mono: var(--uw-mono), ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 html {
@@ -204,6 +218,83 @@ body {
   display: none;
 }
 
+/* Upwork-safe portfolio: separate visual system from /portfolio */
+.upw-root {
+  --upw-bg: #0b0c0e;
+  --upw-surface: #13151a;
+  --upw-ink: #f3efe6;
+  --upw-muted: #9a958a;
+  --upw-line: rgba(243, 239, 230, 0.1);
+  --upw-accent: #ff6a3d;
+  --upw-accent-soft: rgba(255, 106, 61, 0.14);
+  position: relative;
+  margin-inline: calc(var(--page-gutter) * -1);
+  min-height: 100vh;
+  overflow-x: clip;
+  background:
+    radial-gradient(90% 60% at 100% -10%, rgba(255, 106, 61, 0.16), transparent 55%),
+    radial-gradient(70% 50% at 0% 20%, rgba(120, 140, 160, 0.12), transparent 50%),
+    var(--upw-bg);
+  color: var(--upw-ink);
+  font-family: var(--font-upw-body), system-ui, sans-serif;
+}
+
+.upw-shell {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+.upw-display {
+  font-family: var(--font-upw-display), var(--font-upw-body), system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.upw-grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.upw-no-scrollbar {
+  scrollbar-width: none;
+}
+
+.upw-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.upw-marquee-track {
+  animation: upw-marquee 55s linear infinite;
+}
+
+.upw-marquee:hover .upw-marquee-track {
+  animation-play-state: paused;
+}
+
+.upw-marquee-reverse {
+  animation-direction: reverse;
+}
+
+@keyframes upw-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .upw-marquee-track {
+    animation: none;
+  }
+}
+
 @keyframes pf-marquee {
   from {
     transform: translateX(0);
@@ -217,6 +308,47 @@ body {
   .pf-marquee-track {
     animation: none;
   }
+}
+
+/* Upwork portfolio page */
+body:has(.uw-root) {
+  background: #f3efe7;
+}
+
+.uw-root {
+  position: relative;
+  margin-inline: calc(var(--page-gutter) * -1);
+  min-height: 100vh;
+  overflow-x: clip;
+  background: #f3efe7;
+  color: #15140f;
+  font-family: var(--uw-body), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+.uw-root ::selection {
+  background: #e8451b;
+  color: #fbf9f4;
+}
+
+.uw-shell {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+.uw-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.uw-dots {
+  background-image: radial-gradient(rgba(21, 20, 15, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(180deg, #000, transparent 85%);
 }
 
 .trades-root {

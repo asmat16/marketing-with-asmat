@@ -29,6 +29,10 @@ type Props = {
   next: CaseStudy;
   onClose: () => void;
   onNavigate: (slug: string) => void;
+  /** Page the "Copy link" button points at. */
+  sharePath?: string;
+  /** Off on Upwork-safe pages: no booking, email or WhatsApp buttons. */
+  showContact?: boolean;
 };
 
 export function CaseStudyModal({
@@ -39,6 +43,8 @@ export function CaseStudyModal({
   next,
   onClose,
   onNavigate,
+  sharePath = "/portfolio",
+  showContact = true,
 }: Props) {
   const rootRef = useRef<HTMLDivElement>(null);
   const backdropRef = useRef<HTMLDivElement>(null);
@@ -128,7 +134,7 @@ export function CaseStudyModal({
   }, []);
 
   const copyLink = async () => {
-    const url = `${window.location.origin}/portfolio?case=${study.slug}`;
+    const url = `${window.location.origin}${sharePath}?case=${study.slug}`;
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
@@ -370,6 +376,22 @@ export function CaseStudyModal({
               ))}
             </div>
 
+            {!showContact && (
+              <div
+                data-modal-item
+                className="relative mt-12 overflow-hidden rounded-[28px] border border-white/10 bg-[radial-gradient(120%_140%_at_0%_0%,rgba(45,212,191,0.18),transparent_55%),#13131b] p-7 sm:p-10"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-300">
+                  Want to know more about this case study?
+                </p>
+                <h3 className="mt-3 max-w-2xl text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
+                  Ask me about it in our{" "}
+                  <span className="font-display font-normal italic text-teal-200">Upwork chat</span>
+                  . I&apos;ll walk you through this account and what I&apos;d do for yours.
+                </h3>
+              </div>
+            )}
+            {showContact && (
             <div
               data-modal-item
               className="relative mt-12 overflow-hidden rounded-[28px] border border-white/10 bg-[radial-gradient(120%_140%_at_0%_0%,rgba(45,212,191,0.18),transparent_55%),#13131b] p-7 sm:p-10"
@@ -414,6 +436,7 @@ export function CaseStudyModal({
                 </a>
               </div>
             </div>
+            )}
 
             <nav
               data-modal-item

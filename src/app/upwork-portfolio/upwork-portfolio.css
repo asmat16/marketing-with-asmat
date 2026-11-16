@@ -1,0 +1,4 @@
+/* Upwork work-samples page: match the page background to the portfolio theme. */
+body:has(.pf-upwork) {
+  background: #09090d;
+}

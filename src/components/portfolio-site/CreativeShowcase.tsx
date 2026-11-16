@@ -58,7 +58,7 @@ const creativeNumbers = [
   { value: "90%", label: "Of that budget ended up on four winning videos after weekly testing" },
 ];
 
-export function CreativeShowcase() {
+export function CreativeShowcase({ showContact = true }: { showContact?: boolean } = {}) {
   const [viewer, setViewer] = useState<{ items: MediaItem[]; index: number } | null>(null);
 
   return (
@@ -102,6 +102,7 @@ export function CreativeShowcase() {
       </dl>
 
       <UgcSlideshow
+        showContact={showContact}
         paused={viewer !== null}
         onOpen={(index) => setViewer({ items: videoItems, index })}
       />
@@ -165,7 +166,15 @@ export function CreativeShowcase() {
   );
 }
 
-function UgcSlideshow({ paused, onOpen }: { paused: boolean; onOpen: (index: number) => void }) {
+function UgcSlideshow({
+  paused,
+  onOpen,
+  showContact,
+}: {
+  paused: boolean;
+  onOpen: (index: number) => void;
+  showContact: boolean;
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
   const hoverRef = useRef(false);
   const [preview, setPreview] = useState<number | null>(null);
@@ -285,6 +294,7 @@ function UgcSlideshow({ paused, onOpen }: { paused: boolean; onOpen: (index: num
         ))}
       </div>
 
+      {showContact && (
       <div
         data-pf-reveal
         className="mt-8 flex flex-col items-start gap-4 rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6 sm:flex-row sm:items-center sm:justify-between"
@@ -303,6 +313,7 @@ function UgcSlideshow({ paused, onOpen }: { paused: boolean; onOpen: (index: num
           Talk about UGC for my brand
         </a>
       </div>
+      )}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { CalendlyHints } from "@/components/CalendlyHints";
 import { ContactPopup } from "@/components/ContactPopup";
 import { PageMotion } from "@/components/PageMotion";
 import { siteConfig } from "@/lib/site";
@@ -67,11 +68,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US" className={`${inter.variable} h-full`}>
-      <head>
-        <link rel="preconnect" href="https://calendly.com" />
-        <link rel="dns-prefetch" href="https://calendly.com" />
-      </head>
       <body className="min-h-full antialiased">
+        <CalendlyHints />
         <PageMotion />
         {children}
         <ContactPopup />
